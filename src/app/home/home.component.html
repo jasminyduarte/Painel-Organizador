@@ -1,3 +1,87 @@
-<p>
-  home works!
-</p>
+<!-- menu -->
+ <nav>
+   <mat-card class="MENU">
+     <div class="box-logo">
+       <img class="logo" src="../../assets/img/logo.svg" alt="ticketphone">
+     </div>
+     <div  class="titulo">
+       <p>Organizador</p>
+     </div>
+     <ul>
+       <li>
+        <a href="#">Login</a>
+       </li>
+       <li>
+         <a href="#">Vantagens</a>
+       </li>
+       <li>
+         <a href="#">Ferramentas</a>
+       </li>
+       <li>
+         <a href="#">Valores</a>
+       </li>
+       <li>
+         <a href="#">Quem somos</a>
+       </li>
+     </ul>
+   </mat-card>
+ </nav>
+
+
+<!-- Campo login-->
+<div class="login">
+  <mat-card class="login-card">
+    <form>
+      <input placeholder="CPF" id="cpf" type="number" class="campo-forms">
+      <input placeholder="Senha" id="senha" type="text" class="campo-forms">
+    </form>
+     <div class="botoes">
+       <button mat-button>Entrar</button>
+     </div>
+    <div class="links">
+      <a href="#">Ainda não possui cadastro ?</a>
+      <a href="#">Esqueceu a senha?</a>
+    </div>
+  </mat-card>
+</div>
+
+<!-- slider-->
+<header>
+</header>
+
+<!--RODAPÉ-->
+<footer class="footer">
+  <mat-grid-list cols="5">
+    <mat-grid-tile>
+      <div>
+        <h4>Conheça a TicketPhone</h4>
+      </div>
+      <ul>
+        <li *ngFor=" let list1 of lista1 "><p>{{list1}}<p></li>
+      </ul>
+    </mat-grid-tile>
+
+    <!--<mat-grid-tile>-->
+      <!--<p>Crie e organize atividades únicas</p>-->
+      <!--<mat-list>-->
+        <!--<mat-list-item *ngFor=" let list2 of lista2 ">{{list2}}</mat-list-item>-->
+      <!--</mat-list>-->
+    <!--</mat-grid-tile>-->
+
+    <!--<mat-grid-tile>-->
+      <!--<p>Venda de qualquer lugar </p>-->
+     <!---->
+        <!--<mat-list-item *ngFor=" let list2 of lista2 ">{{list2}}</mat-list-item>-->
+      <!--</mat-list>-->
+    <!--</mat-grid-tile>-->
+
+    <!--<mat-grid-tile>-->
+      <!--<p>Plataforma completa e integrada</p>-->
+      <!--<mat-list>-->
+        <!--<mat-list-item *ngFor=" let list2 of lista2 ">{{list2}}</mat-list-item>-->
+      <!--</mat-list>-->
+    <!--</mat-grid-tile>-->
+  </mat-grid-list>
+
+
+
