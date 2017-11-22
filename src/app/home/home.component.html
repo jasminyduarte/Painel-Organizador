@@ -13,22 +13,22 @@
   </div>
 </nav>
 
-<!-- Campo login-->
-<div *ngIf="!show" class="login">
-  <mat-card class="login-card">
-    <form>
-      <input placeholder="CPF" id="cpf" type="number" class="campo-forms">
-      <input placeholder="Senha" id="senha" type="password" class="campo-forms">
-    </form>
-     <div class="botoes">
-       <button mat-button>Entrar</button>
-     </div>
-    <div class="links">
-      <a href="#">Ainda não possui cadastro ?</a>
-      <a href="#">Esqueceu a senha?</a>
-    </div>
-  </mat-card>
-</div>
+<!--&lt;!&ndash; Campo login&ndash;&gt;-->
+<!--<div *ngIf="!show" class="login">-->
+  <!--<mat-card class="login-card">-->
+    <!--<form>-->
+      <!--<input placeholder="CPF" id="cpf" type="number" class="campo-forms">-->
+      <!--<input placeholder="Senha" id="senha" type="password" class="campo-forms">-->
+    <!--</form>-->
+     <!--<div class="botoes">-->
+       <!--<button mat-button>Entrar</button>-->
+     <!--</div>-->
+    <!--<div class="links">-->
+      <!--<a href="#">Ainda não possui cadastro ?</a>-->
+      <!--<a href="#">Esqueceu a senha?</a>-->
+    <!--</div>-->
+  <!--</mat-card>-->
+<!--</div>-->
 
 <!-- slider-->
 <header>
@@ -88,14 +88,23 @@
           <p>CNPJ: 04.803.710/0001-00</p>
         </div>
       </div>
-      <div class="col s4">
+
+
         <div id="mensagem" class="mensagem">
           <div class="header">Mandar Mensagem</div>
           <div class="conteudo">
-
+            <select  materialize="material_select"[materializeSelectOptions]="selectOptions" >
+              <option *ngFor="let option of assustos" [value]="option.value">{{option.name}}</option>
+            </select>
+            <input  placeholder="Nome" id="nome" type="text" class="validate forms_contat">
+            <input  placeholder="Email" id="email" type="text" class="validate forms_contat">
+            <input  placeholder="Telefone" id="telefone" type="text" class="validate forms_contat">
+            <p>Mensagem</p>
+            <textarea id="textarea1" class="materialize-textarea"></textarea>
           </div>
         </div>
-      </div>
+
+
     </div>
   </footer>
 

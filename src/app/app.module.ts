@@ -1,20 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-/*material angular*/
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { MaterializeModule } from 'angular2-materialize';
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonToggleModule} from '@angular/material';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatInputModule} from '@angular/material/input';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatListModule} from '@angular/material/list';
+
 
 
 @NgModule({
@@ -24,17 +16,8 @@ import {MatListModule} from '@angular/material/list';
   ],
   imports: [
     BrowserModule,
-    MatButtonModule,
-    MatMenuModule,
-    BrowserAnimationsModule,
-    MatButtonToggleModule,
-    MatMenuModule,
-    MatIconModule,
-    MatButtonModule,
-    MatCardModule,
-    MatInputModule,
-    MatGridListModule,
-    MatListModule],
+    MaterializeModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

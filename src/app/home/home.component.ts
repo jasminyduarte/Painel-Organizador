@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as $ from 'jquery';
 
 @Component({
   selector: 'home-component',
@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit {
     this.lista4 = ['TicketPhone web', 'Aplicativo Organizador', 'Aplicativo Participante', 'Maquininhas TicketPhone'];
     // select lista
     this.assustos = [
+      {name: 'Selecione um assunto'},
       {name: 'Ingressos'},
       {name: 'Certificados'},
       {name: 'Aplicativos'},
@@ -34,6 +35,10 @@ export class HomeComponent implements OnInit {
       {name: 'Pacotes de serviços'},
       {name: 'Outros'},
     ];
+
+    $("#mensagem .header").on("click", function(){
+      $("#mensagem .conteudo").slideToggle();
+    });
   }
 
   Mostra() {
