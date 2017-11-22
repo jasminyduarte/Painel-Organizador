@@ -11,42 +11,8 @@
 nav{
   background: white;
 }
-/*card menu*/
-.mat-card{
-  height: 70px;
-  padding: 0px;
-}
-.MENU{
-    display: flex;
-    justify-content: space-between;
-}
-.titulo{
-  text-align: center;
-  font-size: 24px;
-  color: rgba(95, 95, 95, 0.58);
-  font-weight: 600;
-  margin: 14px auto;
-}
-.titulo p{
-  margin: 4px auto;
-}
-.box-logo{
-  width: 10%;
-  position: absolute;
-  text-align: left;
-}
-/*ul{*/
-  /*width: 66%;*/
-  /*padding: 0px;*/
-  /*display: flex;*/
-  /*margin: 0px;*/
-/*}*/
-/*li{*/
-  /*display: flex;*/
-  /*justify-content: center;*/
-  /*width: 18%;*/
-  /*align-items: center;*/
-/*}*/
+
+
 .organizador{
   color: #5f5f5f;
   font-size: 24px;
@@ -64,7 +30,6 @@ li a{
   text-align: center;
 }
 li:hover{
-  /*background: linear-gradient(130deg, #33cc70,#009966);*/
   border: 1px solid #009966;
 }
 li a:hover{
@@ -107,7 +72,7 @@ button{
 }
 
 /*Campo input*/
- input {
+ input .campo-forms {
   border: none !important;
   border-radius: 5px !important ;
   padding: 5px 10px !important ;
@@ -148,12 +113,13 @@ header{
 }
 
 .Titulo-footer{
-  font-size: 20px;
+  font-size: 18px;
   margin: 0px;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.38);
 }
 
 .lista{
-  font-size: 13px;
+  font-size: 12px;
   margin: 0px !important;
 }
 .row{
@@ -168,3 +134,19 @@ header{
 .texto_linha_baixo{
   text-align: center;
 }
+
+.linha-esquerda{
+  border-right: 1px solid ;
+  height: 320px;
+}
+.contato{
+  font-size: 18px;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.38);
+  margin: 2px;
+}
+
+.text_contato{
+  margin: 0px;
+}
+
+/*Mensagem*/

@@ -59,11 +59,26 @@
           <div class="linha-esquerda">
             <p class="Titulo-footer">Plataforma completa integrada</p>
             <div>
-s            </div>
+              <p *ngFor="let list4 of lista4" class="lista">{{list4}}</p>
+           </div>
           </div>
         </div>
         <div class="col s4">
-            <p class="Titulo-footer">Conheça a TicketPhone</p>
+            <div class="row">
+             <div class="col s6 m6">
+               <img src="../../assets/img/logo.svg" alt="">
+             </div>
+            </div>
+          <div class="row">
+            <div>
+              <p class="contato">Contato</p>
+              <p class="text_contato">(95)3624-4321</p>
+              <p class="text_contato">Boa Vista-RR,Sebastião Diniz, 222 - Centro</p>
+            </div>
+          </div>
+          <div class="row">
+
+          </div>
         </div>
       </div>
     <div class="row linha_baixo">
@@ -74,7 +89,12 @@ s            </div>
         </div>
       </div>
       <div class="col s4">
-        <button mat-button>Manda Mensagem</button>
+        <div id="mensagem" class="mensagem">
+          <div class="header">Mandar Mensagem</div>
+          <div class="conteudo">
+
+          </div>
+        </div>
       </div>
     </div>
   </footer>
