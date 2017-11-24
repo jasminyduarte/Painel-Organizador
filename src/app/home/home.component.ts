@@ -12,7 +12,8 @@ export class HomeComponent implements OnInit {
   lista3: string[];
   lista4: string[];
   show = true;
-  assustos= [];
+  assustos = [];
+
 
   constructor() {
   }
@@ -39,6 +40,9 @@ export class HomeComponent implements OnInit {
     $("#mensagem .header").on("click", function(){
       $("#mensagem .conteudo").slideToggle();
     });
+
+
+
   }
 
   Mostra() {

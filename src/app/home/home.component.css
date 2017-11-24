@@ -5,13 +5,14 @@
 * {
   font-family: helvetica-regular;
 }
+
+/*/////////////menu///////////////*/
 .logo{
   width:45%;
 }
 nav{
   background: white;
 }
-
 
 .organizador{
   color: #5f5f5f;
@@ -22,35 +23,37 @@ nav{
   top: -23px;
   left: 200px;
 }
-li a{
+.box-menu a{
   text-decoration: none;
   color: rgba(95, 95, 95, 0.89);
   font-size: 20px;
   font-weight: 500;
   text-align: center;
 }
-li:hover{
+.box-menu:hover {
   border: 1px solid #009966;
 }
-li a:hover{
+.box-menu a:hover {
   color: #009966;
+  background: transparent;
 }
 
 
-/*Card Login*/
+/*///////////////Card Login//////////////////*/
 .login{
   width: 350px;
   position: absolute;
-  right: 350px;
+  right: 390px;
   margin-top: 0px;
   text-align: center;
+  top: 55px;
 }
 .login-card{
   border-radius: 0px 0px 10px 10px;
   height: auto;
 }
 
-/*Botao*/
+/*/////////Botao//////////////*/
 button{
   background-color: #ff0099;
   color: #ffffff;
@@ -71,8 +74,8 @@ button{
   color: #b3b3b3;
 }
 
-/*Campo input*/
- input .campo-forms {
+/*////////Campo input//////////*/
+form input {
   border: none !important;
   border-radius: 5px !important ;
   padding: 5px 10px !important ;
@@ -87,16 +90,20 @@ button{
   background-color: rgba(179, 179, 179, 0.29) !important;
   clear: both !important;
 }
-
+.btn.btn-entrar{
+  text-transform: capitalize;
+  border-radius: 5px;
+  background: #ff0099;
+}
 .forms{
   text-align: center;
   margin-top: -20px;
   padding: 10px;
 }
 form{
-padding: 15px;
+padding: 40px;
 }
-/*Slider*/
+/*///////////////////Slider//////////////////////////*/
 header{
   height:500px;
   background-image: url("../../assets/img/1.jpg");
@@ -106,11 +113,167 @@ header{
   background-size: cover;
 }
 
-/*footer*/
+
+/*/////////////Sessao tabs personaliza//////////////////*/
+.ferramentas{
+  background: #009966;
+  margin-top: 0px;
+}
+.card-title .titulo_ferraments{
+  margin: 0px auto;
+  padding-top: 10px;
+  color: white;
+  width: 36%;
+  text-align: center;
+}
+
+.ingre_titulo{
+  text-align: center;
+  font-size: 24px;
+  color: #009966;
+}
+.img_ingre{
+  width: 90px;
+  margin-left: 150px;
+}
+
+.box_ingre_text{
+  color: #808080;
+  text-align: justify;
+  padding: 20px;
+  width: 60%;
+  margin: 0px auto;
+}
+.indi{
+  float: right;
+}
+.mult{
+  float: left;
+}
+.card .card-content-tabs{
+  padding: 6px;
+}
+
+/*////////////////Tabs personalizando/////////////////////*/
+.tabs-1{
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 48px;
+  width: 100%;
+  background-color: transparent;
+  margin: 0 auto;
+  white-space: nowrap;
+}
+.tabs-1 .tab-perso{
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  padding: 0;
+  border-right: 1px solid white;
+  margin: 0;
+  text-transform: capitalize;
+}
+.tabs-1 .tab-perso a{
+  color: white;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 24px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: color .28s ease;
+}
+.tab-perso:after {
+  content:'';
+  position:absolute;
+  background:red;
+  width:20px;
+  height:20px;
+  top:-11px;
+  margin-left:-10px;
+  transform:rotate(45deg);
+  opacity:0;
+  border-top:1px solid #330000;
+  border-left:1px solid #330000;
+}
+
+/*//////////////////////////Sessão cards//////////////////////////*/
+.sessao-card .titulo_s1{
+  font-size: 24px;
+  width: 62%;
+  display: block;
+  color: white;
+  font-weight: normal;
+  margin: 0px auto;
+  padding: 20px;
+}
+.sessao-card .sub_s1{
+  margin: 0px auto;
+  width: 38%;
+  font-size: 14px;
+  color: #cacaca;
+  padding-bottom: 30px;
+}
+.box-card{
+  background-image: url("../../assets/img/1.jpg");
+  width: 100%;
+  height: 400px;
+}
+.box-card .card{
+  width: 80%;
+  margin: 0px auto;
+  display: block;
+  top: 160px;
+  border-radius: 10px;
+  height: 55%;
+}
+.row.card_bot{
+  margin-bottom: 100px;
+}
+.det{
+  background-image: url("../../assets/img/det verde.svg");
+  position: relative;
+  top: -21px;
+  width: 100%;
+  height: 22px;
+}
+
+.box-card .card .card-title p{
+  margin: -20px auto;
+  text-align: left;
+  padding-left: 25px;
+  padding-top: 15px;
+}
+.titulo_card-azul{color: #0066cc;}
+.titulo_card-rosa{color: #ff0099;}
+.titulo_card-verde{color:#009966;}
+
+.titulo_card-verde,
+.titulo_card-rosa,
+.titulo_card-azul p{
+  font-size: 20px;
+  font-weight: bold;
+}
+.box-card .card-content p {
+ text-align: justify;
+  width: 90%;
+}
+
+
+/*//////////////IMAGEM ////////////////QR */
+.qrimagem{
+  width: 100%;
+}
+
+/*///////////////////footer///////////////////////////////*/
 .page-footer{
   position: relative;
   background: #4d4d4d;
   color: white;
+  padding: 20px;
 }
 
 .Titulo-footer{
@@ -122,22 +285,34 @@ header{
 .lista{
   font-size: 12px;
   margin: 0px !important;
+  color: #9b9b9b;
 }
 .row{
   margin-bottom: 0px;
 }
 .linha_baixo{
-  border-top: 1px solid;
-  margin: 10px;
-  padding: 10px;
+  border-top: 1px solid #5d5d5d;
+  margin-top: 10px;
+
+}
+.row_contact{
+  margin-bottom: 30px;
+}
+.logo_footer{
+  width: 80%;
 }
 
 .texto_linha_baixo{
   text-align: center;
+  color: #9b9b9b;;
+}
+.texto_linha_baixo p{
+   margin: 0px;
+  padding-top: 10px;
 }
 
 .linha-esquerda{
-  border-right: 1px solid ;
+  border-right: 1px solid #5d5d5d;
   height: 320px;
 }
 .contato{
@@ -145,19 +320,26 @@ header{
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.38);
   margin: 2px;
 }
-
 .text_contato{
   margin: 0px;
 }
 
-/*Mensagem*/
+.icones{
+  margin: 10px;
+}
+.icones img {
+  width: 40px;
+}
+
+
+/*////////////////Mensagem///////////////*/
 .mensagem{
   position: absolute;
   z-index: 17;
-  /*top: 568px;*/
   bottom: 0;
   right: 0;
   width: 30%;
+  margin: 0px 20px;
 }
 .header{
   width: 100%;
@@ -173,15 +355,38 @@ header{
   background: white;
   padding: 20px;
 }
-.conteudo p{
-  color: #5f5f5f;
+.forms_titulo{
+  color: #5f5f5fb0;;
+  margin: 0px;
 }
 
 .forms_contat::-webkit-input-placeholder {
   color: #5f5f5f;
 }
-.select-wrapper input.select-dropdown{
-  color: #5f5f5f !important;
+/*/////////Text area/////////////*/
+textarea.materialize-textarea{
+  color: #5f5f5f;
 }
 
+/*///////////Select/////////////*/
+input.select-dropdown {
+  border-radius: 5px;
+  padding-left: 10px;
+  margin-top: 10px;
+  height: 2rem;
+  width: 50%;
+  background: red !important;
+  border: 1px solid #c3c3c3 !important;
+}
+
+.select-wrapper span.caret{
+  width: 50% !important;
+  color: #808080!important;
+}
+
+.btn_enviar{
+   background: #0066cc;
+   text-transform: inherit;
+   border-radius: 10px;
+ }
 

@@ -1,38 +1,165 @@
 
+<!--Menu-->
 <nav>
   <div class="nav-wrapper">
-    <a href="#" class="brand-logo"><img class="logo" src="../../assets/img/logo.svg" alt="ticketphone"></a>
+    <a href="#" class="brand-logo"><img class="logo" src="../../assets/img/logo-azul.svg" alt="ticketphone"></a>
     <p class="organizador">Organizador</p>
-    <ul  class="right hide-on-med-and-down">
-      <li><a href="badges.html">Vantagens</a></li>
-      <li (click)="Mostra()" ><a>Login</a></li>
-      <li><a href="#">Prestadores de serviços</a></li>
-      <li><a href="#">Valores e termos</a></li>
-      <li><a href="#">Quem somos</a></li>
+    <ul  class="right hide-on-med-and-down menu">
+      <li class="box-menu"><a href="badges.html">Vantagens</a></li>
+      <li class="box-menu" (click)="Mostra()" ><a>Login</a></li>
+      <li class="box-menu"><a href="#">Prestadores de serviços</a></li>
+      <li class="box-menu"><a href="#">Valores e termos</a></li>
+      <li class="box-menu"><a href="#">Quem somos</a></li>
     </ul>
   </div>
 </nav>
 
-<!--&lt;!&ndash; Campo login&ndash;&gt;-->
-<!--<div *ngIf="!show" class="login">-->
-  <!--<mat-card class="login-card">-->
-    <!--<form>-->
-      <!--<input placeholder="CPF" id="cpf" type="number" class="campo-forms">-->
-      <!--<input placeholder="Senha" id="senha" type="password" class="campo-forms">-->
-    <!--</form>-->
-     <!--<div class="botoes">-->
-       <!--<button mat-button>Entrar</button>-->
-     <!--</div>-->
-    <!--<div class="links">-->
-      <!--<a href="#">Ainda não possui cadastro ?</a>-->
-      <!--<a href="#">Esqueceu a senha?</a>-->
-    <!--</div>-->
-  <!--</mat-card>-->
-<!--</div>-->
+<!--LOGIN CARD-->
+<div *ngIf="!show" class="login">
+  <div class="card login-card">
+    <form>
+      <input placeholder="CPF" id="cpf" type="number" class="campo-forms">
+      <input placeholder="Senha" id="senha" type="password" class="campo-forms">
+    </form>
+     <div class="botoes">
 
-<!-- slider-->
-<header>
-</header>
+       <a class="waves-effect waves-light btn btn-entrar">Entrar</a>
+     </div>
+    <div class="links">
+      <a href="#">Ainda não possui cadastro ?</a>
+      <a href="#">Esqueceu a senha?</a>
+    </div>
+</div>
+</div>
+
+  <!-- slider-->
+  <header>
+  </header>
+
+  <img class="responsive-img" src="../../assets/img/desafio.jpg">
+
+  <!--Seção de cards-->
+  <section class="sessao-card">
+    <div class="section grey darken-3">
+      <div class="center-align">
+        <p class="titulo_s1">Somos uma plataforma completa para a organização
+          e vendas de ingresso
+        </p>
+        <p class="sub_s1">
+          Crie e acompanhe todo o seu evento em tempo real,
+          pelo desktop, smatphone ou tablet.
+        </p>
+        <div class="row card_bot">
+          <div class="col s4">
+            <div class="box-card center-align">
+              <div class="card">
+                <div class="card-title titulo_card-verde"><p>Simples e fácil</p></div>
+                <div class="card-content">
+                  <p>
+                    Crie e organize todo o seu evento de qualquer lugar, com facilidade e segurança.
+                    Desde a criação do evento à vendas.
+                    Controle e gerencie suas tarefas em utilizando nosso
+                    Check-list pelo desktop e aplicativo.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s4">
+            <div class="box-card center-align">
+              <div class="card">
+                <div class="card-title titulo_card-rosa"><p>O diferencial na palma da mão!</p></div>
+                <div class="card-content">
+                  <p>
+                    Utilize diversas ferramentas durantes
+                    a realização do seu evento par tornar a
+                    experiência inesquecível. Realize sorteios
+                    faça ou mande pesquisas aos participantes
+                    receba perguntas para o palestrantes e mais!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s4">
+            <div class="box-card center-align">
+              <div class="card">
+                <div class="card-title titulo_card-azul"><p>Sem complicações!</p></div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!--Seleção tabs-->
+  <div class="card ferramentas">
+    <div class="det">
+    </div>
+    <div class="card-title">
+      <p class="titulo_ferraments">Seus eventos e atividades Personalizados do jeito que você quiser</p>
+    </div>
+    <div class="card-content card-content-tabs">
+      <div class="center-align">
+        <ul class=" tabs-1 tabs-transparent">
+          <li class="tab-perso "><a href="#ingre">Seu ingresso</a></li>
+          <li class="tab-perso"><a  href="#tipo-ingre">Tipos de inscrições</a></li>
+          <li class="tab-perso"><a href="#prog">Programações</a></li>
+          <li class="tab-perso"><a href="#prod">Produtos e serviços</a></li>
+          <li class="tab-perso"><a href="#pac">Pacotes</a></li>
+          <li class="tab-perso"><a href="#ferra">Ferramentas</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<!--Conteúdo da tabs-->
+ <div class="box_ferramentas">
+   <div id="ingre" class="row">
+     <p class="ingre_titulo">Seu Ingresso será individual ou múltiplo ?</p>
+     <div class="col s6">
+       <div class="center-align">
+         <img class="img_ingre" src="../../assets/img/ing%20ind.svg" alt="">
+       </div>
+       <div class="box_ingre_text indi">
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+       </div>
+     </div>
+     <div class="col s6">
+       <div>
+         <img class="img_ingre" src="../../assets/img/ing%20mul.svg" alt="">
+       </div>
+       <div class="box_ingre_text mult">
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+       </div>
+     </div>
+   </div>
+   <!--<div id="tipo-ingre" class="col s12">Test 2</div>-->
+   <!--<div id="prog" class="col s12">Test 3</div>-->
+   <!--<div id="prod" class="col s12">Test 4</div>-->
+   <!--<div id="pac" class="col s12">Test 4</div>-->
+   <!--<div id="ferra" class="col s12">Test 4</div>-->
+ </div>
+
+  <!--QRCODE IMAGEM-->
+  <div>
+    <img  class="qrimagem responsive-img" src="../../assets/img/ingressoqr.jpg" alt="">
+  </div>
+
 
 <!--RODAPÉ-->
   <footer class="page-footer">
@@ -64,10 +191,16 @@
           </div>
         </div>
         <div class="col s4">
-            <div class="row">
+            <div class="row row_contact">
              <div class="col s6 m6">
-               <img src="../../assets/img/logo.svg" alt="">
+               <img class="logo_footer" src="../../assets/img/logo.svg" alt="">
              </div>
+              <div class="col s6 m6">
+                <div class="icones">
+                  <img src="../../assets/img/face.svg" alt="">
+                  <img src="../../assets/img/insta.svg" alt="">
+                </div>
+              </div>
             </div>
           <div class="row">
             <div>
@@ -88,23 +221,30 @@
           <p>CNPJ: 04.803.710/0001-00</p>
         </div>
       </div>
-
-
+      <!--Mensagem box-->
         <div id="mensagem" class="mensagem">
           <div class="header">Mandar Mensagem</div>
           <div class="conteudo">
-            <select  materialize="material_select"[materializeSelectOptions]="selectOptions" >
+            <select class="select2"   materialize="material_select"[materializeSelectOptions]="selectOptions" >
               <option *ngFor="let option of assustos" [value]="option.value">{{option.name}}</option>
             </select>
-            <input  placeholder="Nome" id="nome" type="text" class="validate forms_contat">
-            <input  placeholder="Email" id="email" type="text" class="validate forms_contat">
-            <input  placeholder="Telefone" id="telefone" type="text" class="validate forms_contat">
-            <p>Mensagem</p>
-            <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <p class="forms_titulo">Nome <span style="color:#ff0099">*</span></p>
+              <input id="nome" type="text" class="validate forms_contat">
+
+              <p class="forms_titulo">Email<span style="color:#ff0099">*</span></p>
+              <input  id="email" type="text" class="validate forms_contat">
+
+              <p class="forms_titulo">Telefone<span style="color:#ff0099">*</span></p>
+              <input  id="telefone" type="text" class="validate forms_contat">
+
+              <p class="forms_titulo">Mensagem</p>
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+
+             <div class="right-align">
+               <a class="waves-effect waves-light btn btn_enviar">Enviar</a>
+             </div>
           </div>
         </div>
-
-
     </div>
   </footer>
 
