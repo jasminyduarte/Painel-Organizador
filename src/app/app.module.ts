@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MaterializeModule } from 'angular2-materialize';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogModule} from '@angular/material';
+
 
 
 
@@ -16,7 +18,8 @@ import { MaterializeModule } from 'angular2-materialize';
   ],
   imports: [
     BrowserModule,
-    MaterializeModule
+    MaterializeModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

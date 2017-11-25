@@ -390,3 +390,46 @@ input.select-dropdown {
    border-radius: 10px;
  }
 
+/* /////// mandar mensagem ///// */
+.send-message{
+  position: relative;
+  display: flex;
+  background-color: #ff0099;
+  height: 200px;
+}
+.send-message > img{
+  position: absolute;
+  transform: rotateY(180deg);
+
+}
+.send-message .imagem,
+.send-message .texto{
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.send-message .texto{
+  color: #fff;
+  padding: 20px 0;
+}
+.send-message .texto p{
+  margin: 0 auto;
+  width: 80%;
+}
+.send-message .texto p:first-child{
+  font-size: 24px;
+}
+.send-message .texto a{
+  color: #fff;
+  text-decoration: underline;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.send-message .suporte{
+  width: 70px;
+  position: absolute;
+  left: calc(50% - 35px);
+  top: calc(50% - 35px);
+}
