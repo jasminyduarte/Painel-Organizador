@@ -1,18 +1,20 @@
 
 <!--Menu-->
-<nav>
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo"><img class="logo" src="../../assets/img/logo-azul.svg" alt="ticketphone"></a>
-    <p class="organizador">Organizador</p>
-    <ul  class="right hide-on-med-and-down menu">
-      <li class="box-menu"><a href="badges.html">Vantagens</a></li>
-      <li class="box-menu" (click)="Mostra()" ><a>Login</a></li>
-      <li class="box-menu"><a href="#">Prestadores de serviços</a></li>
-      <li class="box-menu"><a href="#">Valores e termos</a></li>
-      <li class="box-menu"><a href="#">Quem somos</a></li>
-    </ul>
-  </div>
-</nav>
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"><img class="logo" src="../../assets/img/logo-azul.svg" alt="ticketphone"></a>
+      <p class="organizador">Organizador</p>
+      <ul  class="right hide-on-med-and-down menu">
+        <li class="box-menu"><a href="badges.html">Vantagens</a></li>
+        <li class="box-menu" (click)="Mostra()" ><a>Login</a></li>
+        <li class="box-menu"><a href="#">Prestadores de serviços</a></li>
+        <li class="box-menu"><a href="#">Valores e termos</a></li>
+        <li class="box-menu"><a href="#">Quem somos</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
 
 <!--LOGIN CARD-->
 <div *ngIf="!show" class="login">
@@ -98,8 +100,8 @@
         </div>
       </div>
     </div>
-
   </section>
+
 
   <!--Seleção tabs-->
   <div class="card ferramentas">
@@ -109,57 +111,84 @@
       <p class="titulo_ferraments">Seus eventos e atividades Personalizados do jeito que você quiser</p>
     </div>
     <div class="card-content card-content-tabs">
-      <div class="center-align">
-        <ul class=" tabs-1 tabs-transparent">
-          <li class="tab-perso "><a href="#ingre">Seu ingresso</a></li>
-          <li class="tab-perso"><a  href="#tipo-ingre">Tipos de inscrições</a></li>
-          <li class="tab-perso"><a href="#prog">Programações</a></li>
-          <li class="tab-perso"><a href="#prod">Produtos e serviços</a></li>
-          <li class="tab-perso"><a href="#pac">Pacotes</a></li>
-          <li class="tab-perso"><a href="#ferra">Ferramentas</a></li>
-        </ul>
+      <div class="tabPanel-widget">
+        <label for="tab-1" tabindex="0"></label>
+        <input id="tab-1" type="radio" name="tabs" checked="true" aria-hidden="true">
+        <h2>Seu ingresso</h2>
+        <div>
+          <div class="box_ferramentas">
+            <div id="ingre" class="row">
+              <p class="ingre_titulo">Seu Ingresso será individual ou múltiplo ?</p>
+              <div class="col s6">
+                <div class="center-align">
+                  <img class="img_ingre" src="../../assets/img/ing%20ind.svg" alt="">
+                </div>
+                <div class="box_ingre_text indi">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+              </div>
+              <div class="col s6">
+                <div>
+                  <img class="img_ingre" src="../../assets/img/ing%20mul.svg" alt="">
+                </div>
+                <div class="box_ingre_text mult">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <label for="tab-2" tabindex="0"></label>
+        <input id="tab-2" type="radio" name="tabs" aria-hidden="true">
+        <h2>Tipos de inscrições</h2>
+        <div>
+          <p>Represents a generic document or application section. In this context, a section is a thematic grouping of content, typically with a header, possibly with a footer. Examples include chapters in a book, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A web site's home page could be split into sections for an introduction, news items, contact information.</p>
+          <p>Source: <a href="http://html5doctor.com/element-index/">html5doctor</a> for Section</p>
+        </div>
+        <label for="tab-3" tabindex="0"></label>
+        <input id="tab-3" type="radio" name="tabs" aria-hidden="true">
+        <h2>Programações</h2>
+        <div>
+          <p>The source element allows authors to specify multiple alternative media resources for media elements. It does not represent anything on its own. The src attribute gives the address of the media resource. The value must be a valid non-empty URL potentially surrounded by spaces. This attribute must be present.</p>
+          <p>Source: <a href="http://html5doctor.com/element-index/">html5doctor</a> for Source</p>
+        </div>
+        <label for="tab-4" tabindex="0"></label>
+        <input id="tab-4" type="radio" name="tabs" aria-hidden="true">
+        <h2>Produtos e serviços</h2>
+        <div>
+          <p>The source element allows authors to specify multiple alternative media resources for media elements. It does not represent anything on its own. The src attribute gives the address of the media resource. The value must be a valid non-empty URL potentially surrounded by spaces. This attribute must be present.</p>
+          <p>Source: <a href="http://html5doctor.com/element-index/">html5doctor</a> for Source</p>
+        </div>
+        <label for="tab-5" tabindex="0"></label>
+        <input id="tab-5" type="radio" name="tabs" aria-hidden="true">
+        <h2>Pacotes</h2>
+        <div>
+          <p>The source element allows authors to specify multiple alternative media resources for media elements. It does not represent anything on its own. The src attribute gives the address of the media resource. The value must be a valid non-empty URL potentially surrounded by spaces. This attribute must be present.</p>
+          <p>Source: <a href="http://html5doctor.com/element-index/">html5doctor</a> for Source</p>
+        </div>
+        <label for="tab-6" tabindex="0"></label>
+        <input id="tab-6" type="radio" name="tabs" aria-hidden="true">
+        <h2>Ferramentas</h2>
+        <div>
+          <p>The source element allows authors to specify multiple alternative media resources for media elements. It does not represent anything on its own. The src attribute gives the address of the media resource. The value must be a valid non-empty URL potentially surrounded by spaces. This attribute must be present.</p>
+          <p>Source: <a href="http://html5doctor.com/element-index/">html5doctor</a> for Source</p>
+        </div>
       </div>
     </div>
   </div>
-<!--Conteúdo da tabs-->
- <div class="box_ferramentas">
-   <div id="ingre" class="row">
-     <p class="ingre_titulo">Seu Ingresso será individual ou múltiplo ?</p>
-     <div class="col s6">
-       <div class="center-align">
-         <img class="img_ingre" src="../../assets/img/ing%20ind.svg" alt="">
-       </div>
-       <div class="box_ingre_text indi">
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-       </div>
-     </div>
-     <div class="col s6">
-       <div>
-         <img class="img_ingre" src="../../assets/img/ing%20mul.svg" alt="">
-       </div>
-       <div class="box_ingre_text mult">
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-       </div>
-     </div>
-   </div>
-   <!--<div id="tipo-ingre" class="col s12">Test 2</div>-->
-   <!--<div id="prog" class="col s12">Test 3</div>-->
-   <!--<div id="prod" class="col s12">Test 4</div>-->
-   <!--<div id="pac" class="col s12">Test 4</div>-->
-   <!--<div id="ferra" class="col s12">Test 4</div>-->
- </div>
 
   <!--QRCODE IMAGEM-->
   <div>
     <img  class="qrimagem responsive-img" src="../../assets/img/ingressoqr.jpg" alt="">
   </div>
 
+<!---->
 
 <!--RODAPÉ-->
   <footer class="page-footer">

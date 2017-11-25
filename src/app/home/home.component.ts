@@ -41,13 +41,13 @@ export class HomeComponent implements OnInit {
       $("#mensagem .conteudo").slideToggle();
     });
 
-
-
   }
 
   Mostra() {
     this.show = !this.show;
 }
+
+
 
 
 }
