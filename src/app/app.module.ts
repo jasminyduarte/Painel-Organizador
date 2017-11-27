@@ -4,10 +4,11 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { MaterializeModule } from 'angular2-materialize';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -20,9 +21,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterializeModule,
     MatMenuModule,
-    MatTabsModule
+    MatTabsModule,
+    MatGridListModule,
+    MatCardModule
 
   ],
   providers: [],
