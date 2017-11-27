@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import * as $ from 'jquery';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import {DialogComponent} from "../dialog/dialog.component";
 
 @Component({
   selector: 'home-component',
@@ -15,7 +17,7 @@ export class HomeComponent implements OnInit {
   assustos = [];
 
 
-  constructor() {
+  constructor(public dialog: MatDialog) {
   }
 
   ngOnInit() {
@@ -48,6 +50,12 @@ export class HomeComponent implements OnInit {
   Mostra() {
     this.show = !this.show;
 }
+
+  openDialog(): void {
+    let dialogRef = this.dialog.open(DialogComponent, {
+      width: '50%'
+    });
+  }
 
 
 }
