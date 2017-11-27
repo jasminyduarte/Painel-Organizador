@@ -1,4 +1,28 @@
+/*------------------------- header ----------------------- */
+.header{
+  text-align: center;
+}
+.header img{
+  width: 100px;
+}
+/* ------------------------ body ------------------------- */
 .modal-send-message{
-  width: 50%;
-  border-radius: 10px;
+  width: 100%;
+  padding-top: 50px;
+}
+.hello,
+.label{
+  margin: 0;
+}
+
+/* ------------------------ footer ----------------------- */
+.footer{
+  border-top: 1px solid #808080;
+  text-align: center;
+}
+.footer .icons{
+}
+.icons img{
+  width: 35px;
+  height: 35px;
 }

@@ -1,11 +1,52 @@
+<div class="header">
+  <img src="../../assets/img/logo-azul.svg">
+</div>
 <div class="modal-send-message">
   <mat-horizontal-stepper>
+
     <mat-step>
-      aldsfgkçasdfhasdkjfheiugkefr
+      <form>
+        <p class="hello">Olá,</p>
+        <p class="label">O que você gostaria de fazer?</p>
+        <mat-form-field>
+            <mat-select placeholder="Escolha uma opção">
+              <mat-option *ngFor="let q of question1" [value]="q.value">
+                {{ q.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        <p class="label">Você é um(a)?</p>
+        <mat-form-field>
+          <mat-select placeholder="Escolha uma opção">
+            <mat-option *ngFor="let p of perfil" [value]="p.value">
+              {{ p.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
     </mat-step>
+
+    <mat-step>
+      asfhlaskfglaksdjfgla 2
+    </mat-step>
+
+    <mat-step>
+      asfhlaskfglaksdjfgla 2
+    </mat-step>
+
     <mat-step>
       asfhlaskfglaksdjfgla 2
     </mat-step>
   </mat-horizontal-stepper>
+</div>
+<div class="footer">
+  <div class="icons">
+    <img src="../../assets/img/face.svg">
+    <img src="../../assets/img/insta.svg">
+  </div>
 </div>
 

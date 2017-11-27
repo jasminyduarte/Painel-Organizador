@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
 
   openDialog(): void {
     let dialogRef = this.dialog.open(DialogComponent, {
-      width: '50%'
+      width: '80%'
     });
   }
 

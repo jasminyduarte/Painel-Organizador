@@ -13,6 +13,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
+import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -32,9 +33,10 @@ import {MatCardModule} from '@angular/material/card';
     MatMenuModule,
     MatTabsModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    MatSelectModule
   ],
-  entryComponents:[
+  entryComponents: [
     DialogComponent
   ],
   providers: [],
