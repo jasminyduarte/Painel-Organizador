@@ -191,21 +191,42 @@
   <!--Seção plataformas -->
   <mat-card class="plataformas">
     <div class="box">
-      <div class="box-plat-esquer">
-        <h5 class="titulo-plat">Plataforma
-          Integrada</h5>
-        <p class="sub-plat">
-          Gerencie de qualquer lugar
-          on-line e off-line
-        </p>
-      </div>
-      <div class="box-plat-direita">
-        <img class="imagens-plat" src="../../assets/img/web.svg" alt="">
-        <img class="imagens-plat" src="../../assets/img/tab%20e%20sm.svg" alt="">
-        <img  class="imagens-plat" src="../../assets/img/maq%20ticketp.svg" alt="">
-      </div>
+      <mat-tab-group class="tab-plat">
+          <mat-tab label="Plataforma
+              Integrada" disabled>
+          </mat-tab>
+          <mat-tab class="tab-select">
+            <ng-template mat-tab-label>
+              <img class="imagens-plat" src="../../assets/img/web.svg" alt="">
+            </ng-template>
+            <div class="demo-tab-content">
+              <mat-grid-list cols="2" rowHeight="2:1">
+                <mat-grid-tile>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+                    Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+                    In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec.
+                  </p>
+                </mat-grid-tile>
+                <mat-grid-tile>2</mat-grid-tile>
+              </mat-grid-list>
+            </div>
+          </mat-tab>
+          <mat-tab>
+          <ng-template mat-tab-label>
+            <img class="imagens-plat" src="../../assets/img/tab%20e%20sm.svg" alt="">
+          </ng-template>
+          </mat-tab>
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <img  class="imagens-plat" src="../../assets/img/maq%20ticketp.svg" alt="">
+            </ng-template>
+          </mat-tab>
+        </mat-tab-group>
     </div>
 </mat-card>
+
+
 
 
 <!--RODAPÉ-->
