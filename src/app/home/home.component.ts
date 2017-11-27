@@ -43,8 +43,6 @@ export class HomeComponent implements OnInit {
       $("#mensagem .conteudo").slideToggle();
     });
 
-
-
   }
 
   Mostra() {
@@ -56,6 +54,8 @@ export class HomeComponent implements OnInit {
       width: '50%'
     });
   }
+
+
 
 
 }

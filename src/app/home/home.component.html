@@ -1,36 +1,39 @@
 
 <!--Menu-->
-<nav>
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo"><img class="logo" src="../../assets/img/logo-azul.svg" alt="ticketphone"></a>
-    <p class="organizador">Organizador</p>
-    <ul  class="right hide-on-med-and-down menu">
-      <li class="box-menu"><a href="badges.html">Vantagens</a></li>
-      <li class="box-menu" (click)="Mostra()" ><a>Login</a></li>
-      <li class="box-menu"><a href="#">Prestadores de serviços</a></li>
-      <li class="box-menu"><a href="#">Valores e termos</a></li>
-      <li class="box-menu"><a href="#">Quem somos</a></li>
-    </ul>
-  </div>
-</nav>
+<div>
+  <nav>
+    <mat-card  class="MENU">
+      <a href="#" class="brand-logo"><img class="logo" src="../../assets/img/logo-azul.svg" alt="ticketphone"></a>
+      <p class="organizador">Organizador</p>
+      <ul  class="menu-ul">
+        <li class="box-menu"><a href="badges.html">Vantagens</a></li>
+        <li class="box-menu" (click)="Mostra()" ><a>Login</a></li>
+        <li class="box-menu"><a href="#">Prestadores de serviços</a></li>
+        <li class="box-menu"><a href="#">Valores e termos</a></li>
+        <li class="box-menu"><a href="#">Quem somos</a></li>
+      </ul>
+    </mat-card>
+  </nav>
+</div>
+
 
 <!--LOGIN CARD-->
-<div *ngIf="!show" class="login">
-  <div class="card login-card">
-    <form>
-      <input placeholder="CPF" id="cpf" type="number" class="campo-forms">
-      <input placeholder="Senha" id="senha" type="password" class="campo-forms">
-    </form>
-     <div class="botoes">
+<!--<div *ngIf="!show" class="login">-->
+  <!--<div class="card login-card">-->
+    <!--<form>-->
+      <!--<input placeholder="CPF" id="cpf" type="number" class="campo-forms">-->
+      <!--<input placeholder="Senha" id="senha" type="password" class="campo-forms">-->
+    <!--</form>-->
+     <!--<div class="botoes">-->
 
-       <a class="waves-effect waves-light btn btn-entrar">Entrar</a>
-     </div>
-    <div class="links">
-      <a href="#">Ainda não possui cadastro ?</a>
-      <a href="#">Esqueceu a senha?</a>
-    </div>
-</div>
-</div>
+       <!--<a class="waves-effect waves-light btn btn-entrar">Entrar</a>-->
+     <!--</div>-->
+    <!--<div class="links">-->
+      <!--<a href="#">Ainda não possui cadastro ?</a>-->
+      <!--<a href="#">Esqueceu a senha?</a>-->
+    <!--</div>-->
+<!--</div>-->
+<!--</div>-->
 
   <!-- slider-->
   <header>
@@ -39,8 +42,8 @@
   <img class="responsive-img" src="../../assets/img/desafio.jpg">
 
   <!--Seção de cards-->
-  <section class="sessao-card">
-    <div class="section grey darken-3">
+<section class="sessao-card">
+    <div class="section">
       <div class="center-align">
         <p class="titulo_s1">Somos uma plataforma completa para a organização
           e vendas de ingresso
@@ -49,194 +52,243 @@
           Crie e acompanhe todo o seu evento em tempo real,
           pelo desktop, smatphone ou tablet.
         </p>
-        <div class="row card_bot">
-          <div class="col s4">
-            <div class="box-card center-align">
-              <div class="card">
-                <div class="card-title titulo_card-verde"><p>Simples e fácil</p></div>
-                <div class="card-content">
+          <mat-grid-list cols="3">
+            <mat-grid-tile>
+            <div class="box-card">
+              <mat-card class="cards">
+                <mat-card-title  class=" titulo_card-verde"><p>Simples e fácil</p></mat-card-title>
+                  <mat-card-content>
+                    <p>
+                      Crie e organize todo o seu evento de qualquer lugar, com facilidade e segurança.
+                      Desde a criação do evento à vendas.
+                      Controle e gerencie suas tarefas em utilizando nosso
+                      Check-list pelo desktop e aplicativo.
+                    </p>
+                    </mat-card-content>
+              </mat-card>
+             </div>
+            </mat-grid-tile>
+          <mat-grid-tile>
+            <div class="box-card">
+              <mat-card class="cards">
+                <mat-card-title  class="titulo_card-rosa"><p>Simples e fácil</p></mat-card-title>
+                <mat-card-content>
                   <p>
                     Crie e organize todo o seu evento de qualquer lugar, com facilidade e segurança.
                     Desde a criação do evento à vendas.
                     Controle e gerencie suas tarefas em utilizando nosso
                     Check-list pelo desktop e aplicativo.
                   </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col s4">
-            <div class="box-card center-align">
-              <div class="card">
-                <div class="card-title titulo_card-rosa"><p>O diferencial na palma da mão!</p></div>
-                <div class="card-content">
-                  <p>
-                    Utilize diversas ferramentas durantes
-                    a realização do seu evento par tornar a
-                    experiência inesquecível. Realize sorteios
-                    faça ou mande pesquisas aos participantes
-                    receba perguntas para o palestrantes e mais!
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col s4">
-            <div class="box-card center-align">
-              <div class="card">
-                <div class="card-title titulo_card-azul"><p>Sem complicações!</p></div>
-                <div class="card-content">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
-                  </p>
-                </div>
-              </div>
+                </mat-card-content>
+              </mat-card>
+             </div>
+            </mat-grid-tile>
+          <mat-grid-tile>
+              <div class="box-card">
+                <mat-card class="cards">
+                  <mat-card-title  class="titulo_card-azul"><p>Simples e fácil</p></mat-card-title>
+                  <mat-card-content>
+                    <p>
+                      Crie e organize todo o seu evento de qualquer lugar, com facilidade e segurança.
+                      Desde a criação do evento à vendas.
+                      Controle e gerencie suas tarefas em utilizando nosso
+                      Check-list pelo desktop e aplicativo.
+                    </p>
+                  </mat-card-content>
+                </mat-card></div>
+            </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+    </div>
+  </section>
+
+
+  <!--Seleção tabs-->
+  <div class="ferramentas">
+    <div class="det">
+    </div>
+      <p class="titulo_ferraments">Seus eventos e atividades Personalizados do jeito que você quiser</p>
+
+    <div class="card-content card-content-tabs">
+      <div class="tabPanel-widget">
+        <label for="tab-1" tabindex="0"></label>
+        <input id="tab-1" type="radio" name="tabs" checked="true" aria-hidden="true">
+        <h2>Seu ingresso</h2>
+        <div>
+          <div class="box_ferramentas">
+            <div id="ingre" class="row">
+              <p class="ingre_titulo">Seu Ingresso será individual ou múltiplo ?</p>
+              <mat-grid-list cols="2" rowHeight="2:1">
+                <mat-grid-tile>
+                  <div class="box_ingre_text indi">
+                    <img class="img_ingre" src="../../assets/img/ing%20ind.svg" alt="">
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                  <div class="box_ingre_text mult">
+                    <img class="img_ingre" src="../../assets/img/ing%20mul.svg" alt="">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+
+                    </div>
+                  </mat-grid-tile>
+              </mat-grid-list>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!--Seleção tabs-->
-  <div class="card ferramentas">
-    <div class="det">
-    </div>
-    <div class="card-title">
-      <p class="titulo_ferraments">Seus eventos e atividades Personalizados do jeito que você quiser</p>
-    </div>
-    <div class="card-content card-content-tabs">
-      <div class="center-align">
-        <ul class=" tabs-1 tabs-transparent">
-          <li class="tab-perso "><a href="#ingre">Seu ingresso</a></li>
-          <li class="tab-perso"><a  href="#tipo-ingre">Tipos de inscrições</a></li>
-          <li class="tab-perso"><a href="#prog">Programações</a></li>
-          <li class="tab-perso"><a href="#prod">Produtos e serviços</a></li>
-          <li class="tab-perso"><a href="#pac">Pacotes</a></li>
-          <li class="tab-perso"><a href="#ferra">Ferramentas</a></li>
-        </ul>
+        <label for="tab-2" tabindex="0"></label>
+        <input id="tab-2" type="radio" name="tabs" aria-hidden="true">
+        <h2>Tipos de inscrições</h2>
+        <div>
+          <p>Represents a generic document or application section. In this context, a section is a thematic grouping of content, typically with a header, possibly with a footer. Examples include chapters in a book, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A web site's home page could be split into sections for an introduction, news items, contact information.</p>
+          <p>Source: <a href="http://html5doctor.com/element-index/">html5doctor</a> for Section</p>
+        </div>
+        <label for="tab-3" tabindex="0"></label>
+        <input id="tab-3" type="radio" name="tabs" aria-hidden="true">
+        <h2>Programações</h2>
+        <div>
+          <p>The source element allows authors to specify multiple alternative media resources for media elements. It does not represent anything on its own. The src attribute gives the address of the media resource. The value must be a valid non-empty URL potentially surrounded by spaces. This attribute must be present.</p>
+          <p>Source: <a href="http://html5doctor.com/element-index/">html5doctor</a> for Source</p>
+        </div>
+        <label for="tab-4" tabindex="0"></label>
+        <input id="tab-4" type="radio" name="tabs" aria-hidden="true">
+        <h2>Produtos e serviços</h2>
+        <div>
+          <p>The source element allows authors to specify multiple alternative media resources for media elements. It does not represent anything on its own. The src attribute gives the address of the media resource. The value must be a valid non-empty URL potentially surrounded by spaces. This attribute must be present.</p>
+          <p>Source: <a href="http://html5doctor.com/element-index/">html5doctor</a> for Source</p>
+        </div>
+        <label for="tab-5" tabindex="0"></label>
+        <input id="tab-5" type="radio" name="tabs" aria-hidden="true">
+        <h2>Pacotes</h2>
+        <div>
+          <p>The source element allows authors to specify multiple alternative media resources for media elements. It does not represent anything on its own. The src attribute gives the address of the media resource. The value must be a valid non-empty URL potentially surrounded by spaces. This attribute must be present.</p>
+          <p>Source: <a href="http://html5doctor.com/element-index/">html5doctor</a> for Source</p>
+        </div>
+        <label for="tab-6" tabindex="0"></label>
+        <input id="tab-6" type="radio" name="tabs" aria-hidden="true">
+        <h2>Ferramentas</h2>
+        <div>
+          <p>The source element allows authors to specify multiple alternative media resources for media elements. It does not represent anything on its own. The src attribute gives the address of the media resource. The value must be a valid non-empty URL potentially surrounded by spaces. This attribute must be present.</p>
+          <p>Source: <a href="http://html5doctor.com/element-index/">html5doctor</a> for Source</p>
+        </div>
       </div>
     </div>
   </div>
-<!--Conteúdo da tabs-->
- <div class="box_ferramentas">
-   <div id="ingre" class="row">
-     <p class="ingre_titulo">Seu Ingresso será individual ou múltiplo ?</p>
-     <div class="col s6">
-       <div class="center-align">
-         <img class="img_ingre" src="../../assets/img/ing%20ind.svg" alt="">
-       </div>
-       <div class="box_ingre_text indi">
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-       </div>
-     </div>
-     <div class="col s6">
-       <div>
-         <img class="img_ingre" src="../../assets/img/ing%20mul.svg" alt="">
-       </div>
-       <div class="box_ingre_text mult">
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-       </div>
-     </div>
-   </div>
-   <!--<div id="tipo-ingre" class="col s12">Test 2</div>-->
-   <!--<div id="prog" class="col s12">Test 3</div>-->
-   <!--<div id="prod" class="col s12">Test 4</div>-->
-   <!--<div id="pac" class="col s12">Test 4</div>-->
-   <!--<div id="ferra" class="col s12">Test 4</div>-->
- </div>
 
   <!--QRCODE IMAGEM-->
   <div>
     <img  class="qrimagem responsive-img" src="../../assets/img/ingressoqr.jpg" alt="">
   </div>
 
-  <!-- mande uma mensagem -->
-  <div class="send-message">
-    <div class="imagem">
-      <img class="responsive-img" src="../../assets/img/ingressoqr.jpg">
-    </div>
-    <div class="texto">
-      <div>
-        <p>Você tem alguma dúvida?</p>
-        <p>Fale com a gente e conheça porquê a TicketPhone é a melhor opção para seu evento e atividade</p>
-        <a (click)="openDialog()">Mandar mensagem</a>
+  <!--Seção plataformas -->
+  <mat-card class="plataformas">
+    <div class="box">
+      <div class="box-plat-esquer">
+        <h5 class="titulo-plat">Plataforma
+          Integrada</h5>
+        <p class="sub-plat">
+          Gerencie de qualquer lugar
+          on-line e off-line
+        </p>
       </div>
-
+      <div class="box-plat-direita">
+        <img class="imagens-plat" src="../../assets/img/web.svg" alt="">
+        <img class="imagens-plat" src="../../assets/img/tab%20e%20sm.svg" alt="">
+        <img  class="imagens-plat" src="../../assets/img/maq%20ticketp.svg" alt="">
+      </div>
     </div>
-    <img class="suporte" src="../../assets/img/suporte.svg">
-  </div>
+</mat-card>
 
+<!-- mande uma mensagem -->
+<div class="send-message">
+  <div class="imagem">
+    <img class="responsive-img" src="../../assets/img/ingressoqr.jpg">
+  </div>
+  <div class="texto">
+    <div>
+      <p>Você tem alguma dúvida?</p>
+      <p>Fale com a gente e conheça porquê a TicketPhone é a melhor opção para seu evento e atividade</p>
+      <a (click)="openDialog()">Mandar mensagem</a>
+    </div>
+
+  </div>
+  <img class="suporte" src="../../assets/img/suporte.svg">
+</div>
+s
 
 <!--RODAPÉ-->
-  <footer class="page-footer">
-      <div class="row">
-        <div class="col s2">
-         <p class="Titulo-footer">Conheça a TicketPhone</p>
-          <div>
-            <p *ngFor="let list1 of lista1" class="lista">{{list1}}</p>
-          </div>
-        </div>
-        <div class="col s2">
-          <p class="Titulo-footer">Crie e Organize atividades únicas</p>
-          <div>
-            <p *ngFor="let list2 of lista2" class="lista">{{list2}}</p>
-          </div>
-        </div>
-        <div class="col s2">
-          <p class="Titulo-footer">Vendas de qualquer lugar</p>
-          <div>
-            <p *ngFor="let list3 of lista3" class="lista">{{list3}}</p>
-          </div>
-        </div>
-        <div class="col s2">
-          <div class="linha-esquerda">
-            <p class="Titulo-footer">Plataforma completa integrada</p>
-            <div>
-              <p *ngFor="let list4 of lista4" class="lista">{{list4}}</p>
-           </div>
-          </div>
-        </div>
-        <div class="col s4">
-            <div class="row row_contact">
-             <div class="col s6 m6">
-               <img class="logo_footer" src="../../assets/img/logo.svg" alt="">
-             </div>
-              <div class="col s6 m6">
-                <div class="icones">
-                  <img src="../../assets/img/face.svg" alt="">
-                  <img src="../../assets/img/insta.svg" alt="">
-                </div>
-              </div>
-            </div>
-          <div class="row">
-            <div>
-              <p class="contato">Contato</p>
-              <p class="text_contato">(95)3624-4321</p>
-              <p class="text_contato">Boa Vista-RR,Sebastião Diniz, 222 - Centro</p>
-            </div>
-          </div>
-          <div class="row">
+  <!--<footer class="page-footer">-->
+    <!--<mat-grid-list cols="10">-->
+      <!--<mat-grid-tile>-->
+        <!--<p class="Titulo-footer">Conheça a TicketPhone</p>-->
+        <!--<div>-->
+          <!--<p *ngFor="let list1 of lista1" class="lista">{{list1}}</p>-->
+        <!--</div>-->
+      <!--</mat-grid-tile>-->
 
-          </div>
-        </div>
-      </div>
-    <div class="row linha_baixo">
-      <div class="col s8">
-        <div class="texto_linha_baixo">
-          <p>TicketPhone é operado por Ideias & Negócios Assesoria Empressarial LTDA-EPP</p>
-          <p>CNPJ: 04.803.710/0001-00</p>
-        </div>
-      </div>
+      <!--<mat-grid-tile>-->
+        <!--<p class="Titulo-footer">Crie e Organize atividades únicas</p>-->
+        <!--<div>-->
+          <!--<p *ngFor="let list2 of lista2" class="lista">{{list2}}</p>-->
+        <!--</div>-->
+      <!--</mat-grid-tile>-->
+
+      <!--<mat-grid-tile>-->
+        <!--<p class="Titulo-footer">Vendas de qualquer lugar</p>-->
+        <!--<div>-->
+          <!--<p *ngFor="let list3 of lista3" class="lista">{{list3}}</p>-->
+        <!--</div>-->
+      <!--</mat-grid-tile>-->
+
+      <!--<mat-grid-tile>-->
+        <!--<div class="linha-esquerda">-->
+          <!--<p class="Titulo-footer">Plataforma completa integrada</p>-->
+          <!--<div>-->
+            <!--<p *ngFor="let list4 of lista4" class="lista">{{list4}}</p>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</mat-grid-tile>-->
+
+
+        <!--<div class="col s4">-->
+            <!--<div class="row row_contact">-->
+             <!--<div class="col s6 m6">-->
+               <!--<img class="logo_footer" src="../../assets/img/logo.svg" alt="">-->
+             <!--</div>-->
+              <!--<div class="col s6 m6">-->
+                <!--<div class="icones">-->
+                  <!--<img src="../../assets/img/face.svg" alt="">-->
+                  <!--<img src="../../assets/img/insta.svg" alt="">-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--<div class="row">-->
+            <!--<div>-->
+              <!--<p class="contato">Contato</p>-->
+              <!--<p class="text_contato">(95)3624-4321</p>-->
+              <!--<p class="text_contato">Boa Vista-RR,Sebastião Diniz, 222 - Centro</p>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="row">-->
+
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--<div class="row linha_baixo">-->
+      <!--<div class="col s8">-->
+        <!--<div class="texto_linha_baixo">-->
+          <!--<p>TicketPhone é operado por Ideias & Negócios Assesoria Empressarial LTDA-EPP</p>-->
+          <!--<p>CNPJ: 04.803.710/0001-00</p>-->
+        <!--</div>-->
+      <!--</div>-->
       <!--&lt;!&ndash;Mensagem box&ndash;&gt;-->
         <!--<div id="mensagem" class="mensagem">-->
           <!--<div class="header">Mandar Mensagem</div>-->
@@ -261,6 +313,7 @@
              <!--</div>-->
           <!--</div>-->
         <!--</div>-->
-    </div>
-  </footer>
+
+    <!--</mat-grid-list>-->
+  <!--</footer>-->
 

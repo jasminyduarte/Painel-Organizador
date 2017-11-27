@@ -4,12 +4,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-// import { MaterializeModule } from 'angular2-materialize';
+
 import {MatDialogModule} from '@angular/material/dialog';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { DialogComponent } from './dialog/dialog.component';
 import {MatStepperModule} from '@angular/material/stepper';
-
+import {MatMenuModule} from '@angular/material/menu';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -25,7 +28,11 @@ import {MatStepperModule} from '@angular/material/stepper';
     BrowserModule,
     MatDialogModule,
     BrowserAnimationsModule,
-    MatStepperModule
+    MatStepperModule,
+    MatMenuModule,
+    MatTabsModule,
+    MatGridListModule,
+    MatCardModule
   ],
   entryComponents:[
     DialogComponent
