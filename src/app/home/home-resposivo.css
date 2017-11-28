@@ -1,0 +1,15 @@
+
+
+
+@media screen and (max-width: 375px){
+  #desafio-web{
+    display: none;
+  }
+  #desafio-mobile{
+     display: block;
+     width: 28%;
+  }
+}
+
+
+

@@ -16,33 +16,30 @@
   </nav>
 </div>
 
-
 <!--LOGIN CARD-->
-<!--<div *ngIf="!show" class="login">-->
-  <!--<div class="card login-card">-->
-    <!--<form>-->
-      <!--<input placeholder="CPF" id="cpf" type="number" class="campo-forms">-->
-      <!--<input placeholder="Senha" id="senha" type="password" class="campo-forms">-->
-    <!--</form>-->
-     <!--<div class="botoes">-->
+<div *ngIf="!show" class="login">
+    <mat-card>
+      <form>
+        <input placeholder="CPF" id="cpf" type="number" class="campo-forms">
+        <input placeholder="Senha" id="senha" type="password" class="campo-forms">
+      </form>
+       <div class="botoes">
+         <mat-button-toggle class="btn-entrar">Entrar</mat-button-toggle>
+       </div>
+      <div class="links">
+        <a href="#">Ainda não possui cadastro ?</a>
+        <a href="#">Esqueceu a senha?</a>
+      </div>
+    </mat-card>
+</div>
 
-       <!--<a class="waves-effect waves-light btn btn-entrar">Entrar</a>-->
-     <!--</div>-->
-    <!--<div class="links">-->
-      <!--<a href="#">Ainda não possui cadastro ?</a>-->
-      <!--<a href="#">Esqueceu a senha?</a>-->
-    <!--</div>-->
-<!--</div>-->
-<!--</div>-->
+ <!--SLIDER-->
+<section id="sessao1" class="slide">
 
-  <!-- slider-->
-  <header>
-  </header>
+</section>
 
-  <img class="responsive-img" src="../../assets/img/desafio.jpg">
-
-  <!--Seção de cards-->
-<section class="sessao-card">
+  <!--Seção de cards DECSKTOP-->
+<section id="sessao2" class="sessao-card">
     <div class="section">
       <div class="center-align">
         <p class="titulo_s1">Somos uma plataforma completa para a organização
@@ -54,45 +51,47 @@
         </p>
           <mat-grid-list cols="3">
             <mat-grid-tile>
-            <div class="box-card">
+            <div class="box-card1">
+              <!--<img class="responsive-img" src="../../assets/img/Prancheta 1.jpg" alt="">-->
               <mat-card class="cards">
                 <mat-card-title  class=" titulo_card-verde"><p>Simples e fácil</p></mat-card-title>
                   <mat-card-content>
-                    <p>
+                    <p class="texto-card">
                       Crie e organize todo o seu evento de qualquer lugar, com facilidade e segurança.
                       Desde a criação do evento à vendas.
-                      Controle e gerencie suas tarefas em utilizando nosso
-                      Check-list pelo desktop e aplicativo.
+                      Controle e gerencie suas tarefas em utilizando nosso Check-list pelo desktop e aplicativo.
                     </p>
                     </mat-card-content>
               </mat-card>
              </div>
             </mat-grid-tile>
           <mat-grid-tile>
-            <div class="box-card">
+            <div class="box-card2">
+              <!--<img class="responsive-img" src="../../assets/img/Prancheta 3.jpg" alt="">-->
               <mat-card class="cards">
                 <mat-card-title  class="titulo_card-rosa"><p>Simples e fácil</p></mat-card-title>
                 <mat-card-content>
-                  <p>
-                    Crie e organize todo o seu evento de qualquer lugar, com facilidade e segurança.
-                    Desde a criação do evento à vendas.
-                    Controle e gerencie suas tarefas em utilizando nosso
-                    Check-list pelo desktop e aplicativo.
+                  <p class="texto-card">
+                    Utilize diversas ferramentas durante a realização do seu evento para tornar a experiência inesquecível.
+                    Realize sorteios
+                    Faça ou mande pesquisas aos participantes,
+                    Receba perguntas para os palestrantes
+                    E mais! Conheça todas as ferramentas da TicketPhone e tenha mais intereção com seus participantes.
                   </p>
                 </mat-card-content>
               </mat-card>
              </div>
             </mat-grid-tile>
           <mat-grid-tile>
-              <div class="box-card">
+              <div class="box-card3">
+                <!--<img class="responsive-img" src="../../assets/img/Prancheta 2.jpg" alt="">-->
                 <mat-card class="cards">
                   <mat-card-title  class="titulo_card-azul"><p>Simples e fácil</p></mat-card-title>
                   <mat-card-content>
-                    <p>
-                      Crie e organize todo o seu evento de qualquer lugar, com facilidade e segurança.
-                      Desde a criação do evento à vendas.
-                      Controle e gerencie suas tarefas em utilizando nosso
-                      Check-list pelo desktop e aplicativo.
+                    <p class="texto-card" >
+                      Gere certificados automaticamente, com contagem de horas.
+                      Mande e-mails aos seus participantes.
+                      Analise e gere relatórios detalhados sobre todas as informações dos seus eventos: Inscrições, registros de presenças, vendas, cadastros entre outros.
                     </p>
                   </mat-card-content>
                 </mat-card></div>
@@ -101,6 +100,8 @@
       </div>
     </div>
   </section>
+
+
 
 
   <!--Seleção tabs-->
@@ -117,27 +118,26 @@
         <div>
           <div class="box_ferramentas">
             <div id="ingre" class="row">
-              <p class="ingre_titulo">Seu Ingresso será individual ou múltiplo ?</p>
+              <p class="ingre_titulo">Seu ingresso será individual ou múltiplo?</p>
               <mat-grid-list cols="2" rowHeight="2:1">
                 <mat-grid-tile>
                   <div class="box_ingre_text indi">
                     <img class="img_ingre" src="../../assets/img/ing%20ind.svg" alt="">
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                   <ul class="box-texto none">
+                     <li>Com ingressos individuais cada participante comprará seu próprio ingresso, criar seu próprio cadastro e você terá todas as informações de quem participará da sua da sua atividade. </li>
+                     <li>É uma ótima opção se você gostaria de ter o controle que quem participa da sua atividade e de proporcionar uma relação pessoal para cada participante</li>
+                     <li>Ideal para eventos e atividades acadêmica, profissionais, competições, passeios turísticos, entre outros….</li>
+                   </ul>
                   </div>
                 </mat-grid-tile>
                 <mat-grid-tile>
                   <div class="box_ingre_text mult">
                     <img class="img_ingre" src="../../assets/img/ing%20mul.svg" alt="">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-
+                      <ul  class="box-texto2 none">
+                        <li> Com ingressos múltiplos o mesmo participante pode comprar quantos ingressos ele quiser, para familiares e amigos utilizando o seu próprio cadastro.</li>
+                        <li>Nesta opção você pode criar pacotes de vendas de ingressos, vender mesas, grupos, times, dar descontos, o que quiser.</li>
+                        <li>Ideal para eventos que não precisam da identificação: Shows, apresentações, feiras, festas, passeios turísticos, entradas para parques, entre outros…</li>
+                      </ul>
                     </div>
                   </mat-grid-tile>
               </mat-grid-list>
@@ -148,36 +148,148 @@
         <input id="tab-2" type="radio" name="tabs" aria-hidden="true">
         <h2>Tipos de inscrições</h2>
         <div>
-          <p>Represents a generic document or application section. In this context, a section is a thematic grouping of content, typically with a header, possibly with a footer. Examples include chapters in a book, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A web site's home page could be split into sections for an introduction, news items, contact information.</p>
-          <p>Source: <a href="http://html5doctor.com/element-index/">html5doctor</a> for Section</p>
+          <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile>
+              <div class="box_ingre_text ">
+                <p class="ingre_titulo">Crie tipos de inscrições e lotes de ingressos.</p>
+                  <ul class="none">
+                    <li> Pensando em todos os tipos de evento e atividades a TicketPhone possibilita à você separar seus ingressos em TIPOS.</li>
+                    <li>  Separe seus ingressos em:.</li>
+                    <li>- Meia e Inteira;</li>
+                    <li> - Pista e Vip;</li>
+                    <li>- Lote 1, 2, 3;</li>
+                    <li>-Bennie and the jets, Your song e Rocket man.</li>
+                    <li> Do jeito que você quiser:
+                      Escolha os preõs de cada um dos lotes;
+                      As datas de lançamento;
+                      Quais programações, produtos, serviços e pacotes estão disponíveis para cada um dos tipos.</li>
+                  </ul>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="box-icones">
+                <img src="../../assets/img/01.svg" alt="">
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
         </div>
         <label for="tab-3" tabindex="0"></label>
         <input id="tab-3" type="radio" name="tabs" aria-hidden="true">
         <h2>Programações</h2>
         <div>
-          <p>The source element allows authors to specify multiple alternative media resources for media elements. It does not represent anything on its own. The src attribute gives the address of the media resource. The value must be a valid non-empty URL potentially surrounded by spaces. This attribute must be present.</p>
-          <p>Source: <a href="http://html5doctor.com/element-index/">html5doctor</a> for Source</p>
+          <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile>
+              <div class="box_ingre_text ">
+                <p class="ingre_titulo">Venda experiências separadamente.</p>
+                <ul class="none">
+                  <li>Na TicketPhone você não precisa criar um evento para vender programações separadamente.</li>
+                  <li>Crie a programação do seu evento e venda cada uma delas individualmente.
+                    Ou crie uma programação principal e disponibilize ao seu cliente adicionar atividades extras na hora da compra.
+                  </li>
+                  <li>*programação incluída automaticamente à compra do ingresso.</li>
+                </ul>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="box-icones">
+                <img src="../../assets/img/02.svg" alt="">
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
         </div>
         <label for="tab-4" tabindex="0"></label>
         <input id="tab-4" type="radio" name="tabs" aria-hidden="true">
         <h2>Produtos e serviços</h2>
         <div>
-          <p>The source element allows authors to specify multiple alternative media resources for media elements. It does not represent anything on its own. The src attribute gives the address of the media resource. The value must be a valid non-empty URL potentially surrounded by spaces. This attribute must be present.</p>
-          <p>Source: <a href="http://html5doctor.com/element-index/">html5doctor</a> for Source</p>
+          <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile>
+              <div class="box_ingre_text">
+                <p class="ingre_titulo">Venda produtos e serviços.</p>
+                <ul class="none">
+                  <li>Não perca a oportunidade de vender.
+                    Além de seus ingressos e passes ofereça mais aos seus clientes.
+                  </li>
+                  <li> Já pensou em vender on-line camisas, copos decorativos, baldes de bebidas, kits, brindes, acesso aos camarins, serviço de transporte, de delivery, de guia, tradutor o que você quiser facilmente configurado.</li>
+                </ul>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="box-icones">
+                <img src="../../assets/img/03.svg" alt="">
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
         </div>
         <label for="tab-5" tabindex="0"></label>
         <input id="tab-5" type="radio" name="tabs" aria-hidden="true">
         <h2>Pacotes</h2>
         <div>
-          <p>The source element allows authors to specify multiple alternative media resources for media elements. It does not represent anything on its own. The src attribute gives the address of the media resource. The value must be a valid non-empty URL potentially surrounded by spaces. This attribute must be present.</p>
-          <p>Source: <a href="http://html5doctor.com/element-index/">html5doctor</a> for Source</p>
+            <mat-grid-list cols="2" rowHeight="2:1">
+              <mat-grid-tile>
+                <div class="box_ingre_text">
+                  <p class="ingre_titulo">E que tal vender pacotes?</p>
+                  <ul class="none">
+                    <li>Crie pacotes com seus ingressos, programações, produtos e serviços.</li>
+                    <li>Agrupe e crie preços promocionais para estimular suas vendas.</li>
+                    <li>
+                      <strong>
+                        Pacotes Fixo
+                      </strong>
+                    </li>
+                    <li> Um grupo de itens vendidos em conjunto.</li>
+                    <li>
+                     <strong>
+                       Pacotes personalizados
+                     </strong>
+                    </li>
+                    <li>
+                      Um grupo de itens onde o participante pode selecionar um número determinado de itens do pacote. Ex:
+                    </li>
+                    <li>
+                      Pacote 1- Selecione 2 palestra:
+                    </li>
+                    <li>
+                      -Palestra 1
+                    </li>
+                    <li>
+                      -Palestra 2
+                    </li>
+                    <li>
+                      -Palestra 3
+                    </li>
+                    <li>
+                      -Palestra 4
+                    </li>
+                  </ul>
+                </div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="box-icones">
+                  <img class="img-pac-fer" src="../../assets/img/06.svg" alt="">
+                </div>
+              </mat-grid-tile>
+            </mat-grid-list>
         </div>
         <label for="tab-6" tabindex="0"></label>
         <input id="tab-6" type="radio" name="tabs" aria-hidden="true">
         <h2>Ferramentas</h2>
         <div>
-          <p>The source element allows authors to specify multiple alternative media resources for media elements. It does not represent anything on its own. The src attribute gives the address of the media resource. The value must be a valid non-empty URL potentially surrounded by spaces. This attribute must be present.</p>
-          <p>Source: <a href="http://html5doctor.com/element-index/">html5doctor</a> for Source</p>
+          <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile>
+              <div class="box_ingre_text">
+                <p class="ingre_titulo">Ferramentas</p>
+                <ul class="none">
+                  <li>Pensando em atender todos os tipos de eventos e atividades a TicketPhone criou ferramentas especiais para
+                    você utilizar no seu evento. Encontradas nas configurações das atividades ou para serem utilizadas durante ou após a atividade pelo desktop e aplicativos.</li>
+                </ul>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="box-icones">
+                <img class="img-pac-fer" src="../../assets/img/07.svg" alt="">
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
         </div>
       </div>
     </div>
@@ -192,23 +304,36 @@
   <mat-card class="plataformas">
     <div class="box">
       <mat-tab-group class="tab-plat">
-          <mat-tab label="Plataforma
-              Integrada" disabled>
+          <mat-tab disabled>
+            <ng-template mat-tab-label>
+              <img class="logo-plat"  src="../../assets/img/texto%20plat.svg" alt="">
+            </ng-template>
           </mat-tab>
           <mat-tab class="tab-select">
             <ng-template mat-tab-label>
               <img class="imagens-plat" src="../../assets/img/web.svg" alt="">
             </ng-template>
             <div class="demo-tab-content">
-              <mat-grid-list cols="2" rowHeight="2:1">
+              <mat-grid-list cols="2" rowHeight="3:2">
                 <mat-grid-tile>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
-                    Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
-                    In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec.
-                  </p>
+                  <div class="esquerda">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+                      Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+                      In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec.
+                    </p>
+                  </div>
                 </mat-grid-tile>
-                <mat-grid-tile>2</mat-grid-tile>
+                <mat-grid-tile>
+                  <div class="box-desk">
+                    <div class="esquerda">
+                      <img  class="desk"  src="../../assets/img/desktop.png" alt="">
+                    </div>
+                    <div class="btn">
+                      <mat-button-toggle class="btn-experi">Experimente agora</mat-button-toggle>
+                    </div>
+                  </div>
+                </mat-grid-tile>
               </mat-grid-list>
             </div>
           </mat-tab>
@@ -216,11 +341,74 @@
           <ng-template mat-tab-label>
             <img class="imagens-plat" src="../../assets/img/tab%20e%20sm.svg" alt="">
           </ng-template>
+            <div class="demo-tab-content">
+              <mat-grid-list cols="3" rowHeight="3:3">
+                <mat-grid-tile>
+                  <div class="esquerda">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+                      Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+                      In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec.
+                    </p>
+                  </div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                  <div class="box-desk">
+                    <div class="esquerda">
+                      <img  class="desk"  src="../../assets/img/app%20verde.png" alt="">
+                    </div>
+                    <div class="btn">
+                      <mat-button-toggle class="btn-experi">Experimente agora</mat-button-toggle>
+                    </div>
+                  </div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                  <div class="box-desk">
+                    <div class="esquerda">
+                      <img  class="desk"  src="../../assets/img/app%20azul.png" alt="">
+                    </div>
+                    <div class="btn">
+                      <mat-button-toggle class="btn-experi">Experimente agora</mat-button-toggle>
+                    </div>
+                  </div>
+                </mat-grid-tile>
+              </mat-grid-list>
+            </div>
           </mat-tab>
           <mat-tab>
             <ng-template mat-tab-label>
               <img  class="imagens-plat" src="../../assets/img/maq%20ticketp.svg" alt="">
             </ng-template>
+            <div class="demo-tab-content">
+              <mat-grid-list cols="4" rowHeight="3:4">
+                <mat-grid-tile>
+                  <div>
+                    <img class="img-maq"  src="../../assets/img/maq.png" alt="">
+                  </div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                  <div>
+                    <p>Conheça a maquina</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+                      Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+                      In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec.</p>
+                  </div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                  <div>
+                    <img class="img-maq"  src="../../assets/img/maq2.png" alt="">
+                  </div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                  <div>
+                    <p>Conheça a maquina</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+                      Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+                      In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec.</p>
+                  </div>
+                </mat-grid-tile>
+              </mat-grid-list>
+            </div>
           </mat-tab>
         </mat-tab-group>
     </div>
@@ -229,7 +417,7 @@
 
 
 
-<!--RODAPÉ-->
+<!--RODAPÉ QUE SERÁ USADO DEPOIS  -->
   <!--<footer class="page-footer">-->
     <!--<mat-grid-list cols="10">-->
       <!--<mat-grid-tile>-->

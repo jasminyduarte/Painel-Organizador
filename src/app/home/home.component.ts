@@ -1,10 +1,11 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
+import {MatTabGroup} from '@angular/material';
 import * as $ from 'jquery';
 
 @Component({
   selector: 'home-component',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css', './home-resposivo.css']
 })
 export class HomeComponent implements OnInit {
   lista1: string[];
@@ -14,8 +15,14 @@ export class HomeComponent implements OnInit {
   show = true;
   assustos = [];
 
+  ///////////////////////////////////////
+  // PEGAR OBJETO MATGROUP DO TEMPLATE //
+  ///////////////////////////////////////
+  @ViewChild(MatTabGroup) grupoPlataformas: MatTabGroup;
+
 
   constructor() {
+    // this.grupoPlataformas.selectedIndex = 1;
   }
 
   ngOnInit() {
@@ -37,12 +44,20 @@ export class HomeComponent implements OnInit {
       {name: 'Outros'},
     ];
 
-    $("#mensagem .header").on("click", function(){
-      $("#mensagem .conteudo").slideToggle();
-    });
+    // $("#mensagem .header").on("click", function(){
+    //   $("#mensagem .conteudo").slideToggle();
+    // });
 
+
+    /////////////////////////////////////////////////////////
+    // FORCAR TAB GRUPOS PLATAFORMA COMECAR NO SEGUNDO TAB //
+    /////////////////////////////////////////////////////////
+    this.grupoPlataformas.selectedIndex = 1;
   }
 
+  /////////////////////////////////////////////////////////
+  // MOSTRA O CARD LOGIN //
+  /////////////////////////////////////////////////////////
   Mostra() {
     this.show = !this.show;
 }
