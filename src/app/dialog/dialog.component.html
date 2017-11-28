@@ -2,23 +2,23 @@
   <img src="../../assets/img/logo-azul.svg">
 </div>
 <div class="modal-send-message">
-  <mat-horizontal-stepper>
+  <mat-horizontal-stepper [linear]="isLinear">
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
 
-    <mat-step>
-      <form>
         <p class="hello">Olá,</p>
         <p class="label">O que você gostaria de fazer?</p>
         <mat-form-field>
-            <mat-select placeholder="Escolha uma opção">
-              <mat-option *ngFor="let q of question1" [value]="q.value">
-                {{ q.viewValue }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
+          <mat-select [(ngModel)] = "step1" (change)="changeLabelTextArea()" placeholder="Escolha uma opção" formControlName="firstCtrl" required>
+            <mat-option *ngFor="let q of question1" [value]="q.value">
+              {{ q.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
 
         <p class="label">Você é um(a)?</p>
         <mat-form-field>
-          <mat-select placeholder="Escolha uma opção">
+          <mat-select placeholder="Escolha uma opção" required>
             <mat-option *ngFor="let p of perfil" [value]="p.value">
               {{ p.viewValue }}
             </mat-option>
@@ -30,16 +30,63 @@
       </form>
     </mat-step>
 
-    <mat-step>
-      asfhlaskfglaksdjfgla 2
+
+    <mat-step [stepControl]="secondFormGroup">
+
+      <form [formGroup]="secondFormGroup" *ngIf="step1 == 1 || step1 == 3 || step1 == 4 || step1 == 5 || step1 == 6 || step1 == 7">
+        <mat-form-field>
+          <input matInput placeholder="Qual o seu nome?" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Qual o seu sobrenome?" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Qual o seu email?" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Qual o seu telefone?" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+
+      <form [formGroup]="secondFormGroup" *ngIf="step1 == 2">
+        <mat-form-field>
+          <input matInput placeholder="Qual o seu nome?" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Qual o seu sobrenome?" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Qual o seu email?" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Qual o seu telefone?" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Qual o nome da sua empresa?" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Qual a sua cidade?" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+
     </mat-step>
 
     <mat-step>
-      asfhlaskfglaksdjfgla 2
-    </mat-step>
 
-    <mat-step>
-      asfhlaskfglaksdjfgla 2
+      <mat-form-field>
+        <textarea matInput [placeholder]="labelTextArea"></textarea>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+      </div>
     </mat-step>
   </mat-horizontal-stepper>
 </div>
