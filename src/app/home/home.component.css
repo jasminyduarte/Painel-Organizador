@@ -163,8 +163,10 @@ header{
 }
 .ferramentas{
   background: #009966;
-  margin-top: -57px;
+  margin-top: -53px;
   margin-bottom: 16px;
+  padding-top: 10px;
+  position: relative;
 }
 .titulo_ferraments{
   padding-top: 10px;
@@ -266,14 +268,16 @@ header{
 
 }
 
-
-
 .det{
   background-image: url("../../assets/img/det verde.svg");
-  position: relative;
-  top: -25px;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: bottom;
+  position: absolute;
+  top: 0;
   width: 100%;
-  height: 26px;
+  height: 40px;
+  margin-top: -34px;
 }
 
 .box-card .card .card-title p{
@@ -452,13 +456,13 @@ textarea.materialize-textarea{
 .desk{
   width: 50%;
 }
-/deep/ .mat-tab-label{
-  height: 140px !important;
-  min-width: 338px !important;
-}
-/deep/ .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
-  background-color: white !important;
-}
+/*/deep/ .mat-tab-label{*/
+  /*height: 140px !important;*/
+  /*min-width: 338px !important;*/
+/*}*/
+/*/deep/ .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{*/
+  /*background-color: white !important;*/
+/*}*/
 .btn{
   text-align: right;
   padding-right: 45px;
@@ -649,5 +653,11 @@ ul.none{
   display: none;
 }
 #mob{
+  display: none;
+}
+#card-mob{
+  display: none;
+}
+#mobile-tabs{
   display: none;
 }

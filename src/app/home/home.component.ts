@@ -2,6 +2,8 @@ import {Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
 import {MatTabGroup} from '@angular/material';
 import * as $ from 'jquery';
 
+
+
 @Component({
   selector: 'home-component',
   templateUrl: './home.component.html',

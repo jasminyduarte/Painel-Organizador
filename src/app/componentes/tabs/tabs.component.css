@@ -1,0 +1,87 @@
+@font-face {
+  font-family: helvetica-regular;
+  src: url("../../../assets/fonts/helvetica-regular.ttf");
+}
+* {
+  font-family: helvetica-regular;
+}
+
+.margin{
+  margin-top: 10px;
+}
+.plataformas{
+  background:linear-gradient(135deg,#009966,#007F9B );
+  padding: 0px;
+}
+
+.mat-tab-label{
+ height: 48px !important;
+  min-width: 90px !important;
+  color: white !important;
+}
+
+.text-card{
+  width: 100%;
+}
+.card-tabs{
+  width: 100%;
+}
+.titulo{
+  font-size: 25px;
+  font-weight: 500;
+  width: 38%;
+  text-shadow: 0px 4px 10px black;
+  color: white;
+  margin: 0px;
+  padding: 10px;
+}
+.sub-text{
+  width: 67%;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  padding-left:10px;
+}
+.demo-tab-content{
+  background: white;
+}
+.img-mob{
+  width: 60%;
+  display: block;
+  margin: 0px auto;
+}
+.img-maq{
+  width: 100%;
+  margin: 0px auto;
+}
+.text{
+  text-align: justify;
+  margin: 0px;
+  color: #5f5f5f;
+  padding: 10px;
+}
+.butn{
+  text-align: center;
+}
+.btn-experi{
+  background: #ff0099;
+  color: white;
+  border-radius: 5px;
+}
+
+.card-tabs /deep/ .mat-tab-label{
+  width: 50%;
+  color: white;
+  }
+.card-tabs /deep/ .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+  background-color: white !important;
+}
+
+.nome-maq{
+  margin: 0px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #5f5f5f;
+}

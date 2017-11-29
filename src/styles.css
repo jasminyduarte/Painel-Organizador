@@ -3,15 +3,3 @@
 body{
   margin: 0px !important;
 }
-
-
-@media screen and (max-width: 1326px){
-  /*body{*/
-    /*display: inline-block;*/
-  /*}*/
-}
-@media screen and (max-width: 45em){
-  body{
-    display: inherit;
-  }
-}

@@ -12,6 +12,12 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import { SlideComponent } from './componentes/slide/slide.component';
+import { FerramentasComponent } from './componentes/ferramentas/ferramentas.component';
+import { TabsComponent } from './componentes/tabs/tabs.component';
+
+
 
 
 
@@ -19,7 +25,10 @@ import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    SlideComponent,
+    FerramentasComponent,
+    TabsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,8 +39,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatCardModule,
     MatButtonToggleModule,
     MatPaginatorModule,
-    MatIconModule
-
+    MatIconModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
