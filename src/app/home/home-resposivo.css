@@ -1,15 +1,157 @@
-
-
-
-@media screen and (max-width: 375px){
-  #desafio-web{
-    display: none;
+ /*////////////// TELA GRANDE//////////*/
+@media screen and (max-width: 1768px){
+  .tabPanel-widget label:nth-child(1),
+  .tabPanel-widget h2:nth-child(3) {
+    left: 14em;
   }
-  #desafio-mobile{
-     display: block;
-     width: 28%;
+
+  .tabPanel-widget label:nth-child(5),
+  .tabPanel-widget h2:nth-child(7) {
+    left: 27em;
+  }
+
+  .tabPanel-widget label:nth-child(9),
+  .tabPanel-widget h2:nth-child(11) {
+    left: 40em;
+  }
+  .tabPanel-widget label:nth-child(13),
+  .tabPanel-widget h2:nth-child(15) {
+    left: 55em;
+  }
+  .tabPanel-widget label:nth-child(17),
+  .tabPanel-widget h2:nth-child(19) {
+    left: 68em;
+  }
+  .tabPanel-widget label:nth-child(21),
+  .tabPanel-widget h2:nth-child(23) {
+    left: 80em;
+  }
+
+}
+ /*////////////// TELA MÉDIA//////////*/
+@media screen and (max-width: 1326px){
+  .tabPanel-widget label:nth-child(1),
+  .tabPanel-widget h2:nth-child(3) {
+    left: 10em;
+  }
+
+  .tabPanel-widget label:nth-child(5),
+  .tabPanel-widget h2:nth-child(7) {
+    left: 24em;
+  }
+
+  .tabPanel-widget label:nth-child(9),
+  .tabPanel-widget h2:nth-child(11) {
+    left: 37em;
+  }
+  .tabPanel-widget label:nth-child(13),
+  .tabPanel-widget h2:nth-child(15) {
+    left: 51em;
+  }
+  .tabPanel-widget label:nth-child(17),
+  .tabPanel-widget h2:nth-child(19) {
+    left: 62em;
+  }
+  .tabPanel-widget label:nth-child(21),
+  .tabPanel-widget h2:nth-child(23) {
+    left: 74em;
   }
 }
+ /*////////////// TELA MOBILE//////////*/
+ @media screen and (max-width: 45em) {
+   #desk{
+     display: none;
+   }
+   /*Plataformas*/
+   /deep/ .mat-tab-label{
+     height: 90px !important;
+     min-width: 50px !important;
+   }
+   /deep/ .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+     background-color: white !important;
+   }
+   .plataformas{
+     background: linear-gradient(135deg,#009966,#007F9B );
+     padding: 0px;
+     margin: -24px 0px;
+     height: 103px;
+   }
+
+   /*Sessão tabs*/
+   .det{
+     width: 247%;
+     height: 23px;
+   }
+   .titulo_ferraments{
+     width: 70%;
+   }
+
+   /*Sessão card*/
+   .sessao-card .titulo_s1{
+     width: 83%;
+   }
+   .sessao-card .sub_s1{
+     width: 54%;
+   }
+   /*slides feito com css*/
+   .slides{
+     display: block;
+     height: 293px;
+     width: 600px;
+     margin: auto;
+     margin-top: 20px;
+     position: relative;
+   }
+   .slides li {
+     list-style: none;
+     position: absolute;
+     width: 50%;
+     }
+   .slides img {
+      margin: auto;
+      height: 100%;
+       width: 100%;
+     vertical-align: top;
+    }
+   .slides input {
+     display: none;
+   }
+   .slides label {
+     background-color: white;
+     bottom: -14px;
+     cursor: pointer;
+     display: block;
+     height: 10px;
+     position: absolute;
+     width: 21px;
+     z-index: 10;
+     border-radius: 20px;
+     }
+   .slides li:nth-child(1) label {
+      left: 10px;
+   }
+   .slides li:nth-child(2) label {
+      left: 40px;
+      }
+
+   .slides li:nth-child(3) label {
+     left: 70px;
+      }
+   .slider img {
+      opacity: 0;
+       visibility: hidden;
+      }
+
+   .slider li input:checked ~ img {
+          opacity: 1;
+       visibility: visible;
+           z-index: 10;
+       }
+   /*Menu*/
+   .organizador{
+     display: none;
+   }
 
 
+ }
 

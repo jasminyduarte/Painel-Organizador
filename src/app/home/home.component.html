@@ -5,13 +5,26 @@
     <mat-card  class="MENU">
       <a href="#" class="brand-logo"><img class="logo" src="../../assets/img/logo-azul.svg" alt="ticketphone"></a>
       <p class="organizador">Organizador</p>
-      <ul  class="menu-ul">
+      <ul id="menu-desk" class="menu-ul">
         <li class="box-menu"><a href="badges.html">Vantagens</a></li>
         <li class="box-menu" (click)="Mostra()" ><a>Login</a></li>
         <li class="box-menu"><a href="#">Prestadores de serviços</a></li>
         <li class="box-menu"><a href="#">Valores e termos</a></li>
         <li class="box-menu"><a href="#">Quem somos</a></li>
       </ul>
+       <!--Mobile-->
+      <div id="menu-mob">
+        <button mat-icon-button [matMenuTriggerFor]="appMenu">
+          <mat-icon>dehaze</mat-icon>
+        </button>
+        <mat-menu #appMenu="matMenu">
+          <button mat-menu-item>Vantagens</button>
+          <button mat-menu-item>Login</button>
+          <button mat-menu-item>Prestadores de serviços</button>
+          <button mat-menu-item>Valores e termos</button>
+          <button mat-menu-item>Quem somos</button>
+        </mat-menu>
+      </div>
     </mat-card>
   </nav>
 </div>
@@ -49,7 +62,7 @@
           Crie e acompanhe todo o seu evento em tempo real,
           pelo desktop, smatphone ou tablet.
         </p>
-          <mat-grid-list cols="3">
+          <mat-grid-list id="card-desk" cols="3">
             <mat-grid-tile>
             <div class="box-card1">
               <!--<img class="responsive-img" src="../../assets/img/Prancheta 1.jpg" alt="">-->
@@ -97,6 +110,23 @@
                 </mat-card></div>
             </mat-grid-tile>
         </mat-grid-list>
+          <ul id="card-mob" class="slides">
+            <li>
+              <input type="radio" id="slide1" name="slide" checked>
+              <label for="slide1"></label>
+              <img src="../../assets/img/maq.png" alt="">
+            </li>
+            <li>
+              <input type="radio" id="slide2" name="slide" checked>
+              <label for="slide2"></label>
+              <img src="../../assets/img/desktop.png" alt="">
+            </li>
+            <li>
+              <input type="radio" id="slide3" name="slide" checked>
+              <label for="slide3"></label>
+              <img src="../../assets/img/Prancheta%202.jpg" alt="">
+            </li>
+          </ul>
       </div>
     </div>
   </section>
@@ -104,14 +134,14 @@
 
 
 
+
   <!--Seleção tabs-->
+<div class="det"></div>
   <div class="ferramentas">
-    <div class="det">
-    </div>
       <p class="titulo_ferraments">Seus eventos e atividades Personalizados do jeito que você quiser</p>
 
     <div class="card-content card-content-tabs">
-      <div class="tabPanel-widget">
+      <div id="desk" class="tabPanel-widget">
         <label for="tab-1" tabindex="0"></label>
         <input id="tab-1" type="radio" name="tabs" checked="true" aria-hidden="true">
         <h2>Seu ingresso</h2>
@@ -292,6 +322,9 @@
           </mat-grid-list>
         </div>
       </div>
+      <div id="mob">
+
+      </div>
     </div>
   </div>
 
@@ -300,8 +333,8 @@
     <img  class="qrimagem responsive-img" src="../../assets/img/ingressoqr.jpg" alt="">
   </div>
 
-  <!--Seção plataformas -->
-  <mat-card class="plataformas">
+  <!--Seção plataformas Desktop-->
+  <mat-card id="desk" class="plataformas">
     <div class="box">
       <mat-tab-group class="tab-plat">
           <mat-tab disabled>
@@ -412,6 +445,47 @@
           </mat-tab>
         </mat-tab-group>
     </div>
+</mat-card>
+
+<!--Seção plataformas Mobile-->
+<mat-card id="mob" class="plataformas">
+  <div class="box">
+    <mat-tab-group class="tab-plat">
+      <mat-tab label="Desktop" class="tab-select">
+        <div class="demo-tab-content">
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+                  Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+                  In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec.
+                </p>
+              </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Tablet e Smartphones" class="tab-select">
+        <div class="demo-tab-content">
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+              Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+              In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec.
+            </p>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Maquininha" class="tab-select">
+        <div class="demo-tab-content">
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+              Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+              In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec.
+            </p>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
 </mat-card>
 
 

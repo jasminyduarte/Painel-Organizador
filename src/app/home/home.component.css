@@ -158,12 +158,12 @@ header{
 .section{
   width: 100%;
   height: auto;
-  height: 650px;
+  height: 750px;
   background: #4d4d4d;
 }
 .ferramentas{
   background: #009966;
-  margin-top: 0px;
+  margin-top: -57px;
   margin-bottom: 16px;
 }
 .titulo_ferraments{
@@ -271,9 +271,9 @@ header{
 .det{
   background-image: url("../../assets/img/det verde.svg");
   position: relative;
-  top: -21px;
+  top: -25px;
   width: 100%;
-  height: 22px;
+  height: 26px;
 }
 
 .box-card .card .card-title p{
@@ -614,29 +614,40 @@ ul.none{
   border-top: 17px solid #009966;
 }
 
-@media screen and (max-width: 45em) {
-  .tabPanel-widget label,
-  .tabPanel-widget input[name="tabs"] {
-    display: none;
-  }
-  .tabPanel-widget > input + h2 + div {
-    display: block !important;
-    position: static !important;
-    padding: 1em !important;
-    height: auto !important;
-    width: auto !important;
-  }
+/*@media screen and (max-width: 45em) {*/
+  /*.tabPanel-widget label,*/
+  /*.tabPanel-widget input[name="tabs"] {*/
+    /*display: none;*/
+  /*}*/
+  /*.tabPanel-widget > input + h2 + div {*/
+    /*display: block !important;*/
+    /*position: static !important;*/
+    /*padding: 1em !important;*/
+    /*height: auto !important;*/
+    /*width: auto !important;*/
+  /*}*/
 
-  .tabPanel-widget h2 {
-    width: auto;
-    position: static !important;
-    background: #009966 !important;
-  }
-  .tabPanel-widget h2:after {
-    display: none !important;
-  }
-}
+  /*.tabPanel-widget h2 {*/
+    /*width: auto;*/
+    /*position: static !important;*/
+    /*background: #009966 !important;*/
+  /*}*/
+  /*.tabPanel-widget h2:after {*/
+    /*display: none !important;*/
+  /*}*/
+/*}*/
 /*MOBILE ESCODENDO DIV */
 #desafio-mobile{
+  display: none;
+}
+
+#card-mob{
+  display: none;
+}
+
+#menu-mob{
+  display: none;
+}
+#mob{
   display: none;
 }
