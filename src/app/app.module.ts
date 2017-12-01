@@ -16,6 +16,10 @@ import {MatButtonModule} from '@angular/material/button';
 import { SlideComponent } from './componentes/slide/slide.component';
 import { FerramentasComponent } from './componentes/ferramentas/ferramentas.component';
 import { TabsComponent } from './componentes/tabs/tabs.component';
+import { CardLoginComponent } from './componentes/card-login/card-login.component';
+import { TiposEventComponent } from './componentes/tipos-event/tipos-event.component';
+import { FooterComponent } from './componentes/footer/footer.component';
+import { TabsDesktopComponent } from './componentes/tabs-desktop/tabs-desktop.component';
 
 
 
@@ -28,7 +32,11 @@ import { TabsComponent } from './componentes/tabs/tabs.component';
     HomeComponent,
     SlideComponent,
     FerramentasComponent,
-    TabsComponent
+    TabsComponent,
+    CardLoginComponent,
+    TiposEventComponent,
+    FooterComponent,
+    TabsDesktopComponent
   ],
   imports: [
     BrowserModule,

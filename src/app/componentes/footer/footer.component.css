@@ -1,0 +1,29 @@
+.icones{
+  margin: 10px;
+}
+.icones img {
+  width: 40px;
+}
+.page-footer{
+  position: relative;
+  background: #4d4d4d;
+  color: white;
+  padding: 10px;
+}
+
+.box{
+  display: flex;
+  justify-content: space-between;
+}
+.linha_baixo{
+  border-top: 1px solid #5d5d5d;
+  text-align: center;
+  font-size: 12px;
+}
+.info{
+  padding-left: 40px;
+  font-size: 12px;
+}
+.redes{
+  padding-right: 40px;
+}

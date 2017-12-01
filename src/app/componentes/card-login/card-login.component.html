@@ -1,0 +1,49 @@
+<body id="overlay">
+<div class="container">
+  <div class="backbox">
+    <div class="loginMsg">
+      <div class="textcontent">
+        <p class="title">Não Possui uma conta?</p>
+        <p>Registra-se agora e aproveite todos os recursos</p>
+        <button id="switch1">Registra-se</button>
+      </div>
+    </div>
+    <div class="signupMsg visibility">
+      <div class="textcontent">
+        <p class="title">Já possui conta?</p>
+        <p>Faça seu login.</p>
+        <button id="switch2">Login</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="frontbox">
+    <div class="login" >
+      <h2>LOGIN</h2>
+      <div *ngIf="!esconde" class="inputbox">
+        <input type="number" name="cpf" placeholder="CPF">
+        <input type="password" name="password" placeholder="Senha">
+      </div>
+      <p (click)="RecuperaSenha()" class="esqueceu">Esqueceu a senha ?</p>
+      <button>Entrar</button>
+      <div *ngIf="mostra !=true" class="recupe">
+        <input type="number" name="email" placeholder="Digite seu email">
+        <p>Um link para alteração será enviando para o email informado </p>
+      </div>
+    </div>
+
+    <div class="signup hide">
+      <h2>Cadastrar</h2>
+      <div class="inputbox cadastro">
+        <input type="text" name="nome" placeholder="Nome Completo">
+        <input type="text" name="email" placeholder="Email">
+        <input type="text" name="emailconf" placeholder="Confirmar email">
+        <input type="password" name="password" placeholder="Senha">
+        <input type="password" name="passwordconf" placeholder="Confirmar senha">
+      </div>
+      <button>Cadastrar</button>
+    </div>
+  </div>
+  <!-- frontbox -->
+</div>
+</body>

@@ -1,0 +1,181 @@
+@font-face {
+  font-family: helvetica-regular;
+  src: url("../../../assets/fonts/helvetica-regular.ttf");
+}
+* {
+  font-family: helvetica-regular;
+}
+#overlay{
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 100;
+}
+.container{
+  width: 600px;
+  height: 350px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  z-index: 90;
+}
+.backbox{
+  background: linear-gradient(135deg, #009966 , #33cc70);
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  transform: translate(0,-50%);
+  top:50%;
+  display: inline-flex;
+}
+
+.frontbox{
+  background-color: white;
+  border-radius: 20px;
+  height: 100%;
+  width: 50%;
+  z-index: 10;
+  position: absolute;
+  right:0;
+  margin-right: 3%;
+  margin-left: 3%;
+  transition: right .8s ease-in-out;
+}
+
+.moving{
+  right:45%;
+}
+
+.loginMsg, .signupMsg{
+  width: 50%;
+  height: 100%;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.loginMsg .title,
+.signupMsg .title{
+  font-weight: 300;
+  font-size: 23px;
+}
+
+.loginMsg p,
+.signupMsg p {
+  font-weight: 100;
+  width: 54%;
+}
+
+.esqueceu{
+  text-align: left;
+}
+
+.textcontent{
+  color:white;
+  margin-top:65px;
+  margin-left: 12%;
+}
+
+.loginMsg button,
+.signupMsg button {
+  background-color: #ff0099;
+  border: 2px solid #cacaca;
+  border-radius: 10px;
+  color:white;
+  font-size: 12px;
+  box-sizing: content-box;
+  font-weight: 300;
+  padding:10px;
+  margin-top: 20px;
+  width: 67px;
+}
+
+/* front box content*/
+.login, .signup{
+  padding: 20px;
+  text-align: center;
+}
+
+.login h2,
+.signup h2 {
+  color: #009966;
+  font-size:22px;
+}
+.signup h2{
+  margin: 2px;
+}
+.inputbox{
+  margin-top:30px;
+}
+.inputbox.cadastro{
+  margin-top: 5px;
+}
+.login input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background-color: #f2f2f2;
+  border: none;
+  margin-bottom:20px;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 10px;
+}
+.signup input {
+  display: block;
+  width: 100%;
+  height: 38px;
+  background-color: #f2f2f2;
+  border: none;
+  margin-bottom: 12px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.login button,
+.signup button{
+  background-color: #ff0099;
+  border: none;
+  color:white;
+  font-size: 12px;
+  font-weight: 300;
+  box-sizing: content-box;
+  padding:10px;
+  border-radius: 10px;
+  width: 60px;
+  position: absolute;
+  right:30px;
+  bottom: 30px;
+  cursor: pointer;
+}
+.signup button{
+  bottom: 10px;
+}
+
+/* Fade In & Out*/
+.login p {
+  cursor: pointer;
+  color:#5f5f5f;
+  font-size:15px;
+}
+
+.loginMsg, .signupMsg{
+  /*opacity: 1;*/
+  transition: opacity .8s ease-in-out;
+}
+
+.visibility{
+  opacity: 0;
+}
+
+.hide{
+  display: none;
+}
+

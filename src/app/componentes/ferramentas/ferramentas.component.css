@@ -20,7 +20,7 @@
 }
 .box{
   background: white;
-  height: 600px;
+  height: 750px;
 }
 
 .titulo{
@@ -34,6 +34,9 @@
 }
 .border{
   border-bottom: 1px solid #cacaca;
+  margin: 0px auto;
+  width: 90%;
+  display: block;
 }
 
 ul{

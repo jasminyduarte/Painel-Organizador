@@ -8,14 +8,14 @@
       <ul id="menu-desk" class="menu-ul">
         <li class="box-menu"><a href="badges.html">Vantagens</a></li>
         <li class="box-menu" (click)="Mostra()" ><a>Login</a></li>
-        <li class="box-menu"><a href="#">Prestadores de serviços</a></li>
-        <li class="box-menu"><a href="#">Valores e termos</a></li>
+        <!--<li class="box-menu"><a href="#">Prestadores de serviços</a></li>-->
+        <!--<li class="box-menu"><a href="#">Valores e termos</a></li>-->
         <li class="box-menu"><a href="#">Quem somos</a></li>
       </ul>
       <!--Mobile-->
       <div id="menu-mob">
         <button mat-icon-button [matMenuTriggerFor]="appMenu">
-          <mat-icon>home</mat-icon>
+          <img src="../../assets/img/icons8-Cardápio.svg" alt="">
         </button>
         <mat-menu #appMenu="matMenu">
           <button mat-menu-item>Vantagens</button>
@@ -29,22 +29,8 @@
   </nav>
 </div>
 
-<!--LOGIN CARD-->
-<div *ngIf="!show" class="login">
-  <mat-card>
-    <form>
-      <input placeholder="CPF" id="cpf" type="number" class="campo-forms">
-      <input placeholder="Senha" id="senha" type="password" class="campo-forms">
-    </form>
-    <div class="botoes">
-      <mat-button-toggle class="btn-entrar">Entrar</mat-button-toggle>
-    </div>
-    <div class="links">
-      <a href="#">Ainda não possui cadastro ?</a>
-      <a href="#">Esqueceu a senha?</a>
-    </div>
-  </mat-card>
-</div>
+<!--Login-->
+<app-card-login *ngIf="!show" ></app-card-login>
 
 <!--SLIDER-->
 <section id="sessao1" class="slide">
@@ -83,7 +69,7 @@
           <div class="box-card2">
             <!--<img class="responsive-img" src="../../assets/img/Prancheta 3.jpg" alt="">-->
             <mat-card class="cards">
-              <mat-card-title  class="titulo_card-rosa"><p>Simples e fácil</p></mat-card-title>
+              <mat-card-title  class="titulo_card-rosa"><p>O diferencial na palma da sua mão!</p></mat-card-title>
               <mat-card-content>
                 <p class="texto-card">
                   Utilize diversas ferramentas durante a realização do seu evento para tornar a experiência inesquecível.
@@ -100,7 +86,7 @@
           <div class="box-card3">
             <!--<img class="responsive-img" src="../../assets/img/Prancheta 2.jpg" alt="">-->
             <mat-card class="cards">
-              <mat-card-title  class="titulo_card-azul"><p>Simples e fácil</p></mat-card-title>
+              <mat-card-title  class="titulo_card-azul"><p>Sem complicações!</p></mat-card-title>
               <mat-card-content>
                 <p class="texto-card" >
                   Gere certificados automaticamente, com contagem de horas.
@@ -327,215 +313,13 @@
 
 
 <!--Sessão plataformas Desktop-->
-<mat-card id="desk" class="plataformas">
-  <div class="box">
-    <mat-tab-group class="tab-plat">
-      <mat-tab disabled>
-        <ng-template mat-tab-label>
-          <img class="logo-plat"  src="assets/img/texto%20plat.svg" alt="">
-        </ng-template>
-      </mat-tab>
-      <mat-tab class="tab-select">
-        <ng-template mat-tab-label>
-          <img class="imagens-plat" src="assets/img/web.svg" alt="">
-        </ng-template>
-        <div class="demo-tab-content">
-          <mat-grid-list cols="2" rowHeight="3:2">
-            <mat-grid-tile>
-              <div class="esquerda">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
-                  Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
-                  In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec.
-                </p>
-              </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-              <div class="box-desk">
-                <div class="esquerda">
-                  <img  class="desk"  src="assets/img/desktop.png" alt="">
-                </div>
-                <div class="btn">
-                  <mat-button-toggle class="btn-experi">Experimente agora</mat-button-toggle>
-                </div>
-              </div>
-            </mat-grid-tile>
-          </mat-grid-list>
-        </div>
-      </mat-tab>
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <img class="imagens-plat" src="assets/img/tab%20e%20sm.svg" alt="">
-        </ng-template>
-        <div class="demo-tab-content">
-          <mat-grid-list cols="3" rowHeight="3:3">
-            <mat-grid-tile>
-              <div class="esquerda">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
-                  Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
-                  In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec.
-                </p>
-              </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-              <div class="box-desk">
-                <div class="esquerda">
-                  <img  class="desk"  src="assets/img/app%20verde.png" alt="">
-                </div>
-                <div class="btn">
-                  <mat-button-toggle class="btn-experi">Experimente agora</mat-button-toggle>
-                </div>
-              </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-              <div class="box-desk">
-                <div class="esquerda">
-                  <img  class="desk"  src="assets/img/app%20azul.png" alt="">
-                </div>
-                <div class="btn">
-                  <mat-button-toggle class="btn-experi">Experimente agora</mat-button-toggle>
-                </div>
-              </div>
-            </mat-grid-tile>
-          </mat-grid-list>
-        </div>
-      </mat-tab>
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <img  class="imagens-plat" src="assets/img/maq%20ticketp.svg" alt="">
-        </ng-template>
-        <div class="demo-tab-content">
-          <mat-grid-list cols="4" rowHeight="3:4">
-            <mat-grid-tile>
-              <div>
-                <img class="img-maq"  src="assets/img/maq.png" alt="">
-              </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-              <div>
-                <p>Conheça a maquina</p>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
-                  Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
-                  In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec.</p>
-              </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-              <div>
-                <img class="img-maq"  src="assets/img/maq2.png" alt="">
-              </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-              <div>
-                <p>Conheça a maquina</p>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
-                  Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
-                  In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec.</p>
-              </div>
-            </mat-grid-tile>
-          </mat-grid-list>
-        </div>
-      </mat-tab>
-    </mat-tab-group>
-  </div>
-</mat-card>
-
+<app-tabs-desktop></app-tabs-desktop>
 <!--Sessão Plaformas Mobile-->
 <app-tabs></app-tabs>
 
 
+<!--Tipos de eventos-->
+<app-tipos-event></app-tipos-event>
 
-
-<!--RODAPÉ QUE SERÁ USADO DEPOIS  -->
-<!--<footer class="page-footer">-->
-<!--<mat-grid-list cols="10">-->
-<!--<mat-grid-tile>-->
-<!--<p class="Titulo-footer">Conheça a TicketPhone</p>-->
-<!--<div>-->
-<!--<p *ngFor="let list1 of lista1" class="lista">{{list1}}</p>-->
-<!--</div>-->
-<!--</mat-grid-tile>-->
-
-<!--<mat-grid-tile>-->
-<!--<p class="Titulo-footer">Crie e Organize atividades únicas</p>-->
-<!--<div>-->
-<!--<p *ngFor="let list2 of lista2" class="lista">{{list2}}</p>-->
-<!--</div>-->
-<!--</mat-grid-tile>-->
-
-<!--<mat-grid-tile>-->
-<!--<p class="Titulo-footer">Vendas de qualquer lugar</p>-->
-<!--<div>-->
-<!--<p *ngFor="let list3 of lista3" class="lista">{{list3}}</p>-->
-<!--</div>-->
-<!--</mat-grid-tile>-->
-
-<!--<mat-grid-tile>-->
-<!--<div class="linha-esquerda">-->
-<!--<p class="Titulo-footer">Plataforma completa integrada</p>-->
-<!--<div>-->
-<!--<p *ngFor="let list4 of lista4" class="lista">{{list4}}</p>-->
-<!--</div>-->
-<!--</div>-->
-<!--</mat-grid-tile>-->
-
-
-<!--<div class="col s4">-->
-<!--<div class="row row_contact">-->
-<!--<div class="col s6 m6">-->
-<!--<img class="logo_footer" src="../../assets/img/logo.svg" alt="">-->
-<!--</div>-->
-<!--<div class="col s6 m6">-->
-<!--<div class="icones">-->
-<!--<img src="../../assets/img/face.svg" alt="">-->
-<!--<img src="../../assets/img/insta.svg" alt="">-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="row">-->
-<!--<div>-->
-<!--<p class="contato">Contato</p>-->
-<!--<p class="text_contato">(95)3624-4321</p>-->
-<!--<p class="text_contato">Boa Vista-RR,Sebastião Diniz, 222 - Centro</p>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="row">-->
-
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="row linha_baixo">-->
-<!--<div class="col s8">-->
-<!--<div class="texto_linha_baixo">-->
-<!--<p>TicketPhone é operado por Ideias & Negócios Assesoria Empressarial LTDA-EPP</p>-->
-<!--<p>CNPJ: 04.803.710/0001-00</p>-->
-<!--</div>-->
-<!--</div>-->
-<!--&lt;!&ndash;Mensagem box&ndash;&gt;-->
-<!--<div id="mensagem" class="mensagem">-->
-<!--<div class="header">Mandar Mensagem</div>-->
-<!--<div class="conteudo">-->
-<!--<select class="select2"   materialize="material_select"[materializeSelectOptions]="selectOptions" >-->
-<!--<option *ngFor="let option of assustos" [value]="option.value">{{option.name}}</option>-->
-<!--</select>-->
-<!--<p class="forms_titulo">Nome <span style="color:#ff0099">*</span></p>-->
-<!--<input id="nome" type="text" class="validate forms_contat">-->
-
-<!--<p class="forms_titulo">Email<span style="color:#ff0099">*</span></p>-->
-<!--<input  id="email" type="text" class="validate forms_contat">-->
-
-<!--<p class="forms_titulo">Telefone<span style="color:#ff0099">*</span></p>-->
-<!--<input  id="telefone" type="text" class="validate forms_contat">-->
-
-<!--<p class="forms_titulo">Mensagem</p>-->
-<!--<textarea id="textarea1" class="materialize-textarea"></textarea>-->
-
-<!--<div class="right-align">-->
-<!--<a class="waves-effect waves-light btn btn_enviar">Enviar</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-
-<!--</mat-grid-list>-->
-<!--</footer>-->
-
+<!--Rodapé-->
+<app-footer></app-footer>

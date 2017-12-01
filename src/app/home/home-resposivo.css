@@ -65,6 +65,7 @@
    #menu-mob{
      display: block;
      width: 40%;
+     text-align: right;
    }
    #desk{
      display: none;

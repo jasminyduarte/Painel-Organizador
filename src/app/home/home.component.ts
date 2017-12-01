@@ -24,8 +24,11 @@ export class HomeComponent implements OnInit {
 
 
   constructor() {
-    // this.grupoPlataformas.selectedIndex = 1;
+
+
   }
+
+
 
   ngOnInit() {
     // lista do rodapé
@@ -35,26 +38,26 @@ export class HomeComponent implements OnInit {
     this.lista3 = ['Vendas on-line e off-line', 'Vendas pelo site e aplicativos', 'Vendas as individuais e multiplas', 'Vendas com lugar marcado', 'Vendas de produtos e servições', 'Vendas de pacotes'];
     this.lista4 = ['TicketPhone web', 'Aplicativo Organizador', 'Aplicativo Participante', 'Maquininhas TicketPhone'];
     // select lista
-    this.assustos = [
-      {name: 'Selecione um assunto'},
-      {name: 'Ingressos'},
-      {name: 'Certificados'},
-      {name: 'Aplicativos'},
-      {name: 'Acesso a eventos'},
-      {name: 'Serviços'},
-      {name: 'Pacotes de serviços'},
-      {name: 'Outros'},
-    ];
-
+    // this.assustos = [
+    //   {name: 'Selecione um assunto'},
+    //   {name: 'Ingressos'},
+    //   {name: 'Certificados'},
+    //   {name: 'Aplicativos'},
+    //   {name: 'Acesso a eventos'},
+    //   {name: 'Serviços'},
+    //   {name: 'Pacotes de serviços'},
+    //   {name: 'Outros'},
+    // ];
     // $("#mensagem .header").on("click", function(){
     //   $("#mensagem .conteudo").slideToggle();
     // });
 
 
+
     /////////////////////////////////////////////////////////
     // FORCAR TAB GRUPOS PLATAFORMA COMECAR NO SEGUNDO TAB //
     /////////////////////////////////////////////////////////
-    this.grupoPlataformas.selectedIndex = 1;
+    // this.grupoPlataformas.selectedIndex = 1;
   }
 
   /////////////////////////////////////////////////////////
@@ -63,8 +66,5 @@ export class HomeComponent implements OnInit {
   Mostra() {
     this.show = !this.show;
 }
-
-
-
 
 }
