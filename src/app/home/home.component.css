@@ -384,7 +384,7 @@ input.select-dropdown {
    border-radius: 10px;
  }
 
-/* /////// mandar mensagem ///// */
+/* /////// mandar mensagem by vinicius ///// */
 .send-message{
   position: relative;
   display: flex;
@@ -405,20 +405,28 @@ input.select-dropdown {
 .send-message .texto{
   color: #fff;
   padding: 20px 0;
+  display: flex;
+  justify-content: center;
 }
 .send-message .texto p{
-  margin: 0 auto;
   width: 80%;
+  margin: 0 auto;
 }
 .send-message .texto p:first-child{
-  font-size: 24px;
+  font-size: 20px;
+  padding-bottom: 15px;
 }
-.send-message .texto a{
-  color: #fff;
-  text-decoration: underline;
+.send-message button{
+  color: #ff0099;
+  padding: 10px;
+  border: none;
+  font-size: 14px;
+  background-color: #ffffff;
   position: absolute;
   bottom: 20px;
-  right: 20px;
+  right: calc(50% - 50px);
+  box-shadow: 0 1px 3px #555;
+  border-radius: 10px;
   cursor: pointer;
 }
 .send-message .suporte {
@@ -426,6 +434,11 @@ input.select-dropdown {
   position: absolute;
   left: calc(50% - 35px);
   top: calc(50% - 35px);
+}
+.onda{
+  width: 100%;
+  position: absolute;
+  top: 0;
 }
 
 /*//////////// SEÇÃO PLATFORMAS*/
@@ -594,3 +607,4 @@ input.select-dropdown {
     display: none !important;
   }
 }
+/* --------------------------- formas de pagamento by vinicius ------------------------- */

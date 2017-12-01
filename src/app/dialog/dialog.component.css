@@ -8,21 +8,94 @@
 /* ------------------------ body ------------------------- */
 .modal-send-message{
   width: 100%;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 .hello,
 .label{
   margin: 0;
+}
+form{
+  text-align: center;
+}
+.select,
+.texto{
+  width: 50%;
+  margin: 0 auto;
+}
+.texto{
+  text-align: left;
+}
+.ipt{
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-around;
+}
+.textArea{
+  width: 80%;
+}
+.bt{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.bt button{
+  margin-left: 10px;
+}
+.mensagemResponse{
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mensagemResponse p{
+  width:100%;
+  text-align: center;
+  font-size: 16px;
+}
+/* ------------------------ material angular io -----------*/
+
+
+@media screen and (max-width: 860px) {
+  .mat-form-field{
+    width: 100%;
+  }
+  .ipt{
+    flex-wrap: wrap;
+  }
+  .select,
+  .texto {
+    width: 80%;
+  }
+  .mat-horizontal-content-container{
+    padding: 0 10px 10px 10px;
+  }
 }
 
 /* ------------------------ footer ----------------------- */
 .footer{
   border-top: 1px solid #808080;
   text-align: center;
+  color: #9b9b9b;
 }
 .footer .icons{
+  padding-top: 10px;
 }
 .icons img{
   width: 35px;
   height: 35px;
+}
+.info{
+  text-align: center;
+  font-size: 12px;
+  padding-top: 10px;
+}
+.info-small{
+  text-align: center;
+  font-size: 10px;
+  padding-top: 5px;
+}
+.info p,
+.info-small p{
+  margin: 0;
 }
