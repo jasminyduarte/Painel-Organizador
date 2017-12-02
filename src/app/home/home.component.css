@@ -64,6 +64,14 @@ nav{
   background: transparent;
 }
 
+/*/////////////BANNERS///////////*/
+.banner-apre{
+  background-image: url("../../assets/img/banner1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
 
 /*///////////////Card Login//////////////////*/
 .login{
@@ -102,21 +110,18 @@ header{
   /*min-height: 100%;*/
   height: 174px;
   width: 100%;
-  box-sizing: border-box;
-  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
-  transform-style: inherit;
 }
 
 /*/////////////Sessao tabs personalizar//////////////////*/
 .section{
   width: 100%;
   height: auto;
-  height: 750px;
-  background: #4d4d4d;
+  height: 650px;
+  background: white;
 }
 .ferramentas{
   background: #009966;
-  margin-top: -53px;
+  margin-top: 15px;
   margin-bottom: 16px;
   padding-top: 10px;
   position: relative;
@@ -126,7 +131,6 @@ header{
   color: white;
   margin: 30px auto;
   padding-top: 10px;
-  color: white;
   width: 33%;
   text-align: center;
   line-height: 33px;
@@ -169,44 +173,52 @@ header{
 .sessao-card .titulo_s1{
   width: 41%;
   display: block;
-  color: white;
+  color: #5f5f5f;
   font-weight: normal;
   text-align: center;
   margin: 0px auto;
   padding: 20px;
   font-size: 24px;
-  text-shadow: 3px 0px 10px black;
 }
 .sessao-card .sub_s1{
   margin: 0px auto;
   width: 23%;
   text-align: center;
   font-size: 14px;
-  color: #cacaca;
+  color: #5f5f5fd4;;
   padding-bottom: 30px;
 }
-
+.box_card{
+  display: inline-flex;
+  justify-content: center;
+}
 .box-card1{
   background-image: url("../../assets/img/Prancheta 1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  height: 500px;
+  width: 25%;
+  height: 400px;
+  margin-right: 20px;
+  border-radius: 10px;
 }
 .box-card2{
   background-image: url("../../assets/img/Prancheta 3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
-  width: 100%;
-  height: 500px;
+  background-position: right;
+  width:25%;
+  height: 400px;
+  margin-right: 20px;
+  border-radius: 10px;
 }
 .box-card3{
   background-image: url("../../assets/img/Prancheta 2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  height: 500px;
+  width: 25%;
+  height: 400px;
+  margin-right: 20px;
+  border-radius: 10px;
 }
 .texto-card{
   padding-left: 10px;
@@ -216,9 +228,10 @@ header{
   background: white;
   width: 80%;
   padding: 10px;
-  margin: 250px auto;
+  margin: 158px auto;
   border-radius: 20px;
-  height: 165px;
+  height: 215px;
+  max-height: 203px;
 
 }
 
@@ -240,9 +253,9 @@ header{
   padding-left: 25px;
   padding-top: 15px;
 }
-.titulo_card-azul{color: #0066cc; padding-left: 10px;}
-.titulo_card-rosa{color: #ff0099; padding-left: 10px;}
-.titulo_card-verde{color:#009966; padding-left: 10px;}
+.titulo_card-azul{color: #0066cc; padding-left: 10px; margin: 3px}
+.titulo_card-rosa{color: #ff0099; padding-left: 10px; margin: 3px;}
+.titulo_card-verde{color:#009966; padding-left: 10px; margin: 3px;}
 
 .titulo_card-verde,
 .titulo_card-rosa,
@@ -363,7 +376,88 @@ textarea.materialize-textarea{
   color: #5f5f5f;
 }
 
+/* /////// mandar mensagem by vinicius ///// */
+.send-message{
+  position: relative;
+  display: flex;
+  background-color: #ff0099;
+  height: 200px;
+  margin-bottom: 52px;
+}
+.send-message > img{
+  position: absolute;
+  transform: rotateY(180deg);
 
+}
+.send-message .imagem,
+.send-message .texto{
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.send-message .texto{
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.send-message .texto p{
+  width: 80%;
+  margin: 0 auto;
+}
+.send-message .texto p:first-child{
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+.send-message button{
+  color: #ff0099;
+  padding: 10px;
+  border: none;
+  font-size: 14px;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 20px;
+  right: calc(50% - 50px);
+  box-shadow: 0 1px 3px #555;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.send-message .suporte {
+  width: 70px;
+  position: absolute;
+  left: calc(50% - 35px);
+  top: calc(50% - 35px);
+}
+.onda{
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+/*//////////// SEÇÃO PLATFORMAS*/
+.plataformas {
+  background:linear-gradient(135deg,#009966,#007F9B ) ;
+}
+.titulo-plat,.sub-plat{
+  color: white;
+}
+
+.titulo-plat{
+  width: 20%;
+}
+.imagens-plat{
+  width: 115px;
+}
+.box{
+  display: flex;
+  width: 100%;
+}
+.box-plat-esquer{
+  width: 30%;
+}
+.box-plat-direita{
+  width: 70%;
+}
 
 /*/////////////////////////TABS FEITO COM CSS /////////////////////*/
 .tabPanel-widget {
@@ -532,3 +626,4 @@ app-tabs{
 .esconde{
   display: none;
 }
+/* --------------------------- formas de pagamento by vinicius ------------------------- */

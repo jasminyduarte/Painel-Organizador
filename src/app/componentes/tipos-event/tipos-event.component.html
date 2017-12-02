@@ -3,7 +3,7 @@
     <p class="titulo">Ferramentas especiais para qualquer tipo de atividade</p>
     <p class="sub-titulo">Veja alguns exemplos de atividades realizadas pela TicketPhone</p>
   </div>
-  <div class="box">
+  <div id="desk" class="box">
     <div class="card-box">
       <div class="card">
         <div class="content">
@@ -49,15 +49,17 @@
         </div>
       </div>
     </div>
-    <div class="card-cinza">
-      <p>
-        Teste agora, personalize do jeito que você quiser
-        experimente as ferramentas TicketPhone e crie experiências inesquecíveis
-      </p>
-      <div class="btn">
-        <mat-button-toggle class="btn-experi">Experimente agora</mat-button-toggle>
-      </div>
-    </div>
   </div>
-
 </mat-card>
+
+
+<div class="card-banner">
+  <p>
+    Teste agora, personalize do jeito que você quiser
+    experimente as ferramentas TicketPhone e crie experiências inesquecíveis
+  </p>
+  <div class="btn">
+    <mat-button-toggle class="btn-experi">Experimente agora</mat-button-toggle>
+    <mat-button-toggle (click)="openDialog()" class="btn-duvidas">Tenho dúvidas</mat-button-toggle>
+  </div>
+</div>

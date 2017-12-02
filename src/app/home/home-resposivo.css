@@ -82,8 +82,14 @@
    #mobile-tabs{
      display: block;
    }
+   .box_card{
+     display: none;
+   }
    .esconde{
      display: block;
+   }
+   app-tabs-desktop{
+     display: none;
    }
    .mostra{
      display: none;

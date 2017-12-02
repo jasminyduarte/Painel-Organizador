@@ -1,6 +1,10 @@
+
 import {Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
 import {MatTabGroup} from '@angular/material';
 import * as $ from 'jquery';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import {DialogComponent} from '../dialog/dialog.component';
+
 
 
 
@@ -21,10 +25,7 @@ export class HomeComponent implements OnInit {
   // PEGAR OBJETO MATGROUP DO TEMPLATE //
   ///////////////////////////////////////
   @ViewChild(MatTabGroup) grupoPlataformas: MatTabGroup;
-
-
-  constructor() {
-
+  constructor(public dialog: MatDialog) {
 
   }
 
@@ -52,12 +53,6 @@ export class HomeComponent implements OnInit {
     //   $("#mensagem .conteudo").slideToggle();
     // });
 
-
-
-    /////////////////////////////////////////////////////////
-    // FORCAR TAB GRUPOS PLATAFORMA COMECAR NO SEGUNDO TAB //
-    /////////////////////////////////////////////////////////
-    // this.grupoPlataformas.selectedIndex = 1;
   }
 
   /////////////////////////////////////////////////////////
@@ -66,5 +61,12 @@ export class HomeComponent implements OnInit {
   Mostra() {
     this.show = !this.show;
 }
+
+
+  openDialog(): void {
+    let dialogRef = this.dialog.open(DialogComponent, {
+      width: '80%'
+    });
+  }
 
 }
