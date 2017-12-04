@@ -25,6 +25,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { TabsDesktopComponent } from './componentes/tabs-desktop/tabs-desktop.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule, MatInputModule, MatFormFieldModule} from '@angular/material';
+import { FerramentasDesktopComponent } from './componentes/ferramentas-desktop/ferramentas-desktop.component';
 
 
 
@@ -41,7 +42,8 @@ import {MatButtonModule, MatInputModule, MatFormFieldModule} from '@angular/mate
     TiposEventComponent,
     FooterComponent,
     TabsDesktopComponent,
-    DialogComponent
+    DialogComponent,
+    FerramentasDesktopComponent
   ],
   imports: [
     BrowserModule,

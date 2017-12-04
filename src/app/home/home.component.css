@@ -15,8 +15,16 @@
 }
 
 /*/////////////menu///////////////*/
+#menu{
+  min-width: 100%;
+  position: fixed;
+  z-index: 90;
+}
 .logo{
-  width:45%;
+  width: auto;
+}
+.brand-logo{
+  width:10%;
 }
 nav{
   background: white;
@@ -35,14 +43,20 @@ nav{
   margin: 0px;
 }
 .organizador{
-  color: #5f5f5f;
-  font-size: 24px;
-  font-weight: 600;
-  padding: 0px;
-  position: absolute;
-  top: -5px;
-  left: 200px;
+  width: 19%;
+  padding: 20px;
+  text-align: left;
 }
+.organizador > a {
+  color: #5f5f5f;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.organizador > a:hover{
+  color: #009966;
+}
+
 .box-menu{
   display: flex;
   justify-content: center;
@@ -58,6 +72,7 @@ nav{
 }
 .box-menu:hover {
   border: 1px solid #009966;
+  color: #009966;
 }
 .box-menu a:hover {
   color: #009966;
@@ -115,9 +130,12 @@ header{
 /*/////////////Sessao tabs personalizar//////////////////*/
 .section{
   width: 100%;
-  height: auto;
+  max-height: 1300px;
+  max-width: 1300px;
+  min-height: 600px;
   height: 650px;
   background: white;
+  margin: 0px auto;
 }
 .ferramentas{
   background: #009966;
@@ -171,22 +189,22 @@ header{
 
 /*//////////////////////////Sessão cards//////////////////////////*/
 .sessao-card .titulo_s1{
-  width: 41%;
+  width: 52%;
   display: block;
   color: #5f5f5f;
   font-weight: normal;
   text-align: center;
   margin: 0px auto;
   padding: 20px;
-  font-size: 24px;
+  font-size: 35px;
 }
 .sessao-card .sub_s1{
   margin: 0px auto;
-  width: 23%;
+  width: 32%;
   text-align: center;
-  font-size: 14px;
-  color: #5f5f5fd4;;
-  padding-bottom: 30px;
+  font-size: 18px;
+  color: #5f5f5fd4;
+  padding-bottom: 20px;
 }
 .box_card{
   display: inline-flex;
@@ -196,28 +214,27 @@ header{
   background-image: url("../../assets/img/Prancheta 1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 25%;
-  height: 400px;
-  margin-right: 20px;
+  width: 30%;
+  height: 450px;
+  margin-right: 10px;
   border-radius: 10px;
 }
 .box-card2{
   background-image: url("../../assets/img/Prancheta 3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
-  width:25%;
-  height: 400px;
-  margin-right: 20px;
+  width:30%;
+  height: 450px;
+  margin-right: 10px;
   border-radius: 10px;
 }
 .box-card3{
   background-image: url("../../assets/img/Prancheta 2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 25%;
-  height: 400px;
-  margin-right: 20px;
+  width: 30%;
+  height: 450px;
+  margin-right: 10px;
   border-radius: 10px;
 }
 .texto-card{
@@ -226,12 +243,12 @@ header{
 }
 .cards{
   background: white;
-  width: 80%;
+  width: 86%;
   padding: 10px;
-  margin: 158px auto;
+  margin: 180px auto;
   border-radius: 20px;
   height: 215px;
-  max-height: 203px;
+  max-height: 215px
 
 }
 
@@ -253,7 +270,7 @@ header{
   padding-left: 25px;
   padding-top: 15px;
 }
-.titulo_card-azul{color: #0066cc; padding-left: 10px; margin: 3px}
+.titulo_card-azul{color: #0066cc; padding-left: 10px; margin: 3px; font-weight: bold;}
 .titulo_card-rosa{color: #ff0099; padding-left: 10px; margin: 3px;}
 .titulo_card-verde{color:#009966; padding-left: 10px; margin: 3px;}
 
