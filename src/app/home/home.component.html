@@ -40,6 +40,13 @@
   <!--<img src="../../assets/img/det-branco.svg" alt="">-->
 </div>
 
+<!-- mande uma mensagem -->
+<div class="send-message">
+  <img class="suporte" src="../../assets/img/suporte.svg">
+  <button (click)="openDialog()">Tenho dúvidas</button>
+</div>
+
+
 <!--Seção de cards-->
 <section id="sessao2" class="sessao-card">
   <div class="section">
@@ -107,217 +114,9 @@
 </section>
 
 
-<!-- mande uma mensagem -->
-<!--<div class="send-message">-->
-  <!--<div class="imagem">-->
-    <!--<img class="responsive-img" src="../../assets/img/ingressoqr.jpg">-->
-  <!--</div>-->
-  <!--<div class="texto">-->
-    <!--<div>-->
-      <!--<p>Você tem alguma dúvida?</p>-->
-      <!--<p>Fale com a gente e conheça porquê a TicketPhone é a melhor opção para seu evento e atividade</p>-->
-    <!--</div>-->
-
-  <!--</div>-->
-  <!--<img class="suporte" src="../../assets/img/suporte.svg">-->
-  <!--<button (click)="openDialog()">Fale conosco</button>-->
-<!--</div>-->
-
 <!--Seleção tabs-->
+<app-ferramentas-desktop></app-ferramentas-desktop>
 
-<div class="ferramentas">
-  <p class="titulo_ferraments">Seus eventos e atividades Personalizados do jeito que você quiser</p>
-
-  <div class="card-content card-content-tabs">
-    <!--Desktop-->
-    <div id="desk-tabs" class="tabPanel-widget">
-      <label for="tab-1" tabindex="0"></label>
-      <input id="tab-1" type="radio" name="tabs" checked="true" aria-hidden="true">
-      <h2>Seu ingresso</h2>
-      <div>
-        <div class="box_ferramentas">
-          <div id="ingre" class="row">
-            <p class="ingre_titulo">Seu ingresso será individual ou múltiplo?</p>
-            <mat-grid-list cols="2" rowHeight="2:1">
-              <mat-grid-tile>
-                <div class="box_ingre_text indi">
-                  <img class="img_ingre" src="assets/img/ing%20ind.svg" alt="">
-                  <ul class="box-texto none">
-                    <li>Com ingressos individuais cada participante comprará seu próprio ingresso, criar seu próprio cadastro e você terá todas as informações de quem participará da sua da sua atividade. </li>
-                    <li>É uma ótima opção se você gostaria de ter o controle que quem participa da sua atividade e de proporcionar uma relação pessoal para cada participante</li>
-                    <li>Ideal para eventos e atividades acadêmica, profissionais, competições, passeios turísticos, entre outros….</li>
-                  </ul>
-                </div>
-              </mat-grid-tile>
-              <mat-grid-tile>
-                <div class="box_ingre_text mult">
-                  <img class="img_ingre" src="assets/img/ing%20mul.svg" alt="">
-                  <ul  class="box-texto2 none">
-                    <li> Com ingressos múltiplos o mesmo participante pode comprar quantos ingressos ele quiser, para familiares e amigos utilizando o seu próprio cadastro.</li>
-                    <li>Nesta opção você pode criar pacotes de vendas de ingressos, vender mesas, grupos, times, dar descontos, o que quiser.</li>
-                    <li>Ideal para eventos que não precisam da identificação: Shows, apresentações, feiras, festas, passeios turísticos, entradas para parques, entre outros…</li>
-                  </ul>
-                </div>
-              </mat-grid-tile>
-            </mat-grid-list>
-          </div>
-        </div>
-      </div>
-      <label for="tab-2" tabindex="0"></label>
-      <input id="tab-2" type="radio" name="tabs" aria-hidden="true">
-      <h2>Tipos de inscrições</h2>
-      <div>
-        <mat-grid-list cols="2" rowHeight="2:1">
-          <mat-grid-tile>
-            <div class="box_ingre_text ">
-              <p class="ingre_titulo">Crie tipos de inscrições e lotes de ingressos.</p>
-              <ul class="none">
-                <li> Pensando em todos os tipos de evento e atividades a TicketPhone possibilita à você separar seus ingressos em TIPOS.</li>
-                <li>  Separe seus ingressos em:.</li>
-                <li>- Meia e Inteira;</li>
-                <li> - Pista e Vip;</li>
-                <li>- Lote 1, 2, 3;</li>
-                <li>-Bennie and the jets, Your song e Rocket man.</li>
-                <li> Do jeito que você quiser:
-                  Escolha os preõs de cada um dos lotes;
-                  As datas de lançamento;
-                  Quais programações, produtos, serviços e pacotes estão disponíveis para cada um dos tipos.</li>
-              </ul>
-            </div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="box-icones">
-              <img src="assets/img/01.svg" alt="">
-            </div>
-          </mat-grid-tile>
-        </mat-grid-list>
-      </div>
-      <label for="tab-3" tabindex="0"></label>
-      <input id="tab-3" type="radio" name="tabs" aria-hidden="true">
-      <h2>Programações</h2>
-      <div>
-        <mat-grid-list cols="2" rowHeight="2:1">
-          <mat-grid-tile>
-            <div class="box_ingre_text ">
-              <p class="ingre_titulo">Venda experiências separadamente.</p>
-              <ul class="none">
-                <li>Na TicketPhone você não precisa criar um evento para vender programações separadamente.</li>
-                <li>Crie a programação do seu evento e venda cada uma delas individualmente.
-                  Ou crie uma programação principal e disponibilize ao seu cliente adicionar atividades extras na hora da compra.
-                </li>
-                <li>*programação incluída automaticamente à compra do ingresso.</li>
-              </ul>
-            </div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="box-icones">
-              <img src="assets/img/02.svg" alt="">
-            </div>
-          </mat-grid-tile>
-        </mat-grid-list>
-      </div>
-      <label for="tab-4" tabindex="0"></label>
-      <input id="tab-4" type="radio" name="tabs" aria-hidden="true">
-      <h2>Produtos e serviços</h2>
-      <div>
-        <mat-grid-list cols="2" rowHeight="2:1">
-          <mat-grid-tile>
-            <div class="box_ingre_text">
-              <p class="ingre_titulo">Venda produtos e serviços.</p>
-              <ul class="none">
-                <li>Não perca a oportunidade de vender.
-                  Além de seus ingressos e passes ofereça mais aos seus clientes.
-                </li>
-                <li> Já pensou em vender on-line camisas, copos decorativos, baldes de bebidas, kits, brindes, acesso aos camarins,
-                  serviço de transporte, de delivery, de guia, tradutor o que você quiser facilmente configurado.</li>
-              </ul>
-            </div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="box-icones">
-              <img src="assets/img/03.svg" alt="">
-            </div>
-          </mat-grid-tile>
-        </mat-grid-list>
-      </div>
-      <label for="tab-5" tabindex="0"></label>
-      <input id="tab-5" type="radio" name="tabs" aria-hidden="true">
-      <h2>Pacotes</h2>
-      <div>
-        <mat-grid-list cols="2" rowHeight="2:1">
-          <mat-grid-tile>
-            <div class="box_ingre_text">
-              <p class="ingre_titulo">E que tal vender pacotes?</p>
-              <ul class="none">
-                <li>Crie pacotes com seus ingressos, programações, produtos e serviços.</li>
-                <li>Agrupe e crie preços promocionais para estimular suas vendas.</li>
-                <li>
-                  <strong>
-                    Pacotes Fixo
-                  </strong>
-                </li>
-                <li> Um grupo de itens vendidos em conjunto.</li>
-                <li>
-                  <strong>
-                    Pacotes personalizados
-                  </strong>
-                </li>
-                <li>
-                  Um grupo de itens onde o participante pode selecionar um número determinado de itens do pacote. Ex:
-                </li>
-                <li>
-                  Pacote 1- Selecione 2 palestra:
-                </li>
-                <li>
-                   -Palestra 1
-                </li>
-                <li>
-                   -Palestra 2
-                </li>
-                <li>
-                   -Palestra 3
-                </li>
-                <li>
-                   -Palestra 4
-                </li>
-              </ul>
-            </div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="box-icones">
-              <img class="img-pac-fer" src="assets/img/06.svg" alt="">
-            </div>
-          </mat-grid-tile>
-        </mat-grid-list>
-      </div>
-      <label for="tab-6" tabindex="0"></label>
-      <input id="tab-6" type="radio" name="tabs" aria-hidden="true">
-      <h2>Ferramentas</h2>
-      <div>
-        <mat-grid-list cols="2" rowHeight="2:1">
-          <mat-grid-tile>
-            <div class="box_ingre_text">
-              <p class="ingre_titulo">Ferramentas.</p>
-              <ul class="none">
-                <li>Pensando em atender todos os tipos de eventos e atividades a TicketPhone criou ferramentas especiais para
-                  você utilizar no seu evento. Encontradas nas configurações das atividades ou para serem utilizadas durante ou após a atividade pelo desktop e aplicativos.</li>
-              </ul>
-            </div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="box-icones">
-              <img class="img-pac-fer" src="assets/img/07.svg" alt="">
-            </div>
-          </mat-grid-tile>
-        </mat-grid-list>
-      </div>
-    </div>
-    <!--Mobile-->
-    <div id="mobile-tabs">
-      <app-ferramentas></app-ferramentas>
-    </div>
-  </div>
-</div>
 
 
 <!--&lt;!&ndash; formas de pagamento &ndash;&gt;-->

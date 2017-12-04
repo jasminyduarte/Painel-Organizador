@@ -1,0 +1,64 @@
+section{
+  width: 100%;
+  max-height: 1300px;
+  min-height: 600px;
+  height: 650px;
+  background: white;
+  margin: 0px auto;
+}
+.ferramentas{
+  background: #009966;
+  margin-top: 15px;
+  margin-bottom: 16px;
+  padding-top: 10px;
+  position: relative;
+  width: 100%;
+}
+.titulo_ferraments{
+  padding-top: 10px;
+  color: white;
+  margin: 30px auto;
+  padding-top: 10px;
+  width: 33%;
+  text-align: center;
+  line-height: 33px;
+  font-size: 24px;
+
+}
+mat-tab-group{
+   width: 75%;
+   margin: 0px auto;
+}
+/deep/ mat-tab-header{
+  border-bottom: none;
+}
+
+
+
+.card-content{
+   background: #009966;
+   margin-top: -31px;
+ }
+/deep/.mat-tab-group.mat-primary .mat-ink-bar:after {
+  content: '' !important;
+  margin: auto !important;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  border-top: 17px solid #009966;
+}
+/deep/.mat-tab-group.mat-primary .mat-ink-bar{
+  background-color: #009966 !important;
+}
+
+/deep/.mat-tab-label-container,
+/deep/.mat-tab-header{
+  background: #009966 !important;
+  overflow: visible !important;
+}
+
+
