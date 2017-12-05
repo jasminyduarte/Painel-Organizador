@@ -9,14 +9,17 @@
   width: 33%;
   margin: 0px auto;
   text-align: center;
-  font-size: 24px;
+  font-size: 35px;
   text-shadow: 3px 0px 10px black;
-  padding: 20px;
+  padding-top: 40px;
+  padding-bottom: 10px;
 }
 
 .sub-titulo{
   text-align: center;
   font-size: 17px;
+  margin-top: 0px;
+  padding-bottom: 10px;
 }
 
 .box{
@@ -27,10 +30,11 @@
 }
 
 .card {
-  width: 300px;
+  width: 267px;
   height: 380px;
   float: left;
   perspective: 500px;
+  margin-left: 10px;
 }
 
 .content {
@@ -52,13 +56,29 @@
   position: absolute;
   height: 100%;
   width: 100%;
- background-image: url("../../../assets/img/card1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   border-radius: 5px;
   backface-visibility: hidden;
 }
-
+.pale .front{
+  background-image: url("../../../assets/img/palestra.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.show .front{
+  background-image: url("../../../assets/img/show.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.passe .front{
+  background-image: url("../../../assets/img/visitacao2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ativi .front{
+  background-image: url("../../../assets/img/atividade.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .back {
   background: #0066cc;
   color: white;
@@ -69,16 +89,16 @@
 }
 
 .back img{
-  width: 90%;
+  width: 100%;
   display: block;
-  margin: 0px auto;
+  margin: 20px auto;
 }
 
 .card-box{
   width: 93%;
   margin: 0px auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
   background: #404040;
 }

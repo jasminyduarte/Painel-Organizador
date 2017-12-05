@@ -36,7 +36,7 @@ nav{
   }
 .menu-ul{
   text-decoration: none;
-  width: 60%;
+  width: 50%;
   padding: 0px;
   display: flex;
   justify-content: space-around;
@@ -84,7 +84,7 @@ nav{
   background-image: url("../../assets/img/banner1.jpg");
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 380px;
 }
 
 
@@ -134,24 +134,7 @@ header{
   background: white;
   margin: 0px auto;
 }
-.ferramentas{
-  background: #009966;
-  margin-top: 15px;
-  margin-bottom: 16px;
-  padding-top: 10px;
-  position: relative;
-}
-.titulo_ferraments{
-  padding-top: 10px;
-  color: white;
-  margin: 30px auto;
-  padding-top: 10px;
-  width: 33%;
-  text-align: center;
-  line-height: 33px;
-  font-size: 24px;
 
-}
 
 .ingre_titulo{
   text-align: center;
@@ -195,7 +178,8 @@ header{
   font-weight: normal;
   text-align: center;
   margin: 0px auto;
-  padding: 20px;
+ padding-top: 30px;
+  padding-bottom: 10px;
   font-size: 35px;
 }
 .sessao-card .sub_s1{
@@ -204,18 +188,19 @@ header{
   text-align: center;
   font-size: 18px;
   color: #5f5f5fd4;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 .box_card{
   display: inline-flex;
   justify-content: center;
+  padding: 0px 40px;
 }
 .box-card1{
   background-image: url("../../assets/img/Prancheta 1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 30%;
-  height: 450px;
+  height: 367px;
   margin-right: 10px;
   border-radius: 10px;
 }
@@ -224,7 +209,7 @@ header{
   background-repeat: no-repeat;
   background-size: cover;
   width:30%;
-  height: 450px;
+  height: 367px;
   margin-right: 10px;
   border-radius: 10px;
 }
@@ -233,7 +218,7 @@ header{
   background-repeat: no-repeat;
   background-size: cover;
   width: 30%;
-  height: 450px;
+  height: 367px;
   margin-right: 10px;
   border-radius: 10px;
 }
@@ -243,7 +228,7 @@ header{
 }
 .cards{
   background: white;
-  width: 86%;
+  width:77%;
   padding: 10px;
   margin: 180px auto;
   border-radius: 20px;
@@ -270,15 +255,16 @@ header{
   padding-left: 25px;
   padding-top: 15px;
 }
-.titulo_card-azul{color: #0066cc; padding-left: 10px; margin: 3px; font-weight: bold;}
+.titulo_card-azul{color: #0066cc; padding-left: 10px; margin: 3px; font-weight: bold; font-size: 17px; padding-top: 10px;}
 .titulo_card-rosa{color: #ff0099; padding-left: 10px; margin: 3px;}
 .titulo_card-verde{color:#009966; padding-left: 10px; margin: 3px;}
 
 .titulo_card-verde,
 .titulo_card-rosa,
 .titulo_card-azul p{
-  font-size: 20px;
+  font-size: 17px;
   font-weight: bold;
+  padding-top: 10px;
 }
 .box-card .card-content p {
  text-align: justify;
@@ -291,6 +277,9 @@ header{
   width: 100%;
   position: relative;
   top: -20px;
+}
+.qr-box{
+  padding-bottom: 40px;
 }
 
 /*///////////////////footer///////////////////////////////*/
