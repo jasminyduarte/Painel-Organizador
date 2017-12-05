@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ferramentas-desktop.component.css']
 })
 export class FerramentasDesktopComponent implements OnInit {
+  index: number;
 
   constructor() { }
 
