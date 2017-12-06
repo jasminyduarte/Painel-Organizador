@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {MatTabGroup} from '@angular/material';
 
 @Component({
   selector: 'app-ferramentas-desktop',
@@ -7,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FerramentasDesktopComponent implements OnInit {
   index: number;
+  ///////////////////////////////////////
+  // PEGAR OBJETO MATGROUP DO TEMPLATE //
+  ///////////////////////////////////////
+  @ViewChild(MatTabGroup) grupoPlataformas: MatTabGroup;
 
   constructor() { }
 
   ngOnInit() {
+    /////////////////////////////////////////////////////////
+    // FORCAR TAB GRUPOS PLATAFORMA COMECAR NO SEGUNDO TAB //
+    /////////////////////////////////////////////////////////
+    this.grupoPlataformas.selectedIndex = 1;
   }
 
 }

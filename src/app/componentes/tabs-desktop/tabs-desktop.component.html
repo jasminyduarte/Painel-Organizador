@@ -1,45 +1,43 @@
 <div class="pai">
 <mat-card id="desk" class="plataformas">
+  <div>
+    <p class="titulo_ferraments">Seus eventos e atividades Personalizados do jeito que você quiser</p>
+  </div>
   <div class="box">
-    <mat-tab-group class="tab-plat">
-      <mat-tab disabled>
-        <ng-template mat-tab-label>
-          <img class="logo-plat"  src="assets/img/texto%20plat.svg" alt="">
-        </ng-template>
-      </mat-tab>
+    <mat-tab-group class="tab-plat" [(selectedIndex)]="index">
       <mat-tab class="tab-select">
         <ng-template mat-tab-label>
           <img class="imagens-plat" src="assets/img/web.svg" alt="">
         </ng-template>
         <div class="demo-tab-content">
-          <mat-grid-list cols="2" rowHeight="3:2">
-            <mat-grid-tile>
-              <div class="esquerda">
-                <div class="texto-pla">
-                  <p>Crie e configure todos os seus eventos e atividades no TicketPhone web. Realize o login da sua conta organizador no menu principal do site.
-                    Acompanhe suas vendas, listagem de participantes cadastrados e  inscritos</p>
-                  <p>
-                    Acesse o banco de dados dos seus clientes, conheça seus perfils e gostos.
-                    Gere certificados com horas contabilizadas automaticamente.
-                  </p>
-                  <p>
-                    Faça sorteios entre seus particpantes.
-                    Troque mensagens e e-mails com seus participantes.
-                  </p>
-                </div>
-              </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-              <div class="box-desk">
-                <div class="esquerda">
-                  <img  class="desk"  src="assets/img/desktop.png" alt="">
-                </div>
-                <!--<div class="btn">-->
-                  <!--<mat-button-toggle (click)="Mostra()" class="btn-experi">Experimente agora</mat-button-toggle>-->
+          <!--<mat-grid-list cols="2" rowHeight="3:2">-->
+            <!--<mat-grid-tile>-->
+              <!--<div class="esquerda">-->
+                <!--<div class="texto-pla">-->
+                  <!--<p>Crie e configure todos os seus eventos e atividades no TicketPhone web. Realize o login da sua conta organizador no menu principal do site.-->
+                    <!--Acompanhe suas vendas, listagem de participantes cadastrados e  inscritos</p>-->
+                  <!--<p>-->
+                    <!--Acesse o banco de dados dos seus clientes, conheça seus perfils e gostos.-->
+                    <!--Gere certificados com horas contabilizadas automaticamente.-->
+                  <!--</p>-->
+                  <!--<p>-->
+                    <!--Faça sorteios entre seus particpantes.-->
+                    <!--Troque mensagens e e-mails com seus participantes.-->
+                  <!--</p>-->
                 <!--</div>-->
-              </div>
-            </mat-grid-tile>
-          </mat-grid-list>
+              <!--</div>-->
+            <!--</mat-grid-tile>-->
+            <!--<mat-grid-tile>-->
+              <!--<div class="box-desk">-->
+                <!--<div class="esquerda">-->
+                  <!--<img  class="desk"  src="assets/img/desktop.png" alt="">-->
+                <!--</div>-->
+                <!--&lt;!&ndash;<div class="btn">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<mat-button-toggle (click)="Mostra()" class="btn-experi">Experimente agora</mat-button-toggle>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+              <!--</div>-->
+            <!--</mat-grid-tile>-->
+          <!--</mat-grid-list>-->
         </div>
       </mat-tab>
       <mat-tab>
@@ -47,49 +45,49 @@
           <img class="imagens-plat" src="assets/img/tab%20e%20sm.svg" alt="">
         </ng-template>
         <div class="demo-tab-content">
-          <mat-grid-list cols="3" rowHeight="3:3">
-            <mat-grid-tile>
-              <div class="esquerda">
-                <div class="texto-pla">
-                  <p>Os aplicativos da TicketPhone possuem todas as ferramentas para proporcionar experiências inesquecíveis aos seus clientes.</p>
-                  <p>
-                    Através do app <strong>Participante</strong> seu cliente pode acompanha todo o histórico de atividades dele, comprar ingressos, realizar pagamentos, gerar certificados,
-                    trocar mensagens com a organização, enviar perguntas aos palestrantes, acessar roteiros e mais…
-                    O aplicativo Participante já está disponível para ser baixado gratuitamente pela Google play e Apple Store.
-                  </p>
-                  <p>
-                    Com o app <strong> Organizador</strong> você pode criar, editar e acompanhar todas as suas atividades sem precisar de acesso à internet. Além de ter todas as ferramentas na palma da sua mão:
-                    Registro de presenças, receber e enviar mensagens, roteiros, sorteios, pesquisas, letreiro visual e mais…
-                  </p>
-                </div>
-              </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-              <div class="box-desk">
-                <div class="esquerda">
-                  <img  class="desk"  src="assets/img/app%20verde.png" alt="">
-                </div>
-                <div class="btn">
-                  <p>Em Breve</p>
-                </div>
-              </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-              <div class="box-desk">
-                <div class="esquerda">
-                  <img  class="desk"  src="assets/img/app%20azul.png" alt="">
-                </div>
-                <div class="box-btn">
-                  <a href="">
-                    <img class="img-btn"  src="../../../assets/img/disponivel-app-store.png" alt="">
-                  </a>
-                  <a href="">
-                    <img class="img-btn" src="../../../assets/img/googleplay.png" alt="">
-                  </a>
-                </div>
-              </div>
-            </mat-grid-tile>
-          </mat-grid-list>
+          <!--<mat-grid-list cols="3" rowHeight="3:3">-->
+            <!--<mat-grid-tile>-->
+              <!--<div class="esquerda">-->
+                <!--<div class="texto-pla">-->
+                  <!--<p>Os aplicativos da TicketPhone possuem todas as ferramentas para proporcionar experiências inesquecíveis aos seus clientes.</p>-->
+                  <!--<p>-->
+                    <!--Através do app <strong>Participante</strong> seu cliente pode acompanha todo o histórico de atividades dele, comprar ingressos, realizar pagamentos, gerar certificados,-->
+                    <!--trocar mensagens com a organização, enviar perguntas aos palestrantes, acessar roteiros e mais…-->
+                    <!--O aplicativo Participante já está disponível para ser baixado gratuitamente pela Google play e Apple Store.-->
+                  <!--</p>-->
+                  <!--<p>-->
+                    <!--Com o app <strong> Organizador</strong> você pode criar, editar e acompanhar todas as suas atividades sem precisar de acesso à internet. Além de ter todas as ferramentas na palma da sua mão:-->
+                    <!--Registro de presenças, receber e enviar mensagens, roteiros, sorteios, pesquisas, letreiro visual e mais…-->
+                  <!--</p>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</mat-grid-tile>-->
+            <!--<mat-grid-tile>-->
+              <!--<div class="box-desk">-->
+                <!--<div class="esquerda">-->
+                  <!--<img  class="desk"  src="assets/img/app%20verde.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="btn">-->
+                  <!--<p>Em Breve</p>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</mat-grid-tile>-->
+            <!--<mat-grid-tile>-->
+              <!--<div class="box-desk">-->
+                <!--<div class="esquerda">-->
+                  <!--<img  class="desk"  src="assets/img/app%20azul.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="box-btn">-->
+                  <!--<a href="">-->
+                    <!--<img class="img-btn"  src="../../../assets/img/disponivel-app-store.png" alt="">-->
+                  <!--</a>-->
+                  <!--<a href="">-->
+                    <!--<img class="img-btn" src="../../../assets/img/googleplay.png" alt="">-->
+                  <!--</a>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</mat-grid-tile>-->
+          <!--</mat-grid-list>-->
         </div>
       </mat-tab>
       <mat-tab>
@@ -97,37 +95,48 @@
           <img  class="imagens-plat" src="assets/img/maq%20ticketp.svg" alt="">
         </ng-template>
         <div class="demo-tab-content">
-          <mat-grid-list cols="4" rowHeight="3:4">
-            <mat-grid-tile>
-              <div>
-                <img class="img-maq"  src="assets/img/maq.png" alt="">
-              </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-              <div class="texto-pla">
-                <p class="titulo-maquinas">Completa TicketPhone</p>
-                <p>Sistema TicketPhone integrada. Gerencie toda as suas atividades através do aplicativo organizador na própria maquininha.
-                  Receba o pagamento de seus ingressos/passaportes, produtos e serviços com cartão de crédito e registre os pagamentos em dinheiro.
-                  Imprima os ingressos e comprovantes de pagamento ou envie-os por e-mail.</p>
-              </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-              <div>
-                <img class="img-maq"  src="assets/img/maq2.png" alt="">
-              </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-              <div class="texto-pla">
-                <p class="titulo-maquinas">Compacta TicketPhone</p>
-                <p> Sistema TicketPhone integrada. Gerencie toda as suas atividades através do aplicativo organizador na própria máquininha.
-                  Receba o pagamento de seus ingressos/passaportes, produtos e serviços com cartão de crédito e registre os pagamentos em dinheiro.
-                  Imprima os ingressos e comprovantes de pagamento ou envie-os por e-mail..</p>
-              </div>
-            </mat-grid-tile>
-          </mat-grid-list>
+          <!--<mat-grid-list cols="4" rowHeight="3:4">-->
+            <!--<mat-grid-tile>-->
+              <!--<div>-->
+                <!--<img class="img-maq"  src="assets/img/maq.png" alt="">-->
+              <!--</div>-->
+            <!--</mat-grid-tile>-->
+            <!--<mat-grid-tile>-->
+              <!--<div class="texto-pla">-->
+                <!--<p class="titulo-maquinas">Completa TicketPhone</p>-->
+                <!--<p>Sistema TicketPhone integrada. Gerencie toda as suas atividades através do aplicativo organizador na própria maquininha.-->
+                  <!--Receba o pagamento de seus ingressos/passaportes, produtos e serviços com cartão de crédito e registre os pagamentos em dinheiro.-->
+                  <!--Imprima os ingressos e comprovantes de pagamento ou envie-os por e-mail.</p>-->
+              <!--</div>-->
+            <!--</mat-grid-tile>-->
+            <!--<mat-grid-tile>-->
+              <!--<div>-->
+                <!--<img class="img-maq"  src="assets/img/maq2.png" alt="">-->
+              <!--</div>-->
+            <!--</mat-grid-tile>-->
+            <!--<mat-grid-tile>-->
+              <!--<div class="texto-pla">-->
+                <!--<p class="titulo-maquinas">Compacta TicketPhone</p>-->
+                <!--<p> Sistema TicketPhone integrada. Gerencie toda as suas atividades através do aplicativo organizador na própria máquininha.-->
+                  <!--Receba o pagamento de seus ingressos/passaportes, produtos e serviços com cartão de crédito e registre os pagamentos em dinheiro.-->
+                  <!--Imprima os ingressos e comprovantes de pagamento ou envie-os por e-mail..</p>-->
+              <!--</div>-->
+            <!--</mat-grid-tile>-->
+          <!--</mat-grid-list>-->
         </div>
       </mat-tab>
     </mat-tab-group>
+
+    <!--Opções das divs-->
+    <div class="box-info" *ngIf="index == 0">
+
+    </div>
+    <div class="box-info" *ngIf="index == 1">
+teste
+    </div>
+    <div class="box-info" *ngIf="index == 1">
+teste
+    </div>
   </div>
 </mat-card>
 </div>

@@ -7,6 +7,7 @@ import {MatTabGroup} from '@angular/material';
   styleUrls: ['./tabs-desktop.component.css']
 })
 export class TabsDesktopComponent implements OnInit {
+  index: number;
   ///////////////////////////////////////
   // PEGAR OBJETO MATGROUP DO TEMPLATE //
   ///////////////////////////////////////
@@ -18,7 +19,7 @@ export class TabsDesktopComponent implements OnInit {
     /////////////////////////////////////////////////////////
     // FORCAR TAB GRUPOS PLATAFORMA COMECAR NO SEGUNDO TAB //
     /////////////////////////////////////////////////////////
-    this.grupoPlataformas.selectedIndex = 1;
+    this.grupoPlataformas.selectedIndex = 0;
   }
 
 }

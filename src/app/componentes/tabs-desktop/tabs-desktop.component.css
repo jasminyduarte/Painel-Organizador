@@ -8,7 +8,7 @@
   background:linear-gradient(135deg,#009966,#007F9B ) ;
   padding: 0px;
   margin: -24px 0px;
-  height: 153px;
+  height: 209px;
 }
 .titulo-plat,.sub-plat{
   color: white;
@@ -23,11 +23,10 @@
   font-size: 26px;
 }
 .imagens-plat{
-  width: 115px;
+  width: 80px;
   margin: 20px;
 }
 .box{
-  display: flex;
   width: 100%;
 }
 .box-plat-esquer{
@@ -46,11 +45,34 @@
   width: 50%;
 }
 .plataformas /deep/ .mat-tab-label{
-  height: 140px !important;
-  min-width: 338px !important;
+  height: 70px !important;
 }
 .plataformas /deep/ .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
   background-color: white !important;
+}
+
+.plataformas /deep/ .mat-tab-group{
+  width: 75%;
+  margin: 0px auto;
+}
+.plataformas /deep/ .mat-tab-header{
+  border-bottom: none !important;
+}
+.plataformas /deep/ .mat-tab-group.mat-primary .mat-ink-bar:after {
+  content: '' !important;
+  margin: auto !important;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  bottom: -1px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 10px solid white;
+}
+.plataformas /deep/ .mat-tab-group.mat-primary .mat-ink-bar{
+  background:transparent !important;
 }
 .btn{
   text-align: right;
@@ -113,5 +135,17 @@ ul.none{
 .titulo-maquinas{
   font-size: 24px;
   font-weight: 600;
+}
+
+.titulo_ferraments{
+  padding-top: 10px;
+  color: white;
+  margin: 30px auto;
+  padding-top: 10px;
+  width: 33%;
+  text-align: center;
+  line-height: 33px;
+  font-size: 24px;
+
 }
 
