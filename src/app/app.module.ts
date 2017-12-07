@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -27,7 +28,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule, MatInputModule, MatFormFieldModule} from '@angular/material';
 import { FerramentasDesktopComponent } from './componentes/ferramentas-desktop/ferramentas-desktop.component';
 
-
+import { Request } from './modules/request/request';
+import { WebserviceTicketPhone } from './webservice';
 
 
 
@@ -46,6 +48,7 @@ import { FerramentasDesktopComponent } from './componentes/ferramentas-desktop/f
     FerramentasDesktopComponent
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     MatDialogModule,
     BrowserAnimationsModule,
@@ -68,7 +71,10 @@ import { FerramentasDesktopComponent } from './componentes/ferramentas-desktop/f
   entryComponents: [
     DialogComponent
   ],
-  providers: [],
+  providers: [
+    Request,
+    WebserviceTicketPhone
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

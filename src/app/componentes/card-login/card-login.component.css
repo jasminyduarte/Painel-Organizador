@@ -39,7 +39,7 @@
 .frontbox{
   background-color: white;
   border-radius: 20px;
-  height: 100%;
+  min-height: 100%;
   width: 50%;
   z-index: 10;
   position: absolute;
@@ -122,7 +122,6 @@
   height: 40px;
   background-color: #f2f2f2;
   border: none;
-  margin-bottom:20px;
   font-size: 15px;
   text-align: center;
   border-radius: 10px;
@@ -133,7 +132,6 @@
   height: 38px;
   background-color: #f2f2f2;
   border: none;
-  margin-bottom: 12px;
   font-size: 12px;
   text-align: center;
   border-radius: 10px;
@@ -154,7 +152,14 @@
   right:30px;
   bottom: 30px;
   cursor: pointer;
+  transition: .4s;
 }
+
+.login button[disabled],
+.signup button[disabled]{
+  background-color: #f979c6;
+}
+
 .signup button{
   bottom: 10px;
 }
@@ -164,6 +169,19 @@
   cursor: pointer;
   color:#5f5f5f;
   font-size:15px;
+}
+
+.input-container {
+  margin-bottom: 10px;
+}
+
+/* MENSAGEM VALIDACAO INPUT */
+.erro-input {
+  color: #ff2c78 !important;
+  margin: 1px 0 0 4px;
+  text-indent: 10px;
+  text-align: left;
+  font-size: 13px !important;
 }
 
 .loginMsg, .signupMsg{

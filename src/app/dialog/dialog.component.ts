@@ -42,16 +42,19 @@ export class DialogComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit() {
+
     this.firstFormGroup = this._formBuilder.group({
       selCtrl: ['', Validators.required],
       perfilCtrl: ['', Validators.required]
     });
+
     this.secondFormGroup = this._formBuilder.group({
       nomeCtrl: ['', Validators.required],
       sobrenomeCtrl: ['', Validators.required],
       emailCtrl: ['', [Validators.required, Validators.email]],
       telCtrl: ['', Validators.required]
     });
+
     this.thirdFormGroup = this._formBuilder.group({
       nomeCtrl: ['', Validators.required],
       sobrenomeCtrl: ['', Validators.required],
@@ -60,6 +63,7 @@ export class DialogComponent implements OnInit {
       empresaCtrl: ['', Validators.required],
       cidadeCtrl: ['', Validators.required]
     });
+
     this.fourthFormGroup = this._formBuilder.group({
       mensagemCtrl: ['', Validators.required]
     });
