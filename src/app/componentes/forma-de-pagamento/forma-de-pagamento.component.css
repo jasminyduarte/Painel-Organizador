@@ -1,0 +1,75 @@
+.banner{
+  background-image: url("../../../assets/img/banner3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+
+.onda-branca{
+  margin-top: -2px;
+}
+.box{
+  width: 100%;
+  display: inline-flex;
+}
+.esquerda{
+  width: 50%;
+  border-right: 1px solid #cacaca;
+}
+.direita{
+  width: 40%;
+  padding-left: 80px;
+}
+.img{
+  width: 35%;
+  height: 200px;
+  padding: 30px;
+}
+.box-info{
+  display: inline-flex;
+  padding-top: 20px;
+}
+.box-info2{
+  display: inline;
+  padding-top: 20px;
+}
+.box-info2 p{
+  color: #5f5f5f;
+  width: 50%;
+  margin-top: 28px;
+}
+.box-text{
+  width: 50%;
+  color: #5f5f5f;
+  padding-left: 40px;
+  padding-top: 14px;
+}
+.titulo{
+  font-size: 20px;
+  padding: 6px;
+  font-weight: 600;
+}
+.maquina{
+  width: 250px;
+  height: 200px;
+}
+.conteudo{
+  position: relative;
+}
+
+.link p {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #5f5f5f;
+}
+.box-mob{
+  display: none;
+}
+@media screen and (max-width: 45em){
+  .box{
+    display: none;
+  }
+  .box-mob{
+    display: block;
+  }
+}

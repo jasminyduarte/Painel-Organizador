@@ -31,23 +31,29 @@
   </nav>
 </div>
 
+
+<!--Banner Apresentação-->
+<div class="banner-apre">
+  <img src="../../assets/img/frasebanner.svg" alt="">
+  <div class="btn-banner">
+    <mat-button-toggle class="btn-experi" (click)="Mostra()" >Experimente agora</mat-button-toggle>
+  </div>
+</div>
+
 <!--Login-->
 <app-card-login *ngIf="!show" ></app-card-login>
 
-<!--Banner Apresentação-->
-<div class="banner-apre"></div>
 
 <!-- mande uma mensagem -->
-<div class="send-message">
-  <img class="suporte" src="../../assets/img/suporte.svg">
-  <button (click)="openDialog()">Tenho dúvidas</button>
-</div>
+<!--<div class="send-message">-->
+  <!--<img class="suporte" src="../../assets/img/suporte.svg">-->
+  <!--<button (click)="openDialog()">Tenho dúvidas</button>-->
+<!--</div>-->
 
 
 <!--Seção de cards-->
 <section id="sessao2" class="sessao-card">
-  <div>
-    <img src="../../assets/img/det" alt="">
+  <div class="onda-branca">
   </div>
   <div class="section">
     <div class="center-align">
@@ -73,6 +79,18 @@
             </mat-card-content>
           </mat-card>
         </div>
+        <div class="box-card3 boox">
+          <mat-card class="cards">
+            <mat-card-title><p class="titulo_card-azul">Sem complicações!</p></mat-card-title>
+            <mat-card-content>
+              <p class="texto-card" >
+                Gere certificados automaticamente, com contagem de horas.
+                Mande e-mails aos seus participantes.
+                Analise e gere relatórios detalhados sobre todas as informações dos seus eventos: Inscrições, registros de presenças, vendas, cadastros entre outros.
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
 
         <div class="box-card2 boox">
           <mat-card class="cards">
@@ -89,18 +107,6 @@
           </mat-card>
         </div>
 
-        <div class="box-card3 boox">
-          <mat-card class="cards">
-            <mat-card-title><p class="titulo_card-azul">Sem complicações!</p></mat-card-title>
-            <mat-card-content>
-              <p class="texto-card" >
-                Gere certificados automaticamente, com contagem de horas.
-                Mande e-mails aos seus participantes.
-                Analise e gere relatórios detalhados sobre todas as informações dos seus eventos: Inscrições, registros de presenças, vendas, cadastros entre outros.
-              </p>
-            </mat-card-content>
-          </mat-card>
-        </div>
 
       </div>
       <!--Cards Mobile-->
@@ -115,40 +121,8 @@
 
 <!--Seleção tabs-->
 <app-ferramentas-desktop></app-ferramentas-desktop>
-
-
-
-<!--&lt;!&ndash; formas de pagamento &ndash;&gt;-->
-<!--<div class="formas-pagamento">-->
-  <!--<div class="header">-->
-    <!--<div class="left">-->
-      <!--<div class="texto">-->
-        <!--<p>On-line</p>-->
-        <!--<p>Cartão de crédito</p>-->
-        <!--<p>Cartão de débito</p>-->
-        <!--<p>Transferência bancária*</p>-->
-        <!--<p>Boleto</p>-->
-      <!--</div>-->
-      <!--<div class="imagem">-->
-        <!--<img src="../../assets/img/"-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="right">-->
-
-    <!--</div>-->
-  <!--</div>-->
-  <!--<div class="cols">-->
-    <!--<div class="col1">-->
-
-    <!--</div>-->
-    <!--<div class="col2">-->
-
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
-
-
-
+<!-- Seleção tabs mobile-->
+<app-ferramentas></app-ferramentas>
 
 <!--QRCODE IMAGEM-->
 <div class="qr-box">
@@ -164,6 +138,8 @@
 <!--Sessão Plaformas Mobile-->
 <app-tabs></app-tabs>
 
+<!-- formas de pagamento -->
+<app-forma-de-pagamento></app-forma-de-pagamento>
 
 <!--Tipos de eventos-->
 <app-tipos-event></app-tipos-event>

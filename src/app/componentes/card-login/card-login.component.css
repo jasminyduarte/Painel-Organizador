@@ -197,3 +197,20 @@
   display: none;
 }
 
+@media screen and (max-width: 45em){
+  .container{
+    width: 100%;
+  }
+  .textcontent {
+    color: white;
+    margin-top: 8px;
+    margin-left: 12%;
+    font-size: 19px;
+  }
+  .loginMsg button,
+  .signupMsg button {
+    width: 86px;
+  }
+
+
+}

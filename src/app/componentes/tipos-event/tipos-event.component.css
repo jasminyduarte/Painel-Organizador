@@ -101,6 +101,7 @@
   justify-content: center;
   position: relative;
   background: #404040;
+  padding-bottom: 30px;
 }
 
 .box-titulo-azul{
@@ -161,6 +162,10 @@
   justify-content: center;
 }
 
+.onda-branca{
+  margin-top: -2px;
+}
+
 /*MOBILE*/
 @media screen and (max-width: 45em) {
   .card-banner p {
@@ -174,6 +179,19 @@
 
   mat-button-toggle{
     font-size: 14px;
+  }
+   .onda-branca{
+     display: none;
+   }
+  .card-box{
+    flex-direction: column;
+  }
+  .card{
+    margin-left: 9%;
+    margin-bottom: 30px;
+  }
+  .titulo{
+    width: 80%;
   }
 
 }

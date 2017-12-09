@@ -19,7 +19,7 @@ export class TabsDesktopComponent implements OnInit {
     /////////////////////////////////////////////////////////
     // FORCAR TAB GRUPOS PLATAFORMA COMECAR NO SEGUNDO TAB //
     /////////////////////////////////////////////////////////
-    this.grupoPlataformas.selectedIndex = 0;
+    this.grupoPlataformas.selectedIndex = this.index = 0;
   }
 
 }

@@ -30,6 +30,7 @@ import { FerramentasDesktopComponent } from './componentes/ferramentas-desktop/f
 
 import { Request } from './modules/request/request';
 import { WebserviceTicketPhone } from './webservice';
+import { FormaDePagamentoComponent } from './componentes/forma-de-pagamento/forma-de-pagamento.component';
 
 
 
@@ -45,7 +46,8 @@ import { WebserviceTicketPhone } from './webservice';
     FooterComponent,
     TabsDesktopComponent,
     DialogComponent,
-    FerramentasDesktopComponent
+    FerramentasDesktopComponent,
+    FormaDePagamentoComponent
   ],
   imports: [
     HttpModule,
