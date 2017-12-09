@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import { WebserviceTicketPhone } from '../webservice';
 
 
 @Component({
@@ -38,8 +39,11 @@ export class DialogComponent implements OnInit {
     {value: '5', viewValue: 'Sou um(a) curioso(a)'}
   ];
 
-  constructor(public dialogRef: MatDialogRef<DialogComponent>, private _formBuilder: FormBuilder,
-              @Inject(MAT_DIALOG_DATA) public data: any ) {
+  constructor(
+    private _webservice: WebserviceTicketPhone,
+    public dialogRef: MatDialogRef<DialogComponent>,
+    private _formBuilder: FormBuilder,
+    @Inject(MAT_DIALOG_DATA) public data: any ) {
   }
 
   ngOnInit() {
@@ -110,8 +114,8 @@ export class DialogComponent implements OnInit {
     const thirdGroup = this.thirdFormGroup.value;
     const fourthGroup = this.fourthFormGroup.value;
 
-    const tipo = firstGroup.selCtrl.viewValue;
-    const perfilUser = firstGroup.perfilCtrl.viewValue;
+    const tipo = firstGroup.selCtrl;
+    const perfilUser = firstGroup.perfilCtrl;
     let nomeUser;
     let sobrenomeUser;
     let tel;
@@ -132,24 +136,31 @@ export class DialogComponent implements OnInit {
       email = thirdGroup.emailCtrl;
       empresa = thirdGroup.empresaCtrl;
       cidade = thirdGroup.cidadeCtrl;
-      // } this._webservice.enviarMensagem(
-      //   '01178662292',
-      //   '1234',
-      //   210,
-      //   1,
-      //   JSON.stringify({
-      //     tp: tipo,
-      //     perfil: perfilUser,
-      //     nome: nomeUser,
-      //     sobrenome: sobrenomeUser,
-      //     tel: tel,
-      //     email: email,
-      //     empresa: empresa,
-      //     cidade: cidade,
-      //     mensagem: mensagem
-      //   }),
-      //   'Org'
-      // );
     }
+
+    this._webservice.enviarMensagem(
+      '01178662292',
+      '1234',
+      210,
+      1,
+      JSON.stringify({
+        nome: nomeUser,
+        sobrenome: sobrenomeUser,
+        empresa: empresa,
+        email: email,
+        interesse: perfilUser,
+        tel: tel,
+        cidade: cidade,
+        mensagem: mensagem
+      }),
+      'Org'
+    )
+    .subscribe(resposta => {
+      // MESAGEM ENVIADA COM SUCESSO
+      console.log(resposta);
+    }, erro => {
+      // ERRO AO ENVIAR
+      console.log(erro);
+    });
   }
 }

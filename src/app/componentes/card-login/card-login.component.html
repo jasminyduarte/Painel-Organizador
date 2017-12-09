@@ -1,5 +1,5 @@
-<body id="overlay">
-<div class="container">
+<body id="overlay" *ngIf="!closse">
+<div (click)="loginclosse()" class="container">
   <div class="backbox">
     <div class="loginMsg">
       <div class="textcontent">
@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="signupMsg visibility">
-      <div class="textcontent">
+      <div class="textcontent textcontent2">
         <p class="title">Já possui conta?</p>
         <p>Faça seu login.</p>
         <button id="switch2">Login</button>
@@ -33,12 +33,23 @@
           <p class="erro-input" *ngIf="hasErro(formLogin, 'senhaCtrl', 'required')">Campo obrigatório!</p>
         </div>
       </form>
-      <p (click)="RecuperaSenha()" class="esqueceu">Esqueceu a senha ?</p>
-      <button (click)="submitLogin()" [disabled]="!formLogin.valid">Entrar</button>
-      <div *ngIf="mostra !=true" class="recupe">
-        <input type="number" name="email" placeholder="Digite seu email">
-        <p>Um link para alteração será enviando para o email informado </p>
-      </div>
+
+       <!--Eesqueci senha-->
+      <form *ngIf="!mostra" class="inputbox" [formGroup]="formSenha">
+        <div class="input-container">
+          <input type="tel" name="cpf" placeholder="CPF" formControlName="cpfCtrl" maxlength="11">
+          <p class="erro-input" *ngIf="hasErro(formSenha, 'cpfCtrl', 'required')">Campo obrigatório!</p>
+          <p class="erro-input" *ngIf="!hasErro(formSenha, 'cpfCtrl', 'required') && hasErro(formSenha, 'cpfCtrl', 'cpf')">CPF inválido!</p>
+        </div>
+      </form>
+
+      <p *ngIf="!mostra">Um link para alteração será enviando para o email informado </p>
+      <button *ngIf="!mostra" (click)="esqueciSenha()" [disabled]="!formSenha.valid">Enviar</button>
+
+      <p class="esqueceu" (click)="RecuperaSenha()">{{voltar}}</p>
+
+      <button *ngIf="!esconde" (click)="submitLogin()" [disabled]="!formLogin.valid">Entrar</button>
+
     </div> <!-- END FORMULARIO LOGIN -->
 
     <!----------------------------------------------->

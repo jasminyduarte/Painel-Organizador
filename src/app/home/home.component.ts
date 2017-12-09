@@ -59,6 +59,7 @@ export class HomeComponent implements OnInit {
   // MOSTRA O CARD LOGIN //
   /////////////////////////////////////////////////////////
   Mostra() {
+    console.log("mostra")
     this.show = !this.show;
 }
 

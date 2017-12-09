@@ -12,12 +12,15 @@ import { WebserviceTicketPhone } from '../../webservice';
 export class CardLoginComponent implements OnInit {
  esconde = false;
  mostra = true;
+ closse = false;
  login: string[];
- registro: string[];
+ registro: string[]
+  voltar: string ="Esqueceu a senha ?";
 
   formLogin;
   formCadastro;
   formDados;
+  formSenha;
 
   constructor(
     private _webservice: WebserviceTicketPhone,
@@ -34,6 +37,7 @@ export class CardLoginComponent implements OnInit {
     $('#switch1').on('click', function() {
       $loginMsg.toggleClass("visibility");
       $frontbox.addClass("moving");
+      $frontbox.addClass("frontbox2");
       $signupMsg.toggleClass("visibility");
 
       $signup.toggleClass('hide');
@@ -43,6 +47,7 @@ export class CardLoginComponent implements OnInit {
     $('#switch2').on('click', function() {
       $loginMsg.toggleClass("visibility");
       $frontbox.removeClass("moving");
+      $frontbox.removeClass("frontbox2");
       $signupMsg.toggleClass("visibility");
 
       $signup.toggleClass('hide');
@@ -84,6 +89,11 @@ export class CardLoginComponent implements OnInit {
       interesseCtrl: ['', Validators.required],
       estadoCtrl: ['', Validators.required],
       cidadeCtrl: ['', Validators.required]
+    });
+
+    // FORMULARIO ESQUECI SENHA
+    this.formSenha = this._formBuilder.group({
+      cpfCtrl: ['', [Validators.required, FormValidacao.cpf]]
     });
   }
 
@@ -200,15 +210,33 @@ export class CardLoginComponent implements OnInit {
       })
   }
 
+  // NOVA SENHA
+  esqueciSenha() {
+    const form = this.formSenha.value;
+    const cpf = form.cpfCtrl;
+
+    this._webservice.novaSenha(cpf)
+      .subscribe(resposta => {
+        console.log(resposta);
+      }, erro => {
+        console.log(erro);
+      })
+  }
+
   // VERIFICAR VALIDACAO
   hasErro(form: FormGroup, control: string, erro: string) {
     const ctrl = form.controls[control];
     return (ctrl.touched || ctrl.dirty) && ctrl.hasError(erro);
   }
 
-  // RecuperaSenha(){
-  //   this.esconde = !this.esconde;
-  //   this.mostra = !this.mostra;
-  // }
+  RecuperaSenha(){
+    this.esconde = !this.esconde;
+    this.mostra = !this.mostra;
+    this.voltar = this.mostra ? "Esqueceu a senha ?":"Deseja voltar ?";
+  }
 
+  loginclosse(){
+    console.log("entrou")
+    this.closse= !this.closse;
+  }
 }

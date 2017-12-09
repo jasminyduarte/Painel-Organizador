@@ -52,4 +52,11 @@ export class WebserviceTicketPhone {
       'destinatario': destino || ''
     });
   }
+
+  // NOVA SENHA
+  novaSenha(cpf: string) {
+    return this._request.call('WebserviceSolicitacaoAlteracaoSenhaOrganizador', {
+      'Particip': cpf
+    });
+  }
 }

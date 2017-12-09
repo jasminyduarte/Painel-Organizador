@@ -72,4 +72,7 @@
   .box-mob{
     display: block;
   }
+  .onda-branca{
+    display: none;
+  }
 }

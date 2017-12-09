@@ -196,21 +196,61 @@
 .hide{
   display: none;
 }
+.container::after{
+  content: "X";
+  color: white;
+  height: 38px;
+  position: absolute;
+  right: 12px;
+  top: -19px;
+  bottom: 15px;
+  text-align: center;
+  width: 30px;
+}
 
 @media screen and (max-width: 45em){
   .container{
     width: 100%;
   }
+
   .textcontent {
+    font-size: 14px;
     color: white;
-    margin-top: 8px;
-    margin-left: 12%;
-    font-size: 19px;
+    margin-top: 52px;
+    margin-left: 7%;
+  }
+  .textcontent2{
+    font-size: 12px;
+    color: white;
+    margin-top: 47px;
+    margin-left: 34%;
   }
   .loginMsg button,
   .signupMsg button {
     width: 86px;
   }
+  .frontbox{
+    width: 60%;
+    margin-right: 0px;
+  }
+  .loginMsg .title{
+    font-size: 20px;
+    margin-top: -24px;
+  }
+  .signupMsg p{
+    margin-left: 20px;
 
-
+  }
+  .frontbox2{
+    width: 67%;
+  }
+  .moving{
+    right: 33%;
+  }
+  .signup button{
+    bottom: -8px;
+  }
+   .signup h2{
+     font-size: 20px;
+   }
 }
