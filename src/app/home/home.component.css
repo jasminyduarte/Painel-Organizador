@@ -178,8 +178,10 @@ nav{
 
 /*//////////////////////////Sessão cards//////////////////////////*/
 .onda-branca{
-  background-image: url("../../assets/img/det-branco.svg");
-  background-position: top;
+  /*background-image: url("../../assets/img/det branco.svg");*/
+  /*background-position: top;*/
+  /*height: 20px;*/
+
 }
 .sessao-card{
   padding-bottom: 30px;
@@ -394,7 +396,7 @@ textarea.materialize-textarea{
   width: 150px;
   border-radius: 5px;
   height: 120px;
-  top:55%;
+  bottom: 10px;
   position: fixed;
   background: white;
   right: 0px;

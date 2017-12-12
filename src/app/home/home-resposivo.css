@@ -59,6 +59,9 @@
  /*}*/
  /*////////////// TELA MOBILE//////////*/
  @media screen and (max-width: 45em) {
+  .send-message{
+    bottom: 110px;
+  }
    #menu-desk{
      display: none;
    }
@@ -135,5 +138,12 @@
      display: block;
    }
 
+
+ }
+
+ @media screen and (min-width: 900px){
+   .box_card {
+     padding: 0px
+   }
  }
 

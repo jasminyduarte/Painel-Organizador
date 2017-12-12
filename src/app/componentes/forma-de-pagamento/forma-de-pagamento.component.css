@@ -1,8 +1,8 @@
 .banner{
-  background-image: url("../../../assets/img/banner3.jpg");
+  background-image: url("../../../assets/img/pagamento.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 300px;
+  height: 400px;
 }
 
 .onda-branca{
@@ -48,6 +48,8 @@
   font-size: 20px;
   padding: 6px;
   font-weight: 600;
+  color: #5f5f5f;
+  margin-left: 20px;
 }
 .maquina{
   width: 250px;
@@ -65,6 +67,12 @@
 .box-mob{
   display: none;
 }
+.texto-banner{
+  text-align: center;
+}
+.texto-banner h4{
+  color: #fff;
+}
 @media screen and (max-width: 45em){
   .box{
     display: none;
@@ -74,5 +82,26 @@
   }
   .onda-branca{
     display: none;
+  }
+  .titulo_tipo{
+    font-size: 20px;
+    color: #4d4d4d;
+    margin-left: 20px;
+  }
+  .titulo~p{
+    margin-left: 20px;
+    color: #5f5f5f;
+  }
+  ul{
+    list-style-type: none;
+    padding: 0px;
+  }
+  ul li{
+    color: #5f5f5f;
+    margin-left: 20px;
+  }
+  .box2 p{
+    margin-left: 20px;
+    color: #5f5f5f;
   }
 }

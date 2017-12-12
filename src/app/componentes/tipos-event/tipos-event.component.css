@@ -79,6 +79,26 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.event .front{
+  background-image: url("../../../assets/img/beneficent.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.casa .front{
+  background-image: url("../../../assets/img/casamento.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.feira .front{
+  background-image: url("../../../assets/img/feiras.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.compet .front{
+  background-image: url("../../../assets/img/compet.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .back {
   background: #0066cc;
   color: white;

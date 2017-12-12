@@ -139,6 +139,12 @@ ul.none{
   margin: 10px auto;
 }
 
+@media screen and (min-width: 900px){
+  mat-tab-group{
+    width: 100%;
+  }
+}
+
 
 
 
