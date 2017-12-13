@@ -141,7 +141,7 @@
 
  }
 
- @media screen and (min-width: 900px){
+ @media screen and (max-width: 900px){
    .box_card {
      padding: 0px
    }

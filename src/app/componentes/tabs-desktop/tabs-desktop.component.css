@@ -8,7 +8,7 @@
   background:linear-gradient(135deg,#009966,#007F9B ) ;
   padding: 0px;
   margin: -24px 0px;
-  height: 209px;
+  height: 220px;
 }
 .titulo-plat,.sub-plat{
   color: white;
@@ -202,4 +202,16 @@ ul.none{
 .info{
   text-align: center;
   padding-bottom: 20px;
+}
+@media screen and (max-width: 900px){
+  .plataformas{
+    height: 260px;
+  }
+  .plataformas .mat-tab-group{
+    width: 65%;
+  }
+  .box-info{
+    height: 800px;
+     padding-bottom:  200px;
+  }
 }

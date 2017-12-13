@@ -139,10 +139,17 @@ ul.none{
   margin: 10px auto;
 }
 
-@media screen and (min-width: 900px){
+@media screen and (max-width: 900px){
   mat-tab-group{
     width: 100%;
   }
+  .box-texto{
+    width: 80% !important;
+  }
+  .box-info{
+    width: 50% !important;
+  }
+
 }
 
 

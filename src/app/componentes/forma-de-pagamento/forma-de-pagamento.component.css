@@ -72,6 +72,15 @@
 }
 .texto-banner h4{
   color: #fff;
+  font-size: 30px;
+  padding-top: 71px;
+  margin-bottom: 2px;
+}
+.texto-banner p{
+  color: white;
+  font-size: 20px;
+  width: 37%;
+  margin: 0px auto;
 }
 @media screen and (max-width: 45em){
   .box{
