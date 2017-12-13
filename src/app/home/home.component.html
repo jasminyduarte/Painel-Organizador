@@ -34,7 +34,7 @@
 
 <!--Banner Apresentação-->
 <div class="banner-apre">
-  <img src="../../assets/img/frasebanner.svg" alt="">
+  <img src="assets/img/frasebanner.svg" alt="">
   <div class="btn-banner">
     <mat-button-toggle class="btn-experi" (click)="Mostra()" >Experimente agora</mat-button-toggle>
   </div>
@@ -46,24 +46,24 @@
 
  <!--mande uma mensagem-->
 <div class="send-message">
-  <img class="suporte" src="../../assets/img/suporte.svg">
+  <img class="suporte" src="assets/img/suporte.svg">
   <button (click)="openDialog()">Tenho dúvidas</button>
 </div>
 
 
 <!--Seção de cards-->
 <div class="onda-branca">
-  <img src="../../assets/img/det branco.svg" alt="">
+  <img src="assets/img/det branco.svg" alt="">
 </div>
 <section id="sessao2" class="sessao-card">
   <div class="section">
     <div class="center-align">
-      <p class="titulo_s1">Somos uma plataforma completa para a organização
-        e vendas de ingresso
+      <p class="titulo_s1">Somos uma plataforma completa para a gestão e organização
+        de eventos e atividades turísticas.
       </p>
       <p class="sub_s1">
-        Crie e acompanhe todo o seu evento em tempo real,
-        pelo desktop, smatphone ou tablet.
+        Crie e acompanhe os processos de seus eventos e atividades turísticas de forma simultâneas, automatizada e
+        em tempo real, por meio de dispositivos desktop e móveis com App’s online e offline.
       </p>
       <div class="box_card">
 
@@ -73,10 +73,16 @@
             <mat-card-title ><p class=" titulo_card-verde">Simples e fácil</p></mat-card-title>
             <mat-card-content>
               <p class="texto-card">
-                Crie e organize todo o seu evento de qualquer lugar, com facilidade e segurança.
-                Desde a criação do evento à vendas.
-                Controle e gerencie suas tarefas em utilizando nosso Check-list pelo desktop e aplicativo.
+                Crie e organize seus eventos e atividades turísticas de qualquer lugar, com facilidade e segurança.
+                Do panejamento dos eventos e atividades às vendas.
               </p>
+              <ul>
+                <li>Planeje e gerencie seus eventos/atividades utilizando nosso Check-list, planilha
+                  financeira e o gerenciador financeiro pelo desktop e aplicativo;</li>
+                <li>
+                  Divulgue seus produtos/serviços enviando e-mail marketing;
+                </li>
+              </ul>
             </mat-card-content>
           </mat-card>
         </div>
@@ -85,10 +91,25 @@
             <mat-card-title><p class="titulo_card-azul">Sem complicações!</p></mat-card-title>
             <mat-card-content>
               <p class="texto-card" >
-                Gere certificados automaticamente, com contagem de horas.
-                Mande e-mails aos seus participantes.
-                Analise e gere relatórios detalhados sobre todas as informações dos seus eventos: Inscrições, registros de presenças, vendas, cadastros entre outros.
+                Utilize as diversas ferramentas durante a realização do seus eventos e atividades e crie experiências inesquecíveis para seus clientes.
               </p>
+              <ul>
+                <li>
+                  Ofereça mimos aos seus clientes por meio de sorteios;
+                </li>
+                <li>
+                  Aplique pesquisas e conheça a opinião e nível de satisfação dos seus clientes;
+                </li>
+                <li>
+                  Disponibilize mais produtos/serviços para seus clientes e potencialize suas vendas;
+                </li>
+                <li>
+                  Organize o debate em seus eventos coorporativos/acadêmicos – receba as perguntas direcionadas aos palestrantes em seu APP Gestor;
+                </li>
+                <li>
+                  Conheça todas as ferramentas da TicketPhone e interaja mais com seus clientes.
+                </li>
+              </ul>
             </mat-card-content>
           </mat-card>
         </div>
@@ -98,12 +119,19 @@
             <mat-card-title ><p class="titulo_card-rosa">O diferencial na palma da sua mão!</p></mat-card-title>
             <mat-card-content>
               <p class="texto-card">
-                Utilize diversas ferramentas durante a realização do seu evento para tornar a experiência inesquecível.
-                Realize sorteios
-                Faça ou mande pesquisas aos participantes,
-                Receba perguntas para os palestrantes
-                E mais! Conheça todas as ferramentas da TicketPhone e tenha mais intereção com seus participantes.
+                Conclua seus eventos e atividades e entregue os resultados com rapidez!
               </p>
+              <ul>
+                <li>
+                  Gere relatórios detalhados de seus eventos/atividades: financeiro, perfil de público, número de inscrições, número de participantes, entre outros;
+                </li>
+                <li>
+                  Emita certificados automaticamente, com carga horária real ou total;
+                </li>
+                <li>
+                  Mande e-mails aos seus clientes e fornecedores;
+                </li>
+              </ul>
             </mat-card-content>
           </mat-card>
         </div>
@@ -144,6 +172,9 @@
 
 <!--Tipos de eventos-->
 <app-tipos-event></app-tipos-event>
+
+<!--Login-->
+<app-card-login *ngIf="!show" ></app-card-login>
 
 <!--Rodapé-->
 <app-footer></app-footer>

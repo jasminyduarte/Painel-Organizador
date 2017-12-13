@@ -53,6 +53,10 @@ form{
   text-align: center;
   font-size: 16px;
 }
+
+.mat-step-header .mat-step-icon{
+  background-color: #009966 !important;
+}
 /* ------------------------ material angular io -----------*/
 
 

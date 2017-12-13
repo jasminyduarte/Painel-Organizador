@@ -196,7 +196,7 @@
 .hide{
   display: none;
 }
-.container::after{
+span::after{
   content: "X";
   color: white;
   height: 38px;

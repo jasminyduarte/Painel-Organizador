@@ -58,7 +58,8 @@
   /*}*/
  /*}*/
  /*////////////// TELA MOBILE//////////*/
- @media screen and (max-width: 45em) {
+ @media screen and (max-width: 45em){
+
   .send-message{
     bottom: 110px;
   }
@@ -93,6 +94,9 @@
    }
    app-tabs-desktop{
      display: none;
+   }
+   app-tabs{
+     display: block;
    }
    .mostra{
      display: none;
@@ -138,10 +142,9 @@
      display: block;
    }
 
-
  }
 
- @media screen and (max-width: 900px){
+ @media screen and (max-width: 970px){
    .box_card {
      padding: 0px
    }

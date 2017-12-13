@@ -32,6 +32,7 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit() {
+
     // lista do rodapé
     this.lista1 = ['Quem somos', 'Pacotes', 'Termos', 'Pacotes', 'Suporte', 'Comentários', 'TicketPhone na mídia', 'Apoio a TickePhone'];
     this.lista2 = ['Checklista de tarefas', 'Lista de inscritos', 'Registro de presença e check-in', 'Contato de prestadores de serviços', 'Materias para dowloand', 'Certificados Digitais',

@@ -1,10 +1,10 @@
 <mat-card class="box-tipos">
   <div>
     <!--Ondinhas-->
-    <img class="onda-branca" src="../../../assets/img/det-branco.svg" alt="">
+    <img class="onda-branca" src="assets/img/det-branco.svg" alt="">
   </div>
   <div>
-    <p class="titulo">Ferramentas especiais para qualquer tipo de atividade</p>
+    <p class="titulo">Ferramentas inteligentes para você personalizar seus eventos e atividades! </p>
     <p class="sub-titulo">Veja alguns exemplos de atividades realizadas pela TicketPhone</p>
   </div>
   <div id="desk" class="box">
@@ -15,7 +15,7 @@
             <div class="box-titulo-azul"><p>Palestras e cursos</p></div>
           </div>
           <div class="back">
-            <img src="../../../assets/img/palestras.svg" alt="">
+            <img src="assets/img/palestras.svg" alt="">
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@
               <div class="box-titulo-azul"><p>Show e Festas</p></div>
             </div>
             <div class="back">
-              <img src="../../../assets/img/shows.svg" alt="">
+              <img src="assets/img/shows.svg" alt="">
             </div>
           </div>
         </div>
@@ -37,7 +37,7 @@
              <div class="box-titulo-verde"><p>Passeios e visitações</p></div>
            </div>
            <div class="back turismo">
-             <img src="../../../assets/img/passeios.svg" alt="">
+             <img src="assets/img/passeios.svg" alt="">
            </div>
          </div>
        </div>
@@ -48,7 +48,7 @@
             <div class="box-titulo-verde"><p>Atividades Turísticas</p></div>
           </div>
           <div class="back ">
-            <img src="../../../assets/img/atividades.svg" alt="">
+            <img src="assets/img/atividades.svg" alt="">
           </div>
         </div>
       </div>
@@ -60,7 +60,7 @@
             <div class="box-titulo-azul"><p>Competições</p></div>
           </div>
           <div class="back">
-            <img src="../../../assets/img/compet.svg" alt="">
+            <img src="assets/img/compet.svg" alt="">
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@
             <div class="box-titulo-azul"><p>Feiras e exposições</p></div>
           </div>
           <div class="back">
-            <img src="../../../assets/img/feiras.svg" alt="">
+            <img src="assets/img/feiras.svg" alt="">
           </div>
         </div>
       </div>
@@ -82,7 +82,7 @@
             <div class="box-titulo-azul"><p>Casamentos e encontros</p></div>
           </div>
           <div class="back">
-            <img src="../../../assets/img/casamentos.svg" alt="">
+            <img src="assets/img/casamentos.svg" alt="">
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@
             <div class="box-titulo-azul"><p>Eventos beneficientes</p></div>
           </div>
           <div class="back">
-            <img src="../../../assets/img/eventos.svg" alt="">
+            <img src="assets/img/eventos.svg" alt="">
           </div>
         </div>
       </div>
@@ -105,11 +105,13 @@
 
 <div class="card-banner">
   <p>
-    Teste agora, personalize do jeito que você quiser
-    experimente as ferramentas TicketPhone e crie experiências inesquecíveis
+    Teste agora as ferramentas TicketPhone e ofereça experiências inesquecíveis!
   </p>
   <div class="btn">
-    <mat-button-toggle class="btn-experi">Experimente agora</mat-button-toggle>
-    <mat-button-toggle (click)="openDialog()" class="btn-duvidas">Tenho dúvidas</mat-button-toggle>
+    <mat-button-toggle  (click)="Mostra()" class="btn-experi">Experimente agora</mat-button-toggle>
+    <mat-button-toggle  class="btn-duvidas">Tenho dúvidas</mat-button-toggle>
   </div>
 </div>
+
+<!--Login-->
+<app-card-login *ngIf="!show" ></app-card-login>

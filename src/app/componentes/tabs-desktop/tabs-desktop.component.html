@@ -11,17 +11,17 @@
     <mat-tab-group class="tab-plat" [(selectedIndex)]="index">
       <mat-tab class="tab-select">
         <ng-template mat-tab-label>
-          <img class="imagens-plat" src="../../../assets/img/web.svg" alt="">
+          <img class="imagens-plat" src="assets/img/web.svg" alt="">
         </ng-template>
       </mat-tab>
       <mat-tab>
         <ng-template mat-tab-label>
-          <img class="imagens-plat" src="../../../assets/img/tab e sm.svg" alt="">
+          <img class="imagens-plat" src="assets/img/tab e sm.svg" alt="">
         </ng-template>
       </mat-tab>
       <mat-tab>
         <ng-template mat-tab-label>
-          <img  class="imagens-plat" src="../../../assets/img/maq ticketp.svg" alt="">
+          <img  class="imagens-plat" src="assets/img/maq ticketp.svg" alt="">
         </ng-template>
       </mat-tab>
     </mat-tab-group>
@@ -31,15 +31,18 @@
      <div class="display">
        <div class="esquerda">
          <div class="texto-pla">
-           <p>Crie e configure todos os seus eventos e atividades no TicketPhone web. Realize o login da sua conta organizador no menu principal do site.
-             Acompanhe suas vendas, listagem de participantes cadastrados e  inscritos</p>
+           <p>Crie e configure todos os seus eventos e atividades no TicketPhone web.
+             Realize o login da sua conta organizador no menu principal do site.
+             Acompanhe suas vendas, inscrições, quantidade de vagas restantes, áreas ocupadas e outras questões importantes para as próximas estratégias.
            <p>
-             Acesse o banco de dados dos seus clientes, conheça seus perfils e gostos.
-             Gere certificados com horas contabilizadas automaticamente.
-           </p>
            <p>
-             Faça sorteios entre seus particpantes.
-             Troque mensagens e e-mails com seus participantes.
+           Acesse o banco de dados dos seus clientes, conheça seu perfil e gosto e crie situações específicas para cada um.
+         </p>
+           <p>
+             Gere certificados com carga horária contabilizada automaticamente, carga horária real de participação ou carga horária total.
+             Faça sorteios entre os particpantes.
+             Troque mensagens e e-mails com seus clientes.
+
            </p>
          </div>
        </div>
@@ -57,38 +60,40 @@
           <div class="texto-pla">
             <p>Os aplicativos da TicketPhone possuem todas as ferramentas para proporcionar experiências inesquecíveis aos seus clientes.</p>
             <p>
-              Através do app <strong>Participante</strong> seu cliente pode acompanha todo o histórico de atividades dele, comprar ingressos, realizar pagamentos, gerar certificados,
-              trocar mensagens com a organização, enviar perguntas aos palestrantes, acessar roteiros e mais…
-              O aplicativo Participante já está disponível para ser baixado gratuitamente pela Google play e Apple Store.
+              Através do app <strong>Participante</strong>seu cliente pode acompanhar todo o histórico de eventos/atividades dele,
+              comprar ingressos e produtos, realizar pagamentos, gerar certificados, trocar mensagens com você organizador, enviar perguntas aos
+              palestrantes, acessar roteiros e mais… O aplicativo Participante já está disponiveis para ser baixado gratuitamente pela Google play e Apple Store.
             </p>
             <p>
-              Com o app <strong> Organizador</strong> você pode criar, editar e acompanhar todas as suas atividades sem precisar de acesso à internet. Além de ter todas as ferramentas na palma da sua mão:
-              Registro de presenças, receber e enviar mensagens, roteiros, sorteios, pesquisas, letreiro visual e mais…
+              Com o app <strong> Organizador</strong> você pode criar, editar e acompanhar todos os seus eventos/atividades sem precisar de acesso à internet. Além de ter todas as ferramentas na palma da sua mão: venda de ingresos/inscrições, produtos/serviços; registro de presenças, receber e enviar mensagens; roteiros; sorteios; pesquisas; letreiro visual de informações, contagem de público e mais…
+              Em breve será lançado O NOVO app. Aguarde
             </p>
-          </div>
-        </div>
-        <div class="box-desk">
-          <div class="esquerda">
-            <img  class="desk desk2"  src="assets/img/app%20verde.png" alt="">
-          </div>
-          <div class="btn">
-            <p>Em Breve</p>
           </div>
         </div>
 
-        <div class="box-desk">
-          <div class="esquerda esquerda2">
-            <img  class="desk desk2 "  src="assets/img/app%20azul.png" alt="">
-            <div class="box-btn">
-              <a href="">
-                <img class="img-btn"  src="../../../assets/img/disponivel-app-store.png" alt="">
-              </a>
-              <a href="">
-                <img class="img-btn" src="../../../assets/img/googleplay.png" alt="">
-              </a>
+          <div class="box-desk">
+            <div class="esquerda">
+              <img  class="desk desk2"  src="assets/img/app%20verde.png" alt="">
+            </div>
+            <div class="btn">
+              <p>Em Breve</p>
             </div>
           </div>
-        </div>
+
+          <div class="box-desk">
+            <div class="esquerda esquerda2">
+              <img  class="desk desk2 "  src="assets/img/app%20azul.png" alt="">
+              <div class="box-btn">
+                <a href="https://itunes.apple.com/br/app/ticketphone/id1302796578?mt=8">
+                  <img class="img-btn"  src="assets/img/disponivel-app-store.png" alt="">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=br.com.conexao.ticketphone2">
+                  <img class="img-btn" src="assets/img/googleplay.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+
       </div>
     </div>
     <div class="box-info" *ngIf="index == 2">
@@ -96,9 +101,13 @@
         <div class="maq1">
           <div class="texto-pla2">
             <p class="titulo-maquinas">Completa TicketPhone</p>
-            <p>Sistema TicketPhone integrada. Gerencie toda as suas atividades através do aplicativo organizador na própria maquininha.
-              Receba o pagamento de seus ingressos/passaportes, produtos e serviços com cartão de crédito e registre os pagamentos em dinheiro.
-              Imprima os ingressos e comprovantes de pagamento ou envie-os por e-mail.</p>
+            <p>Sistema TicketPhone integrado.
+              Gerencie seus eventos/atividades através do aplicativo organizador na própria máquininha.
+              Acompanhe as vendas, faça sorteios e utilize todas as ferramentas da versão Web e Móvel e outras ferramentas exclusivas da Completa:
+              Receba o pagamento de seus ingressos/passaportes, produtos e serviços, com cartão de crédito e débito, registre os pagamentos em dinheiro;
+              Imprima os ingressos e comprovantes de pagamento ou envie-os por e-mail;
+              E mais!
+            </p>
           </div>
           <div>
             <img class="img-maq"  src="assets/img/maq.png" alt="">
@@ -108,9 +117,11 @@
          <div class="maq2">
            <div class="texto-pla2">
              <p class="titulo-maquinas">Compacta TicketPhone</p>
-             <p> Sistema TicketPhone integrada. Gerencie toda as suas atividades através do aplicativo organizador na própria máquininha.
-               Receba o pagamento de seus ingressos/passaportes, produtos e serviços com cartão de crédito e registre os pagamentos em dinheiro.
-               Imprima os ingressos e comprovantes de pagamento ou envie-os por e-mail..</p>
+             <p> Sistema TicketPhone integrado.
+               Gerencie seus eventos/atividades através do aplicativo organizador instalado em seu dispositivo móvel (tablet, smartphone), conecte a Compacta no dispositivo e acesse todas as ferramentas da plataforma Web e Móvel.
+               	Receba o pagamento de seus ingressos/passaportes, produtos e serviços, com cartão de crédito e débito;
+               Imprima os comprovantes de pagamento.
+             </p>
            </div>
            <div>
              <img class="img-maq"  src="assets/img/maq2.png" alt="">
@@ -121,3 +132,6 @@
   </div>
 </mat-card>
 </div>
+
+<!--Login-->
+<app-card-login *ngIf="!show" ></app-card-login>

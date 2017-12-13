@@ -27,42 +27,7 @@ export class CardLoginComponent implements OnInit {
     private _formBuilder: FormBuilder
   ) { }
 
-  ngOnInit() {
-    var $loginMsg = $('.loginMsg'),
-      $login = $('.login'),
-      $signupMsg = $('.signupMsg'),
-      $signup = $('.signup'),
-      $frontbox = $('.frontbox');
-
-    $('#switch1').on('click', function() {
-      $loginMsg.toggleClass("visibility");
-      $frontbox.addClass("moving");
-      $frontbox.addClass("frontbox2");
-      $signupMsg.toggleClass("visibility");
-
-      $signup.toggleClass('hide');
-      $login.toggleClass('hide');
-    })
-
-    $('#switch2').on('click', function() {
-      $loginMsg.toggleClass("visibility");
-      $frontbox.removeClass("moving");
-      $frontbox.removeClass("frontbox2");
-      $signupMsg.toggleClass("visibility");
-
-      $signup.toggleClass('hide');
-      $login.toggleClass('hide');
-    });
-
-    // setTimeout(function(){
-    //   $('#switch1').click();
-    // },1000);
-    //
-    // setTimeout(function(){
-    //   $('#switch2').click();
-    // },3000);
-
-
+  ngOnInit(){
     // FORMULARIO LOGIN
     this.formLogin = this._formBuilder.group({
       cpfCtrl: ['', [Validators.required, FormValidacao.cpf]],
@@ -95,6 +60,43 @@ export class CardLoginComponent implements OnInit {
     this.formSenha = this._formBuilder.group({
       cpfCtrl: ['', [Validators.required, FormValidacao.cpf]]
     });
+  }
+
+  ngAfterViewInit() {
+    var $loginMsg = $('.loginMsg'),
+      $login = $('.login'),
+      $signupMsg = $('.signupMsg'),
+      $signup = $('.signup'),
+      $frontbox = $('.frontbox');
+
+    $('#switch1').on('click', function() {
+      $loginMsg.toggleClass("visibility");
+      $frontbox.addClass("moving");
+      $frontbox.addClass("frontbox2");
+      $signupMsg.toggleClass("visibility");
+
+      $signup.toggleClass('hide');
+      $login.toggleClass('hide');
+      console.log("teste");
+    });
+
+    $('#switch2').on('click', function() {
+      $loginMsg.toggleClass("visibility");
+      $frontbox.removeClass("moving");
+      $frontbox.removeClass("frontbox2");
+      $signupMsg.toggleClass("visibility");
+
+      $signup.toggleClass('hide');
+      $login.toggleClass('hide');
+    });
+
+    // setTimeout(function(){
+    //   $('#switch1').click();
+    // },1000);
+    //
+    // setTimeout(function(){
+    //   $('#switch2').click();
+    // },3000);
   }
 
   // FAZER LOGIN

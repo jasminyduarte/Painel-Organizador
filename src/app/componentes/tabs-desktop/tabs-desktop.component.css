@@ -79,9 +79,12 @@
 .plataformas /deep/ .mat-tab-group.mat-primary .mat-ink-bar{
   background:transparent !important;
 }
+.plataformas /deep/ .mat-tab-header-pagination-chevron {
+  border-color: white;
+}
+
 .btn{
-  text-align: left;
-  margin-left: 50px;
+  text-align:center;
 }
 .demo-tab-content{
   height: 500px;
@@ -180,6 +183,7 @@ ul.none{
 .box-desk{
   padding-top: 75px;
   width: 40%;
+  text-align: center;
 }
 
 .maq1 {
@@ -203,15 +207,34 @@ ul.none{
   text-align: center;
   padding-bottom: 20px;
 }
-@media screen and (max-width: 900px){
+@media screen and (max-width: 970px){
   .plataformas{
     height: 260px;
   }
   .plataformas .mat-tab-group{
-    width: 65%;
+    width: 47%;
   }
   .box-info{
     height: 800px;
      padding-bottom:  200px;
   }
+  .img-maq{
+    width: 80%;
+  }
+  .desk2{
+    width: 200px
+  }
+  .texto-pla[_ngcontent-c10] {
+    text-align: left;
+    padding: 10px;
+    color: #5f5f5f;
+    font-size: 17px;
+  }
+  .box-desk {
+    padding-top: 44px;
+  }
+  .desk {
+    width: 70%;
+  }
+
 }

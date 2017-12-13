@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabs.component.css']
 })
 export class TabsComponent implements OnInit {
-
+  show = true;
   constructor() { }
 
   ngOnInit() {
   }
-
+  Mostra() {
+    console.log("mostra")
+    this.show = !this.show;
+  }
 }

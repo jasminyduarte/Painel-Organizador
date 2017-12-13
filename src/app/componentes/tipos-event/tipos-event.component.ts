@@ -11,6 +11,7 @@ import {DialogComponent} from '../../dialog/dialog.component';
 })
 export class TiposEventComponent implements OnInit {
   dialog: any;
+  show = true;
 
   constructor() {
   }
@@ -22,4 +23,10 @@ export class TiposEventComponent implements OnInit {
       width: '80%'
     });
   }
+
+  Mostra() {
+    console.log("mostra")
+    this.show = !this.show;
+  }
+
 }

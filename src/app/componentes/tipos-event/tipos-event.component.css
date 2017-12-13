@@ -114,7 +114,7 @@
   margin: 20px auto;
 }
 
-.card-box{
+.card-box {
   width: 93%;
   margin: 0px auto;
   display: flex;
@@ -183,7 +183,9 @@
 }
 
 .onda-branca{
-  margin-top: -2px;
+  margin-top: -8px;
+  height: 38px;
+  width: 100%;
 }
 
 /*MOBILE*/
@@ -204,15 +206,17 @@
      display: none;
    }
   .card-box{
-    flex-direction: column;
+    display: flow-root !important;
+    /*flex-direction: column;*/
   }
   .card{
-    margin-left: 9%;
+    /*margin-left: 9%;*/
     margin-bottom: 30px;
   }
   .titulo{
     width: 80%;
   }
+
 
 }
 
