@@ -6,12 +6,12 @@
 }
 
 .titulo{
-  width: 33%;
+  width: 70%;
   margin: 0px auto;
   text-align: center;
   font-size: 35px;
   text-shadow: 3px 0px 10px black;
-  padding-top: 40px;
+  padding-top: 110px;
   padding-bottom: 10px;
 }
 
@@ -31,10 +31,29 @@
 
 .card {
   width: 267px;
-  height: 380px;
+  min-height: 380px;
   float: left;
   perspective: 500px;
   margin-left: 10px;
+}
+.card.mobile {
+  display: none;
+  margin: 25px 1%;
+  background: #0066cc;
+  border-radius: 10px;
+}
+.card.mobile.turismo {
+  background: #009966;
+}
+.card.mobile img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card.mobile img:nth-child(2) {
+  display: block;
+  width: 87%;
+  margin: 0 auto 10px;
 }
 
 .content {
@@ -60,42 +79,42 @@
   backface-visibility: hidden;
 }
 .pale .front{
-  background-image: url("../../../assets/img/palestra.jpg");
+  background-image: url("/assets/img/palestra.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .show .front{
-  background-image: url("../../../assets/img/show.jpg");
+  background-image: url("/assets/img/show.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .passe .front{
-  background-image: url("../../../assets/img/visitacao2.jpg");
+  background-image: url("/assets/img/visitacao.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .ativi .front{
-  background-image: url("../../../assets/img/atividade.jpg");
+  background-image: url("/assets/img/atividade.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .event .front{
-  background-image: url("../../../assets/img/beneficent.jpg");
+  background-image: url("/assets/img/beneficent.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .casa .front{
-  background-image: url("../../../assets/img/casamento.jpg");
+  background-image: url("/assets/img/casamento.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .feira .front{
-  background-image: url("../../../assets/img/feiras.jpg");
+  background-image: url("/assets/img/feiras.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .compet .front{
-  background-image: url("../../../assets/img/compet.jpg");
+  background-image: url("/assets/img/compet.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -126,18 +145,17 @@
 
 .box-titulo-azul{
   background: #0066ccd9;
-
   width: 100%;
-  height: 52px;
-  position: relative;
-  top: 328px;
+  min-height: 52px;
+  position: absolute;
+  bottom: 0;
 }
 .box-titulo-verde{
   background: #009966c9;
   width: 100%;
-  height: 52px;
-  position: relative;
-  top: 328px;
+  min-height: 52px;
+  position: absolute;
+  bottom: 0;
 }
 
 .box-titulo-azul p ,
@@ -188,6 +206,17 @@
   width: 100%;
 }
 
+.ondinha {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  top: -40px;
+  background-image: url(/assets/img/ondinha-branca.png);
+  background-repeat: repeat-x;
+  background-position: center;
+  z-index: 1;
+}
+
 /*MOBILE*/
 @media screen and (max-width: 45em) {
   .card-banner p {
@@ -205,8 +234,16 @@
    .onda-branca{
      display: none;
    }
+
+   .ondinha {
+     display: none;
+   }
+
   .card-box{
-    display: flow-root !important;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0;
+    /* display: flow-root !important; */
     /*flex-direction: column;*/
   }
   .card{
@@ -215,8 +252,14 @@
   }
   .titulo{
     width: 80%;
+    font-size: 26px;
   }
 
+  .card {
+    display: none;
+  }
 
+  .card.mobile {
+    display: block;
+  }
 }
-

@@ -56,7 +56,8 @@
 }
 
 .plataformas /deep/ .mat-tab-group{
-  width: 38%;
+  width: 520px;
+  min-width: 520px;
   display: block;
   margin: 0px auto;
 }
@@ -151,14 +152,14 @@ ul.none{
   color: white;
   margin: 0px auto;
   padding-top: 40px;
-  width: 33%;
+  width: 100%;
   text-align: center;
   line-height: 33px;
   font-size: 30px;
   font-weight: bold;
 }
 .sub{
-  width: 15%;
+  width: 215px;
   margin: 0px auto;
   color: white;
 }
