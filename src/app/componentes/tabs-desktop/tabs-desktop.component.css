@@ -8,7 +8,6 @@
   background:linear-gradient(135deg,#009966,#007F9B ) ;
   padding: 0px;
   margin: -24px 0px;
-  height: 220px;
 }
 .titulo-plat,.sub-plat{
   color: white;
@@ -25,6 +24,7 @@
 .imagens-plat{
   width: 80px;
   margin: 20px;
+  margin-bottom: 28px;
 }
 .box{
   width: 100%;
@@ -42,14 +42,14 @@
   margin-top: 13px;
 }
 .desk{
-  width: 50%;
+  width: 100%;
 }
 .desk2{
   width: 260px;
   margin-top: -22px
 }
 .plataformas /deep/ .mat-tab-label{
-  height: 70px !important;
+  height: 85px !important;
 }
 .plataformas /deep/ .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
   background-color: white !important;
@@ -92,7 +92,7 @@
 }
 
 .pai{
-  height: 700px;
+  min-height: 610px;
   width: 100%;
 }
 .btn-experi {
@@ -125,12 +125,20 @@ ul.none{
   display: block;
 }
 .img-maq{
-  width: 350px;
-  padding-top: 14px;
-  padding-left: 50px;
+  width: 100%;
 }
 .box-btn{
   text-align: center;
+  width: 100%;
+}
+
+.box-btn a {
+  display: block;
+  width: 90%;
+  max-width: 180px;
+  margin: auto;
+}
+.box-btn a img {
   width: 100%;
 }
 .img-btn{
@@ -148,10 +156,9 @@ ul.none{
 }
 
 .titulo_ferraments{
-  padding-top: 10px;
+  padding-top: 60px;
   color: white;
   margin: 0px auto;
-  padding-top: 40px;
   width: 100%;
   text-align: center;
   line-height: 33px;
@@ -159,49 +166,66 @@ ul.none{
   font-weight: bold;
 }
 .sub{
-  width: 215px;
-  margin: 0px auto;
+  width: 100%;
+  margin: 5px auto;
   color: white;
 }
 
 .box-info{
   background: white;
+  min-height: 420px;
 }
 .display{
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin: 0px auto;
   width: 100%;
+  max-width: 1382px;
+  box-sizing: border-box;
+  padding: 0 30px 50px 30px;
 }
 .esquerda{
-  padding-top: 30px;
-  width: 40%;
-
+  padding: 20px 10px;
+  width: 65%;
+  max-width: 530px;
 }
 .esquerda2{
   width: 56%;
 }
 .box-desk{
-  padding-top: 75px;
-  width: 40%;
+  padding: 20px;
+  width: 35%;
+  max-width: 250px;
   text-align: center;
 }
 
 .maq1 {
   width: 50%;
-  padding-top: 30px;
+  padding: 20px 0 20px 20px;
   display: inline-flex;
+  box-sizing: border-box;
 }
 .maq2{
   width: 50%;
-  padding-top: 30px;
+  padding: 20px 20px 20px 0;
   display: inline-flex;
+  box-sizing: border-box;
 }
 .texto-pla2{
   color: #5f5f5f;
   width: 50%;
-  padding-left: 20px;
+  min-width: 230px;
   font-size: 17px;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.maq1 .texto-pla2 {
+  text-align: right;
+}
+
+.maq-img {
+  max-width: 300px;
 }
 
 .info{
@@ -209,18 +233,8 @@ ul.none{
   padding-bottom: 20px;
 }
 @media screen and (max-width: 970px){
-  .plataformas{
-    height: 260px;
-  }
   .plataformas .mat-tab-group{
     width: 47%;
-  }
-  .box-info{
-    height: 800px;
-     padding-bottom:  200px;
-  }
-  .img-maq{
-    width: 80%;
   }
   .desk2{
     width: 200px
@@ -231,11 +245,22 @@ ul.none{
     color: #5f5f5f;
     font-size: 17px;
   }
-  .box-desk {
-    padding-top: 44px;
-  }
-  .desk {
-    width: 70%;
+  
+  .maq1,
+  .maq2 {
+    flex-direction: column;
   }
 
+  .texto-pla2 {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .maq1 {
+    align-items: flex-end;
+  }
+
+  .maq2 .texto-pla2 {
+    order: 2;
+  }
 }

@@ -1,147 +1,162 @@
-
 <!--Menu-->
 <div id="menu">
-  <nav>
-    <mat-card  class="MENU">
-      <a href="#" class="brand-logo"><img class="logo" src="assets/img/logo-azul.svg" alt="ticketphone"></a>
-      <div class="organizador" >
-        <a href="">Organizador</a>
-      </div>
-      <ul id="menu-desk" class="menu-ul">
-        <li class="box-menu"><a href="badges.html">Vantagens</a></li>
-        <li class="box-menu" (click)="Mostra()" ><a>Login</a></li>
-        <!--<li class="box-menu"><a href="#">Prestadores de serviços</a></li>-->
-        <!--<li class="box-menu"><a href="#">Valores e termos</a></li>-->
-        <!--<li class="box-menu"><a href="#">Quem somos</a></li>-->
-      </ul>
-      <!--Mobile-->
-      <div id="menu-mob">
-        <button mat-icon-button [matMenuTriggerFor]="appMenu">
-          <img src="../../assets/img/icons8-Cardápio.svg" alt="">
-        </button>
-        <mat-menu #appMenu="matMenu">
-          <button mat-menu-item>Vantagens</button>
-          <button (click)="Mostra()" mat-menu-item>Login</button>
-          <!--<button mat-menu-item>Prestadores de serviços</button>-->
-          <!--<button mat-menu-item>Valores e termos</button>-->
-          <!--<button mat-menu-item>Quem somos</button>-->
-        </mat-menu>
-      </div>
-    </mat-card>
-  </nav>
+    <nav>
+        <mat-card class="MENU">
+            <a href="#" class="brand-logo">
+                <img class="logo" src="assets/img/logo-azul.svg" alt="ticketphone">
+            </a>
+            <div class="organizador">
+                <a href="">Organizador</a>
+            </div>
+            <ul id="menu-desk" class="menu-ul">
+                <li class="box-menu">
+                    <a href="badges.html">Vantagens</a>
+                </li>
+                <li class="box-menu" (click)="Mostra()">
+                    <a>Login</a>
+                </li>
+                <!--<li class="box-menu"><a href="#">Prestadores de serviços</a></li>-->
+                <!--<li class="box-menu"><a href="#">Valores e termos</a></li>-->
+                <!--<li class="box-menu"><a href="#">Quem somos</a></li>-->
+            </ul>
+            <!--Mobile-->
+            <div id="menu-mob">
+                <button mat-icon-button [matMenuTriggerFor]="appMenu">
+                    <img src="/assets/img/icons8-Cardápio.svg" alt="">
+                </button>
+                <mat-menu #appMenu="matMenu">
+                    <button mat-menu-item>Vantagens</button>
+                    <button (click)="Mostra()" mat-menu-item>Login</button>
+                    <!--<button mat-menu-item>Prestadores de serviços</button>-->
+                    <!--<button mat-menu-item>Valores e termos</button>-->
+                    <!--<button mat-menu-item>Quem somos</button>-->
+                </mat-menu>
+            </div>
+        </mat-card>
+    </nav>
 </div>
 
 
 <!--Banner Apresentação-->
 <div class="banner-apre">
-  <img src="assets/img/frasebanner.svg" alt="">
-  <div class="btn-banner">
-    <mat-button-toggle class="btn-experi" (click)="Mostra()" >Experimente agora</mat-button-toggle>
-  </div>
+    <img src="/assets/img/frasebanner.svg" alt="">
+    <div class="btn-banner">
+        <mat-button-toggle class="btn-experi" (click)="Mostra()">Experimente agora</mat-button-toggle>
+    </div>
 </div>
 
-<!--Login-->
-<app-card-login *ngIf="!show" ></app-card-login>
 
-
- <!--mande uma mensagem-->
+<!--mande uma mensagem-->
 <div class="send-message">
-  <img class="suporte" src="assets/img/suporte.svg">
-  <button (click)="openDialog()">Tenho dúvidas</button>
+    <img class="suporte" src="/assets/img/suporte.svg">
+    <button (click)="openDialog()">Tenho dúvidas</button>
 </div>
 
 
 <!--Seção de cards-->
 <div class="onda-branca">
-  <img src="assets/img/det branco.svg" alt="">
+    <img src="/assets/img/det branco.svg" alt="">
 </div>
 <section id="sessao2" class="sessao-card">
-  <div class="section">
-    <div class="center-align">
-      <p class="titulo_s1">Somos uma plataforma completa para a gestão e organização
-        de eventos e atividades turísticas.
-      </p>
-      <p class="sub_s1">
-        Crie e acompanhe os processos de seus eventos e atividades turísticas de forma simultâneas, automatizada e
-        em tempo real, por meio de dispositivos desktop e móveis com App’s online e offline.
-      </p>
-      <div class="box_card">
+    <div class="section">
+        <div class="center-align">
+            <p class="titulo_s1">Somos uma plataforma completa para a gestão e organização de eventos e atividades turísticas.
+            </p>
+            <p class="sub_s1">
+                Crie e acompanhe os processos de seus eventos e atividades turísticas de forma simultâneas, automatizada e em tempo real,
+                por meio de dispositivos desktop e móveis com App’s online e offline.
+            </p>
 
-        <!--Cards Desktop-->
-        <div class="box-card1 boox">
-          <mat-card class="cards">
-            <mat-card-title ><p class=" titulo_card-verde">Simples e fácil</p></mat-card-title>
-            <mat-card-content>
-              <p class="texto-card">
-                Crie e organize seus eventos e atividades turísticas de qualquer lugar, com facilidade e segurança.
-                Do panejamento dos eventos e atividades às vendas.
-              </p>
-              <ul>
-                <li>Planeje e gerencie seus eventos/atividades utilizando nosso Check-list, planilha
-                  financeira e o gerenciador financeiro pelo desktop e aplicativo;</li>
-                <li>
-                  Divulgue seus produtos/serviços enviando e-mail marketing;
-                </li>
-              </ul>
-            </mat-card-content>
-          </mat-card>
+
+            <!--Cards Desktop-->
+            <div class="box_card">
+
+                <mat-card class="cards">
+                    <mat-card-title class="card-title">
+                        <h3 class="titulo_card-verde">Primeiros passos</h3>
+                        <p class="titulo_card-verde">Simples e fácil!</p>
+                    </mat-card-title>
+                    <mat-card-content>
+                        <p class="texto-card">
+                            Crie e organize seus eventos e atividades turísticas de qualquer lugar, com facilidade e segurança. Do panejamento dos eventos
+                            e atividades às vendas.
+                        </p>
+                        <ul>
+                            <li>
+                                Planeje e gerencie seus eventos/atividades utilizando nosso Check-list, planilha financeira e
+                                o gerenciador financeiro pelo desktop e aplicativo;
+                            </li>
+                            <li>
+                                Divulgue seus produtos/serviços enviando e-mail marketing;
+                            </li>
+                        </ul>
+                    </mat-card-content>
+                </mat-card>
+
+                
+                <mat-card class="cards">
+                    <mat-card-title class="card-title">
+                        <h3 class="titulo_card-azul">No grande dia</h3>
+                        <p class="titulo_card-azul">O diferencial na palma da sua mão!</p>
+                    </mat-card-title>
+                    <mat-card-content>
+                        <p class="texto-card">
+                            Utilize as diversas ferramentas durante a realização do seus eventos e atividades e crie experiências inesquecíveis para
+                            seus clientes.
+                        </p>
+                        <ul>
+                            <li>
+                                Ofereça mimos aos seus clientes por meio de sorteios;
+                            </li>
+                            <li>
+                                Aplique pesquisas e conheça a opinião e nível de satisfação dos seus clientes;
+                            </li>
+                            <li>
+                                Disponibilize mais produtos/serviços para seus clientes e potencialize suas vendas;
+                            </li>
+                            <li>
+                                Organize o debate em seus eventos coorporativos/acadêmicos – receba as perguntas direcionadas aos palestrantes em seu APP
+                                Gestor;
+                            </li>
+                            <li>
+                                Conheça todas as ferramentas da TicketPhone e interaja mais com seus clientes.
+                            </li>
+                        </ul>
+                    </mat-card-content>
+                </mat-card>
+                    
+                
+                <mat-card class="cards">
+                    <mat-card-title class="card-title">
+                        <h3 class="titulo_card-rosa">Sem complicações</h3>
+                        <p class="titulo_card-rosa">Feche seus eventos/atividades com sucesso!</p>
+                    </mat-card-title>
+                    <mat-card-content>
+                        <p class="texto-card">
+                            Conclua seus eventos e atividades e entregue os resultados com rapidez!
+                        </p>
+                        <ul>
+                            <li>
+                                Gere relatórios detalhados de seus eventos/atividades: financeiro, perfil de público, número de inscrições, número de participantes,
+                                entre outros;
+                            </li>
+                            <li>
+                                Emita certificados automaticamente, com carga horária real ou total;
+                            </li>
+                            <li>
+                                Mande e-mails aos seus clientes e fornecedores;
+                            </li>
+                        </ul>
+                    </mat-card-content>
+                </mat-card>
+
+
+            </div>
+
+            <!--Cards Mobile-->
+            <app-slide id="card-mob"></app-slide>
         </div>
-        <div class="box-card3 boox">
-          <mat-card class="cards">
-            <mat-card-title><p class="titulo_card-azul">Sem complicações!</p></mat-card-title>
-            <mat-card-content>
-              <p class="texto-card" >
-                Utilize as diversas ferramentas durante a realização do seus eventos e atividades e crie experiências inesquecíveis para seus clientes.
-              </p>
-              <ul>
-                <li>
-                  Ofereça mimos aos seus clientes por meio de sorteios;
-                </li>
-                <li>
-                  Aplique pesquisas e conheça a opinião e nível de satisfação dos seus clientes;
-                </li>
-                <li>
-                  Disponibilize mais produtos/serviços para seus clientes e potencialize suas vendas;
-                </li>
-                <li>
-                  Organize o debate em seus eventos coorporativos/acadêmicos – receba as perguntas direcionadas aos palestrantes em seu APP Gestor;
-                </li>
-                <li>
-                  Conheça todas as ferramentas da TicketPhone e interaja mais com seus clientes.
-                </li>
-              </ul>
-            </mat-card-content>
-          </mat-card>
-        </div>
-
-        <div class="box-card2 boox">
-          <mat-card class="cards">
-            <mat-card-title ><p class="titulo_card-rosa">O diferencial na palma da sua mão!</p></mat-card-title>
-            <mat-card-content>
-              <p class="texto-card">
-                Conclua seus eventos e atividades e entregue os resultados com rapidez!
-              </p>
-              <ul>
-                <li>
-                  Gere relatórios detalhados de seus eventos/atividades: financeiro, perfil de público, número de inscrições, número de participantes, entre outros;
-                </li>
-                <li>
-                  Emita certificados automaticamente, com carga horária real ou total;
-                </li>
-                <li>
-                  Mande e-mails aos seus clientes e fornecedores;
-                </li>
-              </ul>
-            </mat-card-content>
-          </mat-card>
-        </div>
-
-
-      </div>
-      <!--Cards Mobile-->
-      <app-slide id="card-mob"></app-slide>
     </div>
-  </div>
 </section>
 
 <!--Banner do desafio-->
@@ -155,10 +170,10 @@
 
 <!--QRCODE IMAGEM-->
 <div class="qr-box">
-  <!--Desktop-->
-  <img class="qrimagem responsive-img mostra" src="assets/img/ingressoqr.jpg" alt="">
-  <!--Mobile-->
-  <img class="qrimagem responsive-img esconde " src="assets/img/ingressoqr2.jpg" alt="">
+    <!--Desktop-->
+    <img class="qrimagem responsive-img mostra" src="/assets/img/ingressoqr.jpg" alt="">
+    <!--Mobile-->
+    <img class="qrimagem responsive-img esconde " src="/assets/img/ingressoqr2.jpg" alt="">
 </div>
 
 
@@ -174,7 +189,7 @@
 <app-tipos-event></app-tipos-event>
 
 <!--Login-->
-<app-card-login *ngIf="!show" ></app-card-login>
+<app-card-login *ngIf="!show"></app-card-login>
 
 <!--Rodapé-->
 <app-footer></app-footer>

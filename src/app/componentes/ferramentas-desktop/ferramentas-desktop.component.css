@@ -1,8 +1,7 @@
 section{
   width: 100%;
   max-height: 1300px;
-  min-height: 600px;
-  height: 650px;
+  min-height: 700px;
   background: white;
   margin: 0px auto;
 }
@@ -25,7 +24,7 @@ section{
 
 }
 mat-tab-group{
-   width: 900px;
+   width: 750px;
    margin: 0px auto;
 }
 .card-content{
@@ -99,6 +98,7 @@ mat-tab-group{
   margin: 16px auto;
   padding-top: 60px;
   color: #009966;
+  margin-bottom: 0;
 }
 
 .box{
@@ -113,15 +113,24 @@ mat-tab-group{
   text-align: left;
 }
 .box-info2{
-  width: 50%;
   display: flex;
+  align-items: flex-start;
 }
 .box-info2 img{
+  margin-top: 18px;
   width: 50%;
+}
+
+.box-info3 {
+  width: 800px;
 }
 .display{
   display: flex;
   justify-content: center;
+}
+.display2 {
+  flex-direction: column;
+  align-items: center;
 }
 ul.none{
   list-style-type: none;
@@ -133,31 +142,29 @@ ul.none{
   color: #5f5f5f;
   font-size: 14px;
   text-align: left;
-  line-height: 18px;
+  line-height: 20px;
   padding: 0;
 }
 
-.icones{
-  margin: 10px;
-}
 .icones img {
-  width: 80%;
+  width: 100%;
   margin: 10px auto;
 }
 
 @media screen and (max-width: 970px){
-  mat-tab-group{
-    width: 100%;
-  }
   .box-texto{
     width: 80% !important;
   }
   .box-info{
-    width: 50% !important;
+    width: 70% !important;
   }
-
 }
 
+@media screen and (max-width: 775px){
+  mat-tab-group{
+    width: 100%;
+  }
+}
 
 
 

@@ -219,6 +219,9 @@
 
 /*MOBILE*/
 @media screen and (max-width: 45em) {
+  .sub-titulo {
+    padding: 10px 20px;
+  }
   .card-banner p {
     width: 88%;
     margin: 0px auto;
@@ -251,6 +254,7 @@
     margin-bottom: 30px;
   }
   .titulo{
+    padding-top: 50px;
     width: 80%;
     font-size: 26px;
   }

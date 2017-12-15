@@ -89,14 +89,6 @@ export class CardLoginComponent implements OnInit {
       $signup.toggleClass('hide');
       $login.toggleClass('hide');
     });
-
-    // setTimeout(function(){
-    //   $('#switch1').click();
-    // },1000);
-    //
-    // setTimeout(function(){
-    //   $('#switch2').click();
-    // },3000);
   }
 
   // FAZER LOGIN
@@ -240,5 +232,9 @@ export class CardLoginComponent implements OnInit {
   loginclosse(){
     console.log("entrou")
     this.closse= !this.closse;
+  }
+
+  ngOnDestroy() {
+    console.log("asdf");
   }
 }

@@ -20,7 +20,7 @@
 }
 .box{
   background: white;
-  height: 750px;
+  min-height: 650px;
 }
 .ferramentas{
   background: #009966;
@@ -68,5 +68,6 @@ ul li {
 .img-ferra{
   width: 100%;
   padding: 10px;
+  box-sizing: border-box;
 }
 

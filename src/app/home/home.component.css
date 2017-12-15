@@ -123,7 +123,7 @@ nav{
 
 
 #sessao1{
-  background-image: url("../../assets/img/desafio.jpg");
+  background-image: url("/assets/img/desafio.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -187,7 +187,7 @@ nav{
   padding-bottom: 30px;
 }
 .sessao-card .titulo_s1{
-  width: 52%;
+  width: 62%;
   display: block;
   color: #5f5f5f;
   font-weight: normal;
@@ -199,12 +199,11 @@ nav{
 }
 .sessao-card .sub_s1{
   margin: 0px auto;
-  width: 44%;
-  width: 44%;
+  width: 57%;
   text-align: center;
   font-size: 18px;
   color: #5f5f5fd4;
-  padding-bottom: 40px;
+  padding-bottom: 24px;
 }
 .box_card{
   display: flex;
@@ -212,6 +211,7 @@ nav{
   padding: 0px 40px;
   max-width: 1150px;
   justify-content: space-around;
+  margin-bottom: 30px;
 }
 .boox {
   /* width: 30%; */
@@ -236,26 +236,28 @@ nav{
   color: #5f5f5f;
 }
 .cards{
-  top: 150px;
   background: white;
-  width: 95%;
-  padding: 10px;
-  margin: auto;
+  width: 33%;
+  padding: 20px 15px 30px 15px;
+  margin: 10px;
   border-radius: 20px;
-  min-height: 215px;
   color: #5f5f5f;
   box-sizing: border-box;
+}
+
+.card-title {
+  margin-bottom: 25px;
 }
 
 .cards ul {
   padding-left: 25px;
   font-size: 14px;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 13px;
+  line-height: 22px;
 }
 
 .det{
-  background-image: url("../../assets/img/det verde.svg");
+  background-image: url("/assets/img/det verde.svg");
   background-repeat: repeat;
   background-size: cover;
   background-position: bottom;
@@ -272,16 +274,16 @@ nav{
   padding-left: 25px;
   padding-top: 15px;
 }
-.titulo_card-azul{color: #0066cc; padding-left: 10px; margin: 3px; font-weight: bold; font-size: 17px; padding-top: 10px;}
+.titulo_card-azul{color: #0066cc; padding-left: 10px; margin: 3px;}
 .titulo_card-rosa{color: #ff0099; padding-left: 10px; margin: 3px;}
 .titulo_card-verde{color:#009966; padding-left: 10px; margin: 3px;}
 
-.titulo_card-verde,
-.titulo_card-rosa,
-.titulo_card-azul p{
-  font-size: 17px;
+p.titulo_card-verde,
+p.titulo_card-rosa,
+p.titulo_card-azul{
+  font-size: 16px;
   font-weight: bold;
-  padding-top: 10px;
+  margin-top: -3px;
 }
 .box-card .card-content p {
  text-align: justify;
@@ -294,7 +296,7 @@ nav{
   width: 100%;
   position: relative;
   top: -20px;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 .qr-box{
   padding-bottom: 40px;

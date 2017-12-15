@@ -5,9 +5,6 @@ import * as $ from 'jquery';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import {DialogComponent} from '../dialog/dialog.component';
 
-
-
-
 @Component({
   selector: 'home-component',
   templateUrl: './home.component.html',
@@ -28,8 +25,6 @@ export class HomeComponent implements OnInit {
   constructor(public dialog: MatDialog) {
 
   }
-
-
 
   ngOnInit() {
 
@@ -60,15 +55,13 @@ export class HomeComponent implements OnInit {
   // MOSTRA O CARD LOGIN //
   /////////////////////////////////////////////////////////
   Mostra() {
-    console.log("mostra")
+    console.log("mostra: ", !this.show)
     this.show = !this.show;
 }
-
 
   openDialog(): void {
     let dialogRef = this.dialog.open(DialogComponent, {
       width: '80%'
     });
   }
-
 }

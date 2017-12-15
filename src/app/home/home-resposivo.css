@@ -60,8 +60,14 @@
  /*////////////// TELA MOBILE//////////*/
  @media screen and (max-width: 45em){
 
+  
+#sessao1{
+  background-image: url("/assets/img/desafio2.jpg");
+}
+
   .send-message{
     bottom: 110px;
+    display: none;
   }
    #menu-desk{
      display: none;
@@ -113,9 +119,10 @@
    /*Sessão card*/
    .sessao-card .titulo_s1{
      width: 83%;
+     font-size: 26px;
    }
    .sessao-card .sub_s1{
-     width: 54%;
+     width: 80%;
    }
 
    /*Menu*/
