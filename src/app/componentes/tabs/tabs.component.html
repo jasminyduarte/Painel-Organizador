@@ -1,118 +1,116 @@
-<mat-card  class="plataformas">
-  <div class="text-card">
-    <p class="titulo">
-      Plataformas Integradas
-    </p>
-    <p class="sub-text">
-      Gerencie de qualquer lugar e On-line e Off-line
-    </p>
-  </div>
-  <div class="card-tabs">
-    <mat-tab-group>
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <p>Web</p>
-        </ng-template>
-        <div class="demo-tab-content">
-          <p class="text">
-            Crie e configure todos os seus eventos e atividades no TicketPhone web.
-            Realize o login da sua conta organizador no menu principal do site.
-            Acompanhe suas vendas, inscrições, quantidade de vagas restantes, áreas ocupadas e outras questões importantes para as próximas estratégias.
-            Acesse o banco de dados dos seus clientes, conheça seu perfil e gosto e crie situações específicas para cada um.
-            Gere certificados com carga horária contabilizada automaticamente, carga horária real de participação ou carga horária total.
-            Faça sorteios entre os particpantes.
-            Troque mensagens e e-mails com seus clientes.
+<mat-card class="plataformas">
+    <div class="text-card">
+        <p class="titulo">
+            Plataformas Integradas
+        </p>
+        <p class="sub-text">
+            Gerencie de qualquer lugar e On-line e Off-line
+        </p>
+    </div>
+    <div class="card-tabs">
+        <mat-tab-group>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <p>Web</p>
+                </ng-template>
+                <div class="demo-tab-content">
+                    <p class="text">
+                        Crie e configure todos os seus eventos e atividades no TicketPhone web. Realize o login da sua conta organizador no menu
+                        principal do site. Acompanhe suas vendas, inscrições, quantidade de vagas restantes, áreas ocupadas
+                        e outras questões importantes para as próximas estratégias. Acesse o banco de dados dos seus clientes,
+                        conheça seu perfil e gosto e crie situações específicas para cada um. Gere certificados com carga
+                        horária contabilizada automaticamente, carga horária real de participação ou carga horária total.
+                        Faça sorteios entre os particpantes. Troque mensagens e e-mails com seus clientes.
 
-          </p>
-          <div>
-            <img class="img-mob" src="/assets/img/desktop.png" alt="">
-          </div>
-          <div class="butn">
-            <mat-button-toggle (click)="Mostra()" class="btn-experi">Experimente Agora</mat-button-toggle>
-          </div>
-        </div>
-      </mat-tab>
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <p>Aplicativos</p>
-        </ng-template>
-        <div class="demo-tab-content">
-          <p class="text">
-            Através do app Participante seu cliente pode acompanhar todo o histórico de eventos/atividades dele,
-            comprar ingressos e produtos, realizar pagamentos, gerar certificados, trocar mensagens com você organizador,
-            enviar perguntas aos palestrantes, acessar roteiros e mais… O aplicativo Participante
-            já está disponiveis para ser baixado gratuitamente pela Google play e Apple Store.
-          </p>
-          <p class="text">
-            Com o app Organizador você pode criar, editar e acompanhar todos os seus eventos/atividades sem precisar de acesso à
-            internet. Além de ter todas as ferramentas na palma da sua mão: venda de ingresos/inscrições, produtos/serviços;
-            registro de presenças, receber e enviar mensagens; roteiros; sorteios; pesquisas; letreiro visual de informações, contagem de público e mais…
-            Em breve será lançado O NOVO app. Aguarde
+                    </p>
+                    <div class="margin">
+                        <img class="img-mob" src="/assets/img/desktop.png" alt="">
+                    </div>
+                    <div class="butn">
+                        <mat-button-toggle (click)="Mostra()" class="btn-experi">Experimente Agora</mat-button-toggle>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <p>Aplicativos</p>
+                </ng-template>
+                <div class="demo-tab-content">
+                    <p class="text">
+                        Através do app Participante seu cliente pode acompanhar todo o histórico de eventos/atividades dele, comprar ingressos e
+                        produtos, realizar pagamentos, gerar certificados, trocar mensagens com você organizador, enviar
+                        perguntas aos palestrantes, acessar roteiros e mais… O aplicativo Participante já está disponiveis
+                        para ser baixado gratuitamente pela Google play e Apple Store.
+                    </p>
+                    <p class="text">
+                        Com o app Organizador você pode criar, editar e acompanhar todos os seus eventos/atividades sem precisar de acesso à internet.
+                        Além de ter todas as ferramentas na palma da sua mão: venda de ingresos/inscrições, produtos/serviços;
+                        registro de presenças, receber e enviar mensagens; roteiros; sorteios; pesquisas; letreiro visual
+                        de informações, contagem de público e mais… Em breve será lançado O NOVO app. Aguarde
 
-          </p>
-          <div class="margin">
-            <div>
-              <img class="img-mob" src="/assets/img/app azul.png" alt="">
-            </div>
-            <div class="box-btn">
-              <a href="https://itunes.apple.com/br/app/ticketphone/id1302796578?mt=8">
-                <img class="img-btn"  src="/assets/img/disponivel-app-store.png" alt="">
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=br.com.conexao.ticketphone2">
-                <img class="img-btn" src="/assets/img/googleplay.png" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="margin">
-            <div>
-              <img class="img-mob" src="/assets/img/app verde.png" alt="">
-            </div>
-            <div class="butn">
-              <mat-button-toggle class="btn-experi">Em Breve</mat-button-toggle>
-            </div>
-          </div>
-        </div>
-      </mat-tab>
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <p>Maquininha</p>
-        </ng-template>
-        <div class="demo-tab-content">
-          <div>
-           <p class="nome-maq">Completa TicketPhone</p>
-          </div>
-          <div class="margin">
-            <p class="text">
-              Sistema TicketPhone integrado.
-              Gerencie seus eventos/atividades através do aplicativo organizador na própria máquininha.
-              Acompanhe as vendas, faça sorteios e utilize todas as ferramentas da versão Web e Móvel e outras ferramentas exclusivas da Completa:
-              	Receba o pagamento de seus ingressos/passaportes, produtos e serviços, com cartão de crédito e débito, registre os pagamentos em dinheiro;
-              Imprima os ingressos e comprovantes de pagamento ou envie-os por e-mail;
-              	E mais!
-            </p>
-            <div style="text-align: center">
-              <img class="img-maq" src="/assets/img/maq.png" alt="">
-            </div>
-          </div>
-          <div>
-            <p class="nome-maq">Compacta TicketPhone</p>
-          </div>
-          <div class="margin">
-            <p class="text">
-              Sistema TicketPhone integrado.
-              Gerencie seus eventos/atividades através do aplicativo organizador instalado em seu dispositivo móvel (tablet, smartphone), conecte a Compacta no dispositivo e acesse todas as ferramentas da plataforma Web e Móvel.
-              Receba o pagamento de seus ingressos/passaportes, produtos e serviços, com cartão de crédito e débito;
-              Imprima os comprovantes de pagamento.
+                    </p>
+                    <div class="margin">
+                        <div>
+                            <img class="img-mob" src="/assets/img/app azul.png" alt="">
+                        </div>
+                        <div class="box-btn">
+                            <a href="https://itunes.apple.com/br/app/ticketphone/id1302796578?mt=8">
+                                <img class="img-btn" src="/assets/img/disponivel-app-store.png" alt="">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=br.com.conexao.ticketphone2">
+                                <img class="img-btn" src="/assets/img/googleplay.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="margin">
+                        <div>
+                            <img class="img-mob" src="/assets/img/app verde.png" alt="">
+                        </div>
+                        <div class="butn">
+                            <mat-button-toggle class="btn-experi">Em Breve</mat-button-toggle>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <p>Maquininha</p>
+                </ng-template>
+                <div class="demo-tab-content">
+                    <div>
+                        <p class="nome-maq">Completa TicketPhone</p>
+                    </div>
+                    <div class="margin">
+                        <p class="text">
+                            Sistema TicketPhone integrado. Gerencie seus eventos/atividades através do aplicativo organizador na própria máquininha.
+                            Acompanhe as vendas, faça sorteios e utilize todas as ferramentas da versão Web e Móvel e outras
+                            ferramentas exclusivas da Completa: Receba o pagamento de seus ingressos/passaportes, produtos
+                            e serviços, com cartão de crédito e débito, registre os pagamentos em dinheiro; Imprima os ingressos
+                            e comprovantes de pagamento ou envie-os por e-mail; E mais!
+                        </p>
+                        <div style="text-align: center" class="margin">
+                            <img class="img-maq" src="/assets/img/maq.png" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <p class="nome-maq">Compacta TicketPhone</p>
+                    </div>
+                    <div class="margin">
+                        <p class="text">
+                            Sistema TicketPhone integrado. Gerencie seus eventos/atividades através do aplicativo organizador instalado em seu dispositivo
+                            móvel (tablet, smartphone), conecte a Compacta no dispositivo e acesse todas as ferramentas da
+                            plataforma Web e Móvel. Receba o pagamento de seus ingressos/passaportes, produtos e serviços,
+                            com cartão de crédito e débito; Imprima os comprovantes de pagamento.
 
-            </p>
-            <div style="text-align: center">
-              <img class="img-maq" src="/assets/img/maq2.png" alt="">
-            </div>
-          </div>
-        </div>
-      </mat-tab>
-    </mat-tab-group>
-  </div>
+                        </p>
+                        <div style="text-align: center" class="margin">
+                            <img class="img-maq" src="/assets/img/maq2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
 </mat-card>
 <!--Login-->
-<app-card-login *ngIf="!show" ></app-card-login>
+<app-card-login *ngIf="!show"></app-card-login>
