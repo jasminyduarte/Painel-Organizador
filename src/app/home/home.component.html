@@ -47,30 +47,119 @@
 
 
 <!--mande uma mensagem-->
-<div class="send-message">
+<div class="send-message" (click)="openDialog()">
     <img class="suporte" src="/assets/img/suporte.svg">
-    <button (click)="openDialog()">Tenho dúvidas</button>
+    <button>Tenho dúvidas</button>
 </div>
 
 
 <!--Seção de cards-->
-<div class="onda-branca">
-    <img src="/assets/img/det branco.svg" alt="">
-</div>
 <section id="sessao2" class="sessao-card">
     <div class="section">
         <div class="center-align">
-            <p class="titulo_s1">Somos uma plataforma completa para a gestão e organização de eventos e atividades turísticas.
-            </p>
+            <p class="titulo_s1">Somos uma plataforma completa para a gestão e organização de eventos e atividades turísticas.</p>
             <p class="sub_s1">
                 Crie e acompanhe os processos de seus eventos e atividades turísticas de forma simultâneas, automatizada e em tempo real,
                 por meio de dispositivos desktop e móveis com App’s online e offline.
             </p>
+            
+            <div class="box_card">
+
+                <div class="card passo1">
+                    <div class="content">
+                        <div class="front">
+                            <div class="card-titulo">
+                                <h3>Primeiros passos</h3>
+                                <p>Simples e fácil!</p>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <p>
+                                Crie e organize seus eventos e atividades turísticas de qualquer lugar, com facilidade e segurança. Do panejamento dos eventos
+                                e atividades às vendas.
+                            </p>
+                            <ul>
+                                <li>
+                                    Planeje e gerencie seus eventos/atividades utilizando nosso Check-list, planilha financeira e
+                                    o gerenciador financeiro pelo desktop e aplicativo;
+                                </li>
+                                <li>
+                                    Divulgue seus produtos/serviços enviando e-mail marketing;
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card passo2">
+                    <div class="content">
+                        <div class="front">
+                            <div class="card-titulo">
+                                <h3>No grande dia</h3>
+                                <p>O diferencial na palma da sua mão!</p>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <p>
+                                Utilize as diversas ferramentas durante a realização do seus eventos e atividades e crie experiências inesquecíveis para
+                                seus clientes.
+                            </p>
+                            <ul>
+                                <li>
+                                    Ofereça mimos aos seus clientes por meio de sorteios;
+                                </li>
+                                <li>
+                                    Aplique pesquisas e conheça a opinião e nível de satisfação dos seus clientes;
+                                </li>
+                                <li>
+                                    Disponibilize mais produtos/serviços para seus clientes e potencialize suas vendas;
+                                </li>
+                                <li>
+                                    Organize o debate em seus eventos coorporativos/acadêmicos – receba as perguntas direcionadas aos palestrantes em seu APP
+                                    Gestor;
+                                </li>
+                                <li>
+                                    Conheça todas as ferramentas da TicketPhone e interaja mais com seus clientes.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card passo3">
+                    <div class="content">
+                        <div class="front">
+                            <div class="card-titulo">
+                                <h3>Sem complicações</h3>
+                                <p>Feche seus eventos/atividades com sucesso!</p>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <p>
+                                Conclua seus eventos e atividades e entregue os resultados com rapidez!
+                            </p>
+                            <ul>
+                                <li>
+                                    Gere relatórios detalhados de seus eventos/atividades: financeiro, perfil de público, número de inscrições, número de participantes,
+                                    entre outros;
+                                </li>
+                                <li>
+                                    Emita certificados automaticamente, com carga horária real ou total;
+                                </li>
+                                <li>
+                                    Mande e-mails aos seus clientes e fornecedores;
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+
 
 
             <!--Cards Desktop-->
-            <div class="box_card">
-
+            <!-- <div class="box_card">
                 <mat-card class="cards">
                     <mat-card-title class="card-title">
                         <h3 class="titulo_card-verde">Primeiros passos</h3>
@@ -92,7 +181,6 @@
                         </ul>
                     </mat-card-content>
                 </mat-card>
-
                 
                 <mat-card class="cards">
                     <mat-card-title class="card-title">
@@ -124,7 +212,6 @@
                         </ul>
                     </mat-card-content>
                 </mat-card>
-                    
                 
                 <mat-card class="cards">
                     <mat-card-title class="card-title">
@@ -149,9 +236,7 @@
                         </ul>
                     </mat-card-content>
                 </mat-card>
-
-
-            </div>
+            </div> -->
 
             <!--Cards Mobile-->
             <app-slide id="card-mob"></app-slide>

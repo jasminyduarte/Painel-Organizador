@@ -34,9 +34,9 @@ export class SlideComponent implements OnInit {
         scrollbar: {
           el: '.swiper-scrollbar',
         },
-        autoplay: {
-          delay: 5000,
-        }
+        // autoplay: {
+        //   delay: 5000,
+        // }
       });
     });
   }

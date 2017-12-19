@@ -406,13 +406,15 @@ textarea.materialize-textarea{
 .send-message{
   z-index: 20;
   width: 150px;
-  border-radius: 5px;
   height: 120px;
   bottom: 10px;
   position: fixed;
   background: white;
   right: 0px;
+  border-top-left-radius: 5px; 
+  border-bottom-left-radius: 5px; 
   box-shadow: 0px 0px 6px 0px #0000004d;
+  cursor: pointer;
 }
 .send-message button{
   color: #ff0099;
@@ -424,7 +426,6 @@ textarea.materialize-textarea{
   bottom: 5px;
   right: calc(50% - 58px);
   border-radius: 10px;
-  cursor: pointer;
 }
 .send-message .suporte {
   width: 50px;
@@ -512,4 +513,106 @@ app-tabs{
 
 app-ferramentas{
   display: none;
+}
+
+/*******************************************************/
+/*******************************************************/
+
+.card {
+  width: 33.3%;
+  max-width: 310px;
+  min-height: 380px;
+  perspective: 500px;
+  margin-left: 10px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+
+.front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+.passo1 .front{
+  background-image: url("/assets/img/passo1.jpg");
+}
+.passo2 .front{
+  background-image: url("/assets/img/passo2.jpg");
+}
+.passo3 .front{
+  background-image: url("/assets/img/passo3.jpg");
+}
+.front .card-titulo {
+  position: absolute;
+  bottom: calc(50% - 45px);
+  width: 100%;
+  padding: 17px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+}
+.front .card-titulo h3 {
+  font-size: 1.7em;
+  font-weight: normal;
+  color: #fff;
+  margin: 0;
+}
+.front .card-titulo p {
+  margin: 5px 0 0 0;
+  font-size: .97em;
+  color: #ddd;
+}
+
+.back {
+  height: 100%;
+  width: 100%;
+  padding: 18px;
+  color: #5f5f5f;
+  border-radius: 5px;
+  background: #fff;
+  backface-visibility: hidden;
+  transform: rotateY( 180deg );
+  box-sizing: border-box;
+}
+.back p {
+  margin: 0;
+  font-size: 1em;
+}
+.back ul {
+  margin: 0;
+  padding-left: 8px;
+}
+.back ul li {
+  margin: 10px;
+  font-size: .95em;
+}
+/* .passo1 .back{
+  background: #009966;
+}
+.passo2 .back{
+  background: #0066cc;
+}
+.passo3 .back{
+  background: #ff0099;
+} */
+
+@media screen and (max-width: 810px) {
+  .front .card-titulo h3 {
+    font-size: 1.4em;
+  }
 }

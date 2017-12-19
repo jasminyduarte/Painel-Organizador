@@ -11,7 +11,7 @@
   text-align: center;
   font-size: 35px;
   text-shadow: 3px 0px 10px black;
-  padding-top: 110px;
+  padding-top: 90px;
   padding-bottom: 10px;
 }
 
@@ -19,7 +19,7 @@
   text-align: center;
   font-size: 17px;
   margin-top: 0px;
-  padding-bottom: 10px;
+  padding-bottom: 40px;
 }
 
 .box{
@@ -167,7 +167,7 @@
 }
 
 .card-banner{
-  background-image: url("../../../assets/img/banner3.jpg");
+  background-image: url("/assets/img/banner3.jpg");
   background-position: center;
   background-size: cover;
   width: 100%;

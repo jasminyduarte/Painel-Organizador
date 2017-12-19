@@ -52,3 +52,70 @@ p.titulo_card-azul{
  text-align: justify;
   width: 90%;
 }
+
+
+/****************************/
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  min-height: 520px;
+  margin: auto;
+  color: #fff;
+  background: rebeccapurple;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.card.passo1 {
+  background-image: url("/assets/img/passo1.jpg");
+}
+.card.passo2 {
+  background-image: url("/assets/img/passo2.jpg");
+}
+.card.passo3 {
+  background-image: url("/assets/img/passo3.jpg");
+}
+
+.card .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000000aa;
+  box-sizing: border-box;
+}
+
+.card .conteudo {
+  position: relative;
+  padding: 30px 18px;
+  box-sizing: border-box;
+}
+
+.card .conteudo h3 {
+  font-size: 1.5em;
+  font-weight: normal;
+  margin: 0;
+}
+
+.card .conteudo h3 + p {
+  margin: 5px 0 20px 0;
+  font-size: .97em;
+  color: #eee;
+}
+
+.card .texto p {
+  margin: 0;
+  font-size: 1em;
+}
+.card .texto ul {
+  margin: 0;
+  padding-left: 8px;
+}
+.card .texto ul li {
+  margin: 10px;
+  font-size: .95em;
+}
