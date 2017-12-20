@@ -23,13 +23,19 @@ form{
   margin: 0 auto;
 }
 .texto{
+  margin: 10px auto;
   text-align: left;
+  font-size: 20px;
+  /* color: #888; */
 }
 .ipt{
   display: flex;
   width: 80%;
   margin: auto;
   justify-content: space-around;
+}
+.ipt mat-form-field {
+    width: 48%;
 }
 .textArea{
   width: 80%;
@@ -44,32 +50,28 @@ form{
 }
 .mensagemResponse{
   min-height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.mensagemResponse p{
-  width:100%;
-  text-align: center;
-  font-size: 16px;
+.mensagemResponse p {
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 16px;
 }
 
 .mat-step-header .mat-step-icon{
   background-color: #009966 !important;
 }
+
 /* ------------------------ material angular io -----------*/
 
 
 @media screen and (max-width: 860px) {
-  .mat-form-field{
-    width: 100%;
+  .mat-form-field,
+  .texto {
+    width: 100% !important;
   }
   .ipt{
     flex-wrap: wrap;
-  }
-  .select,
-  .texto {
-    width: 80%;
   }
   .mat-horizontal-content-container{
     padding: 0 10px 10px 10px;
@@ -107,4 +109,73 @@ form{
 .info p,
 .info-small p{
   margin: 0;
+}
+
+
+.modal-container {
+    position: relative;
+}
+
+.modal-container .fechar-modal {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 55px;
+    min-width: 55px;
+    padding: 0;
+}
+
+.modal-container .fechar-modal mat-icon {
+    width: 30px;
+    height: 28px;
+    font-size: 28px;
+    color: #888;
+}
+
+/* ********************* */
+/* MODAL ENVIAR MENSAGEM */
+/* ********************* */
+.modal-send-message /deep/.mat-stepper-horizontal-line {
+    min-width: 0;
+}
+@media screen and (max-width: 900px) {
+    .modal-send-message /deep/.mat-stepper-horizontal-line {
+        display: none;
+    }
+    .modal-send-message /deep/.mat-horizontal-stepper-header-container {
+        margin: 0 auto 20px auto;
+        flex-wrap: wrap;
+    }
+    .modal-send-message /deep/mat-step-header {
+        height: 40px;
+        width: calc(49% - 48px);
+    }
+}
+@media screen and (max-width: 650px) {
+    
+    .modal-container .fechar-modal {
+        right: -6px;
+    }
+    .modal-send-message /deep/mat-step-header {
+        width: 100%;
+    }
+    .modal-send-message /deep/.mat-horizontal-content-container {
+        padding: 0 10px 24px 10px;
+    }
+
+    /* overlay */
+    /deep/.mat-dialog-container {
+        padding: 24px 10px !important;
+    }
+    /deep/.cdk-global-overlay-wrapper {
+        -webkit-align-items: flex-start !important; /* Safari 7.0+ */
+        align-items: flex-start !important;
+        overflow-y: auto;
+        pointer-events: auto;
+    }
+    /deep/.cdk-global-overlay-wrapper .cdk-overlay-pane {
+        width: 96% !important;
+        max-width: none !important;
+        margin: 10% 0;
+    }
 }

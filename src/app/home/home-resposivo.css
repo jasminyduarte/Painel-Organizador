@@ -66,8 +66,7 @@
 }
 
   .send-message{
-    bottom: 110px;
-    display: none;
+    /* display: none; */
   }
    #menu-desk{
      display: none;
