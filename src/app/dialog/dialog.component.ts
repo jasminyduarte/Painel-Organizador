@@ -71,6 +71,8 @@ export class DialogComponent implements OnInit {
         this.fourthFormGroup = this._formBuilder.group({
             mensagemCtrl: ['', Validators.required]
         });
+
+        console.log(this.firstFormGroup)
     }
 
     fecharModal(): void {

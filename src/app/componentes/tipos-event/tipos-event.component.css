@@ -266,4 +266,11 @@
   .card.mobile {
     display: block;
   }
+
+  
+  .btn{
+    padding: 26px 10px;
+    display: flex;
+    justify-content: center;
+  }
 }
