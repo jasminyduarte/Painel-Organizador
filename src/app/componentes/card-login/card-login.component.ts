@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { MatDialog } from '@angular/material';
 import * as $ from 'jquery';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { FormValidacao } from '../../form-validacao';
 import { WebserviceTicketPhone } from '../../webservice';
+import { AlertaComponent } from '../alerta/alerta.component';
 
 @Component({
     selector: 'app-card-login',
@@ -22,9 +24,12 @@ export class CardLoginComponent implements OnInit {
     formDados;
     formSenha;
 
+    @Output('onFechar') emitter = new EventEmitter();
+
     constructor(
         private _webservice: WebserviceTicketPhone,
-        private _formBuilder: FormBuilder
+        private _formBuilder: FormBuilder,
+        public dialog: MatDialog
     ) { }
 
     ngOnInit() {
@@ -74,10 +79,8 @@ export class CardLoginComponent implements OnInit {
             $frontbox.addClass("moving");
             $frontbox.addClass("frontbox2");
             $signupMsg.toggleClass("visibility");
-
             $signup.toggleClass('hide');
             $login.toggleClass('hide');
-            console.log("teste");
         });
 
         $('#switch2').on('click', function () {
@@ -85,7 +88,6 @@ export class CardLoginComponent implements OnInit {
             $frontbox.removeClass("moving");
             $frontbox.removeClass("frontbox2");
             $signupMsg.toggleClass("visibility");
-
             $signup.toggleClass('hide');
             $login.toggleClass('hide');
         });
@@ -114,14 +116,14 @@ export class CardLoginComponent implements OnInit {
                         + '&password=' + encodeURI(senha);
                     window.location.href = url;
                 } else if (autenticado === "naocadastrado") {
-                    console.log("Este CPF não está cadastrado, faça o seu cadastro!");
+                    this.alerta("Parece que este CPF não está cadastrado, faça o seu cadastro! :)", "Falha de Login");
                 } else if (autenticado === "cadastrado") {
-                    console.log("Senha incorreta");
+                    this.alerta("Poxa, você ainda não possui senha cadastrada. Clique em esqueci a senha. ;)", "Falha de Login");
                 } else {
-                    console.log("acesso negado");
+                    this.alerta('Senha incorreta.', "Falha de Login");
                 }
             }, erro => {
-                console.log('Parece que alguma coisa deu errado :(<br/>Por favor, tente novamente em alguns instantes!');
+                this.alerta('Parece que alguma coisa deu errado :(<br/>Por favor, tente novamente em alguns instantes!', "Falha de Login");
                 console.log(erro);
             });
     }
@@ -139,7 +141,7 @@ export class CardLoginComponent implements OnInit {
                 console.log(resposta);
                 const autenticado = resposta && resposta.toLowerCase().trim() === 'true' ? true : false;
                 if (autenticado) {
-                    console.log('Cadastro realizado com sucesso, redirecionando para o dashboard!');
+                    this.alerta('Cadastro realizado com sucesso, redirecionando para o dashboard!', "Tudo certo!");
                     setTimeout(function () {
                         const url = 'https://app.ticketphone.com.br/webrun/logon.do?sys=EVN'
                             + '&user=' + encodeURI(cpf)
@@ -147,10 +149,10 @@ export class CardLoginComponent implements OnInit {
                         window.location.href = url;
                     }, 1500);
                 } else {
-                    console.log('Parece que alguma coisa deu errado :(<br/>Por favor, tente novamente em alguns instantes!');
+                    this.alerta('Parece que alguma coisa deu errado :(<br/>Por favor, tente novamente em alguns instantes!', "Falha de Cadastro");
                 }
             }, erro => {
-                console.log('Parece que alguma coisa deu errado :(<br/>Por favor, tente novamente em alguns instantes!');
+                this.alerta('Parece que alguma coisa deu errado :(<br/>Por favor, tente novamente em alguns instantes!', "Falha de Cadastro");
                 console.log(erro);
             });
     }
@@ -182,25 +184,23 @@ export class CardLoginComponent implements OnInit {
                 estado: estado,
                 cidade: cidade
             })
-        )
-            .subscribe(resposta => {
-                console.log(resposta);
+        ).subscribe(resposta => {
+            console.log(resposta);
 
-                if (resposta && resposta.toString().toLowerCase().trim() !== "false") {
-                    const res = resposta['status'].toLocaleLowerCase().trim() === 'true' ? true : false;
-                    if (res) {
-                        console.log("Mensagem enviada com sucesso!");
-                        console.log("Apagar campos do formulario.");
-                    } else {
-                        console.log('Parece que alguma coisa deu errado :(<br/>Por favor, tente novamente em alguns instantes!');
-                    }
+            if (resposta && resposta.toString().toLowerCase().trim() !== "false") {
+                const res = resposta['status'].toLocaleLowerCase().trim() === 'true' ? true : false;
+                if (res) {
+                    this.alerta('Mensagem enviada com sucesso!', 'Obrigado pelo interesse!');
                 } else {
-                    console.log('Parece que alguma coisa deu errado :(<br/>Por favor, tente novamente em alguns instantes!');
+                    this.alerta('Parece que alguma coisa deu errado :(<br/>Por favor, tente novamente em alguns instantes!');
                 }
-            }, erro => {
-                console.log('Parece que alguma coisa deu errado :(<br/>Por favor, tente novamente em alguns instantes!');
-                console.log(erro);
-            })
+            } else {
+                this.alerta('Parece que alguma coisa deu errado :(<br/>Por favor, tente novamente em alguns instantes!');
+            }
+        }, erro => {
+            this.alerta('Parece que alguma coisa deu errado :(<br/>Por favor, tente novamente em alguns instantes!');
+            console.log(erro);
+        })
     }
 
     // NOVA SENHA
@@ -229,11 +229,17 @@ export class CardLoginComponent implements OnInit {
     }
 
     loginclosse() {
-        console.log("entrou")
         this.closse = !this.closse;
+        this.emitter.emit();
     }
 
-    ngOnDestroy() {
-        console.log("asdf");
+    alerta(mensagem: string, titulo?: string): void {
+        let dialogRef = this.dialog.open(AlertaComponent, {
+            width: '300px',
+            data: {
+                titulo: titulo,
+                mensagem: mensagem
+            }
+        });
     }
 }

@@ -46,7 +46,7 @@
                     <div class="box-desk">
                         <img class="desk" src="/assets/img/desktop.png" alt="">
                         <div class="btn">
-                            <mat-button-toggle (click)="Mostra()" class="btn-experi">Experimente agora</mat-button-toggle>
+                            <mat-button-toggle (click)="toggleLogin()" class="btn-experi">Experimente agora</mat-button-toggle>
                         </div>
                     </div>
                 </div>
@@ -133,4 +133,4 @@
 </div>
 
 <!--Login-->
-<app-card-login *ngIf="!show"></app-card-login>
+<app-card-login *ngIf="!show" (onFechar)="toggleLogin()"></app-card-login>

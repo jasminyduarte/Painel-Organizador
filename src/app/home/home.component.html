@@ -2,17 +2,17 @@
 <div id="menu">
     <nav>
         <mat-card class="MENU">
-            <a href="#" class="brand-logo">
-                <img class="logo" src="assets/img/logo-azul.svg" alt="ticketphone">
+            <a class="brand-logo">
+                <img class="logo" src="/assets/img/logo-azul.svg" alt="ticketphone">
             </a>
             <div class="organizador">
-                <a href="#">Organizador</a>
+                <a>Organizador</a>
             </div>
             <ul id="menu-desk" class="menu-ul">
                 <li class="box-menu">
-                    <a href="#">Vantagens</a>
+                    <a>Vantagens</a>
                 </li>
-                <li class="box-menu" (click)="Mostra()">
+                <li class="box-menu" (click)="toggleLogin()">
                     <a>Login</a>
                 </li>
                 <!--<li class="box-menu"><a href="#">Prestadores de serviços</a></li>-->
@@ -26,7 +26,7 @@
                 </button>
                 <mat-menu #appMenu="matMenu">
                     <button mat-menu-item>Vantagens</button>
-                    <button (click)="Mostra()" mat-menu-item>Login</button>
+                    <button (click)="toggleLogin()" mat-menu-item>Login</button>
                     <!--<button mat-menu-item>Prestadores de serviços</button>-->
                     <!--<button mat-menu-item>Valores e termos</button>-->
                     <!--<button mat-menu-item>Quem somos</button>-->
@@ -41,7 +41,7 @@
 <div class="banner-apre">
     <img src="/assets/img/frasebanner.svg" alt="">
     <div class="btn-banner">
-        <mat-button-toggle class="btn-experi" (click)="Mostra()">Experimente agora</mat-button-toggle>
+        <mat-button-toggle class="btn-experi" (click)="toggleLogin()">Experimente agora</mat-button-toggle>
     </div>
 </div>
 
@@ -274,7 +274,7 @@
 <app-tipos-event (duvidas)="openDialog()"></app-tipos-event>
 
 <!--Login-->
-<app-card-login *ngIf="!show"></app-card-login>
+<app-card-login *ngIf="!show" (onFechar)="toggleLogin()"></app-card-login>
 
 <!--Rodapé-->
 <app-footer></app-footer>

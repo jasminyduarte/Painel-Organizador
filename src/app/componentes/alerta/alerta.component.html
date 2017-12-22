@@ -1,0 +1,25 @@
+<div class="modal-container">
+
+    <!-- fechar -->
+    <button mat-button class="fechar-modal" (click)="fecharAlerta()" >
+        <mat-icon>close</mat-icon>
+    </button>
+
+    <!-- titulo -->
+    <h2 class="titulo">
+        {{ titulo }}
+    </h2>
+    
+    <!-- mensagem -->
+    <p class="mensagem">
+        {{ mensagem }}
+    </p>
+
+    <!-- botao -->
+    <div class="botao-container">
+        <button mat-button mat-raised-button cdkFocusInitial
+        (click)="fecharAlerta()">
+            OK
+        </button>
+    </div>
+</div>

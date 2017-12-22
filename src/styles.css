@@ -1,4 +1,11 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@font-face {
+    font-family: helvetica-regular;
+    src: url("/assets/fonts/helvetica-regular.ttf");
+}
+* {
+    font-family: helvetica-regular;
+}
 body{
     margin: 0px !important;
 }

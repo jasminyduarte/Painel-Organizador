@@ -25,8 +25,7 @@ export class TiposEventComponent implements OnInit {
         });
     }
 
-    Mostra() {
-        console.log("mostra")
+    toggleLogin() {
         this.show = !this.show;
     }
 

@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { DialogComponent } from './dialog/dialog.component';
+import { AlertaComponent } from './componentes/alerta/alerta.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -46,6 +47,7 @@ import { FormaDePagamentoComponent } from './componentes/forma-de-pagamento/form
     FooterComponent,
     TabsDesktopComponent,
     DialogComponent,
+    AlertaComponent,
     FerramentasDesktopComponent,
     FormaDePagamentoComponent
   ],
@@ -71,7 +73,8 @@ import { FormaDePagamentoComponent } from './componentes/forma-de-pagamento/form
     MatFormFieldModule
   ],
   entryComponents: [
-    DialogComponent
+    DialogComponent,
+    AlertaComponent
   ],
   providers: [
     Request,

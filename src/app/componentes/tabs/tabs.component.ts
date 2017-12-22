@@ -11,8 +11,7 @@ export class TabsComponent implements OnInit {
 
   ngOnInit() {
   }
-  Mostra() {
-    console.log("mostra")
+  toggleLogin() {
     this.show = !this.show;
   }
 }

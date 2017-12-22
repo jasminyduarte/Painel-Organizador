@@ -22,8 +22,7 @@ export class TabsDesktopComponent implements OnInit {
     /////////////////////////////////////////////////////////
     this.grupoPlataformas.selectedIndex = this.index = 0;
   }
-  Mostra() {
-    console.log("mostra")
+  toggleLogin() {
     this.show = !this.show;
   }
 

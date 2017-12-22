@@ -1,0 +1,37 @@
+.modal-container {
+    position: relative;
+}
+
+/* fechar */
+.modal-container .fechar-modal {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 55px;
+    min-width: 55px;
+    padding: 0;
+}
+.modal-container .fechar-modal mat-icon {
+    width: 30px;
+    height: 28px;
+    font-size: 28px;
+    color: #888;
+}
+
+/* titulo */
+.modal-container .titulo {
+    width: calc(100% - 35px);
+    margin: 0 0 15px 0;
+    font-size: 1.3em;
+}
+
+/* mensagem */
+.modal-container .mensagem {
+    font-size: 1em;
+}
+
+/* footer botao */
+.modal-container .botao-container {
+    display: flex;
+    justify-content: flex-end;
+}
