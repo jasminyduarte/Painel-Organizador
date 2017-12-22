@@ -115,8 +115,10 @@
 }
 .inputbox.cadastro{
   margin-top: 5px;
+  margin-bottom: 30px;
 }
-.login input {
+.login input,
+.login select {
   display: block;
   width: 100%;
   height: 40px;
@@ -125,16 +127,20 @@
   font-size: 15px;
   text-align: center;
   border-radius: 10px;
+  box-sizing: border-box;
 }
-.signup input {
+.signup input,
+.signup select {
   display: block;
   width: 100%;
   height: 38px;
-  background-color: #f2f2f2;
-  border: none;
+  padding: 0 5px;
   font-size: 12px;
   text-align: center;
+  background-color: #f2f2f2;
+  border: none;
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .login button,
@@ -246,9 +252,6 @@ span::after{
   }
   .moving{
     right: 33%;
-  }
-  .signup button{
-    bottom: -8px;
   }
    .signup h2{
      font-size: 20px;
