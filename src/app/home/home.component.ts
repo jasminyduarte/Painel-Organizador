@@ -4,6 +4,7 @@ import { MatTabGroup } from '@angular/material';
 import * as $ from 'jquery';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { DialogComponent } from '../dialog/dialog.component';
+import { LoadingComponent } from '../componentes/loading/loading.component';
 
 @Component({
     selector: 'home-component',

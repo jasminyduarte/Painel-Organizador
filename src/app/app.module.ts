@@ -10,6 +10,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { DialogComponent } from './dialog/dialog.component';
 import { AlertaComponent } from './componentes/alerta/alerta.component';
+import { LoadingComponent } from './componentes/loading/loading.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -18,6 +19,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatIconModule} from '@angular/material/icon';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { SlideComponent } from './componentes/slide/slide.component';
 import { FerramentasComponent } from './componentes/ferramentas/ferramentas.component';
 import { TabsComponent } from './componentes/tabs/tabs.component';
@@ -48,6 +50,7 @@ import { FormaDePagamentoComponent } from './componentes/forma-de-pagamento/form
     TabsDesktopComponent,
     DialogComponent,
     AlertaComponent,
+    LoadingComponent,
     FerramentasDesktopComponent,
     FormaDePagamentoComponent
   ],
@@ -70,11 +73,13 @@ import { FormaDePagamentoComponent } from './componentes/forma-de-pagamento/form
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatProgressSpinnerModule
   ],
   entryComponents: [
     DialogComponent,
-    AlertaComponent
+    AlertaComponent,
+    LoadingComponent
   ],
   providers: [
     Request,

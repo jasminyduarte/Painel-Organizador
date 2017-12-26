@@ -5,6 +5,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { FormValidacao } from '../../form-validacao';
 import { WebserviceTicketPhone } from '../../webservice';
 import { AlertaComponent } from '../alerta/alerta.component';
+import { LoadingComponent } from '../loading/loading.component';
 
 @Component({
     selector: 'app-card-login',
@@ -23,6 +24,9 @@ export class CardLoginComponent implements OnInit {
     formCadastro;
     formDados;
     formSenha;
+
+    // loading
+    loadingRef;
 
     @Output('onFechar') emitter = new EventEmitter();
 
@@ -99,8 +103,11 @@ export class CardLoginComponent implements OnInit {
         const cpf = form.cpfCtrl;
         const senha = form.senhaCtrl;
 
+        this.showLoading();
+
         this._webservice.loginOrganizador(cpf, senha)
             .subscribe(resposta => {
+                this.hideLoading();
                 console.log(resposta);
 
                 let autenticado = '';
@@ -123,6 +130,7 @@ export class CardLoginComponent implements OnInit {
                     this.alerta('Senha incorreta.', "Falha de Login");
                 }
             }, erro => {
+                this.hideLoading();
                 this.alerta('Parece que alguma coisa deu errado :(<br/>Por favor, tente novamente em alguns instantes!', "Falha de Login");
                 console.log(erro);
             });
@@ -136,8 +144,11 @@ export class CardLoginComponent implements OnInit {
         const email = form.emailCtrl;
         const senha = form.senhaCtrl;
 
+        this.showLoading();
+
         this._webservice.cadastroOrganizador(nome, cpf, email, senha)
             .subscribe(resposta => {
+                this.hideLoading();
                 console.log(resposta);
                 const autenticado = resposta && resposta.toLowerCase().trim() === 'true' ? true : false;
                 if (autenticado) {
@@ -152,6 +163,7 @@ export class CardLoginComponent implements OnInit {
                     this.alerta('Parece que alguma coisa deu errado :(<br/>Por favor, tente novamente em alguns instantes!', "Falha de Cadastro");
                 }
             }, erro => {
+                this.hideLoading();
                 this.alerta('Parece que alguma coisa deu errado :(<br/>Por favor, tente novamente em alguns instantes!', "Falha de Cadastro");
                 console.log(erro);
             });
@@ -169,6 +181,8 @@ export class CardLoginComponent implements OnInit {
         const estado = form.estadoCtrl;
         const cidade = form.cidadeCtrl;
 
+        this.showLoading();
+
         this._webservice.enviarMensagem(
             '01178662292',
             '1234',
@@ -185,6 +199,7 @@ export class CardLoginComponent implements OnInit {
                 cidade: cidade
             })
         ).subscribe(resposta => {
+            this.hideLoading();
             console.log(resposta);
 
             if (resposta && resposta.toString().toLowerCase().trim() !== "false") {
@@ -198,6 +213,7 @@ export class CardLoginComponent implements OnInit {
                 this.alerta('Parece que alguma coisa deu errado :(<br/>Por favor, tente novamente em alguns instantes!');
             }
         }, erro => {
+            this.hideLoading();
             this.alerta('Parece que alguma coisa deu errado :(<br/>Por favor, tente novamente em alguns instantes!');
             console.log(erro);
         })
@@ -208,10 +224,14 @@ export class CardLoginComponent implements OnInit {
         const form = this.formSenha.value;
         const cpf = form.cpfCtrl;
 
+        this.showLoading();
+
         this._webservice.novaSenha(cpf)
             .subscribe(resposta => {
+                this.hideLoading();
                 console.log(resposta);
             }, erro => {
+                this.hideLoading();
                 console.log(erro);
             })
     }
@@ -233,6 +253,7 @@ export class CardLoginComponent implements OnInit {
         this.emitter.emit();
     }
 
+    // Alerta
     alerta(mensagem: string, titulo?: string): void {
         let dialogRef = this.dialog.open(AlertaComponent, {
             width: '300px',
@@ -241,5 +262,14 @@ export class CardLoginComponent implements OnInit {
                 mensagem: mensagem
             }
         });
+    }
+
+    // LOADING
+    showLoading(): void {
+        this.loadingRef = this.dialog.open(LoadingComponent);
+        console.log(this.loadingRef)
+    }
+    hideLoading(): void {
+        this.loadingRef.close();
     }
 }

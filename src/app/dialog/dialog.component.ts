@@ -1,7 +1,9 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { Component, OnInit, Inject, ViewChild } from '@angular/core';
+import { MatTabGroup } from '@angular/material';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatStepper } from '@angular/material';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { WebserviceTicketPhone } from '../webservice';
+import { LoadingComponent } from '../componentes/loading/loading.component';
 
 @Component({
     selector: 'app-dialog',
@@ -38,11 +40,20 @@ export class DialogComponent implements OnInit {
         { value: '5', viewValue: 'Sou um(a) curioso(a)' }
     ];
 
+    // referencia loadgin
+    loadingRef;
+
+    // bloquear forms anteriores
+    editavel = true;
+
+    @ViewChild(MatStepper) stepper;
+
     constructor(
         private _webservice: WebserviceTicketPhone,
         public dialogRef: MatDialogRef<DialogComponent>,
         private _formBuilder: FormBuilder,
-        @Inject(MAT_DIALOG_DATA) public data: any
+        @Inject(MAT_DIALOG_DATA) public data: any,
+        public dialog: MatDialog
     ) {}
 
     ngOnInit() {
@@ -71,8 +82,6 @@ export class DialogComponent implements OnInit {
         this.fourthFormGroup = this._formBuilder.group({
             mensagemCtrl: ['', Validators.required]
         });
-
-        console.log(this.firstFormGroup)
     }
 
     fecharModal(): void {
@@ -84,9 +93,9 @@ export class DialogComponent implements OnInit {
             this.labelTextArea = 'Nos fale um pouco sobre sua ideia:';
             this.responseStep = 'Daqui a pouco entraremos em contato com você pra gente bater um papo e descobrir a melhor ' +
                 'forma de criar a sua atividade. :D';
-        } else if (this.step1.value === 2 || this.step1.value == 4) {
+        } else if (this.step1.value === 2 || this.step1.value == 3 || this.step1.value == 4) {
             this.labelTextArea = 'Escreva sua mensagem:';
-            if (this.step1.value === 2) {
+            if (this.step1.value === 2 || this.step1.value == 3) {
                 this.responseStep = 'Aiii que legal. Não vemos a hora de fechar essa parceria. Em breve entraremos em contato com você. XD';
             }
             if (this.step1.value === 4) {
@@ -137,6 +146,8 @@ export class DialogComponent implements OnInit {
             cidade = thirdGroup.cidadeCtrl;
         }
 
+        this.showLoading();
+
         this._webservice.enviarMensagem(
             '01178662292',
             '1234',
@@ -155,9 +166,21 @@ export class DialogComponent implements OnInit {
         ).subscribe(resposta => {
             // MESAGEM ENVIADA COM SUCESSO
             console.log(resposta);
+            this.hideLoading();
+            this.stepper.next();
+            this.editavel = false;
         }, erro => {
             // ERRO AO ENVIAR
             console.log(erro);
+            this.hideLoading();
         });
+    }
+
+    // LOADING
+    showLoading(): void {
+        this.loadingRef = this.dialog.open(LoadingComponent);
+    }
+    hideLoading(): void {
+        this.loadingRef.close();
     }
 }

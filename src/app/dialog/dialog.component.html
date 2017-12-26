@@ -14,7 +14,7 @@
         <mat-horizontal-stepper [linear]="isLinear">
             
             <!-- oq deseja -->
-            <mat-step [stepControl]="firstFormGroup">
+            <mat-step [editable]="editavel" [stepControl]="firstFormGroup">
                 <!-- <mat-step-header icon="check" label="TESTESTESTE"></mat-step-header> -->
                 <ng-template matStepLabel>O que deseja?</ng-template>
                 
@@ -52,7 +52,7 @@
             </mat-step>
             
             <!-- informacoes -->
-            <mat-step icon="2" [editable]="false" [stepControl]="secondFormGroup" *ngIf="!!step1 && step1.value !== 2">
+            <mat-step [editable]="editavel" [stepControl]="secondFormGroup" *ngIf="!!step1 && step1.value !== 2">
                 <ng-template matStepLabel>Informe seus dados</ng-template>
                 <form [formGroup]="secondFormGroup">
                     
@@ -84,7 +84,7 @@
             </mat-step>
             
             <!-- mais informacoes -->
-            <mat-step icon="2" [stepControl]="thirdFormGroup" *ngIf="!!step1 && step1.value === 2">
+            <mat-step [editable]="editavel" [stepControl]="thirdFormGroup" *ngIf="!!step1 && step1.value === 2">
                 <ng-template matStepLabel>Informe seus dados</ng-template>
                 <form [formGroup]="thirdFormGroup">
                     
@@ -125,7 +125,7 @@
             </mat-step>
             
             <!-- enviar mensagem -->
-            <mat-step icon="3" [stepControl]="fourthFormGroup">
+            <mat-step [editable]="editavel" [stepControl]="fourthFormGroup">
                 <ng-template matStepLabel>Envie uma mensagem</ng-template>
                 <form [formGroup]="fourthFormGroup">
                     
